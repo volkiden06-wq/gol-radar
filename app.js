@@ -21,7 +21,7 @@ let raw=deep(x,['elapsed_seconds','elapsedSeconds','elapsed','elapsed_time','ela
 let seconds=clockSeconds(raw);if(seconds===null&&/[0-9]{1,3}\s*['’]|[0-9]{1,3}\s*min/i.test(statusText))seconds=clockSeconds(statusText);
 const liveFlag=x.is_live===true||x.live===true||x.isLive===true||x.status?.type?.state==='in'||x.status?.state==='in'||String(x.status).toLowerCase()==='inprogress';
 const liveText=/live|in.?play|in.?progress|playing|1st half|2nd half|first half|second half|half.?time|(^|\W)1h($|\W)|(^|\W)2h($|\W)|(^|\W)ht($|\W)|45\+|90\+|devre|oynan/.test(phaseText);
-if(done||future||(!assumeLive&&!liveFlag&&!liveText&&seconds===null))return null;
+if(done||future||(!liveFlag&&!liveText))return null;
 let home=x.home??x.home_team??x.home_name??x.teams?.home??x.competitors?.[0]??null;
 let away=x.away??x.away_team??x.away_name??x.teams?.away??x.competitors?.[1]??null;
 if(typeof home==='object')home=home.name??home.display_name??home.short_name??home.team?.name??null;
@@ -29,7 +29,7 @@ if(typeof away==='object')away=away.name??away.display_name??away.short_name??aw
 if(!home||!away){const title=String(x.title??x.name??x.event_name??'');const pair=title.split(/\s+vs\.?\s+|\s+v\s+/i);if(pair.length===2){home=home||pair[0].trim();away=away||pair[1].trim()}}
 if(!home||!away)return null;
 const score=v=>v&&typeof v==='object'?Number(v.current??v.display??v.goals??v.score??0)||0:Number(v??0)||0;
-return {raw:x,id:String(x.id??x.match_id??x.event_id??x.slug??''),slug:x.slug??x.match_slug??x.url_slug,home,away,hs:score(x.home_score??x.home_goals??x.home_team?.score??x.scores?.home??x.score?.home??x.score?.home_score),as:score(x.away_score??x.away_goals??x.away_team?.score??x.scores?.away??x.score?.away??x.score?.away_score),seconds,clockBase:Date.now(),period:String(x.period_name??x.period??x.half??statusText??stat),status:stat.toLowerCase(),statusText,league:x.competition_name??x.competition?.name??x.competition??x.league?.name??x.league??'Canlı maç'}
+const slug=x.slug??x.match_slug??x.url_slug??null;const id=String(x.id??x.match_id??x.event_id??slug??[String(home).trim().toLowerCase(),String(away).trim().toLowerCase(),String(x.competition_name??x.competition?.name??x.league?.name??'')].join('|'));return {raw:x,id,slug,home,away,hs:score(x.home_score??x.home_goals??x.home_team?.score??x.scores?.home??x.score?.home??x.score?.home_score),as:score(x.away_score??x.away_goals??x.away_team?.score??x.scores?.away??x.score?.away??x.score?.away_score),seconds,clockBase:Date.now(),period:String(x.period_name??x.period??x.half??statusText??stat),status:stat.toLowerCase(),statusText,league:x.competition_name??x.competition?.name??x.competition??x.league?.name??x.league??'Canlı maç'}
 }
 function phase(m){const s=(m.status+' '+m.statusText+' '+m.period).toLowerCase();if(/half.?time|\bht\b|devre/.test(s))return 'DEVRE';if(/2nd half|second half|\b2h\b|2. yar/.test(s))return '2. YARI';if(/1st half|first half|\b1h\b|1. yar/.test(s))return '1. YARI';return 'CANLI'}
 function elapsed(m){if(m.seconds===null)return 'SÜRE BİLGİSİ YOK';const total=Math.max(0,m.seconds+Math.floor((Date.now()-m.clockBase)/1000));return Math.floor(total/60)+':'+String(total%60).padStart(2,'0')}
@@ -39,26 +39,27 @@ function analyze(m,d){const s=statsWalk(d||m.raw);const points=s.on*11+s.shots*2
 function card(m,a,signal){const clock=elapsed(m),cls=signal?'match signal':'match';let desc=signal?'BASKI '+a.score+'/100 · İsabetli şut '+a.s.on+' · Şut '+a.s.shots+' · Korner '+a.s.corners:(a.has?a.level+' · '+a.score+'/100':'İstatistik akışı bekleniyor');return '<article class="'+cls+'"><div class="match-top"><span class="league">'+esc(m.league)+'</span><span class="phase">'+phase(m)+'</span><span class="'+(signal?'signal-tag':'live-tag')+'">'+(signal?'⚡ GOL SİNYALİ':'● CANLI')+'</span></div><div class="match-main"><div class="team"><b>'+esc(m.home)+'</b><small>EV SAHİBİ</small></div><div class="scoreboard"><strong>'+m.hs+' : '+m.as+'</strong><small>'+clock+'</small></div><div class="team away"><b>'+esc(m.away)+'</b><small>DEPLASMAN</small></div></div><div class="match-foot"><span>'+esc(m.statusText||m.status||'Canlı')+'</span><span class="analysis">'+desc+'</span></div></article>'}
 function saveSignal(m,a){const key=(m.slug||m.id)+'-'+Math.floor((m.seconds||0)/300);if(seen.has(key))return;seen.add(key);localStorage.setItem('gr_seen',JSON.stringify([...seen].slice(-500)));history.unshift({match:m.home+' – '+m.away,score:a.score,time:new Date().toLocaleTimeString('tr-TR',{hour:'2-digit',minute:'2-digit'})});history=history.slice(0,80);localStorage.setItem('gr_history',JSON.stringify(history));if(notifyOn&&'Notification'in window&&Notification.permission==='granted')new Notification('GOL RADAR · Güçlü baskı',{body:m.home+' – '+m.away+' | '+elapsed(m)+' | '+a.score+'/100',icon:'./icon.svg'})}
 function renderHistory(){$('total').textContent=history.length;$('history').innerHTML=history.length?history.slice(0,10).map(x=>'<div class="historyitem"><span>'+esc(x.match)+' · '+esc(x.time)+'</span><b>'+x.score+'/100</b></div>').join(''):'Henüz sinyal yok.'}
-function uniqueMatches(list){const seenKeys=new Set();return list.filter(m=>{const key=(m.slug||m.id||[m.home,m.away,m.league].join('|')).toString().toLowerCase();if(seenKeys.has(key))return false;seenKeys.add(key);return true})}
+function uniqueMatches(list){const seenKeys=new Set();return list.filter(m=>{const key=String(m.slug||m.id||[m.home,m.away,m.league].join('|')).trim().toLowerCase();if(!key||seenKeys.has(key))return false;seenKeys.add(key);return true}).sort((a,b)=>String(a.league).localeCompare(String(b.league),'tr')||String(a.home).localeCompare(String(b.home),'tr')||String(a.away).localeCompare(String(b.away),'tr'))}
 function extractRows(d,out=[]){if(!d)return out;if(Array.isArray(d)){for(const v of d)extractRows(v,out);return out}if(typeof d!=='object')return out;
 const hasTeams=(d.home||d.home_team||d.teams?.home||d.competitors?.length>=2||/ vs\.? /i.test(String(d.title??'')))&&(d.away||d.away_team||d.teams?.away||d.competitors?.length>=2||/ vs\.? /i.test(String(d.title??'')));
 if(hasTeams&&(d.status!==undefined||d.state!==undefined||d.is_live!==undefined||d.live!==undefined||d.timer!==undefined||d.elapsed!==undefined)){out.push(d);return out}
 for(const [k,v] of Object.entries(d)){if(v&&typeof v==='object')extractRows(v,out)}return out}
 
 async function refresh(){if(busy)return;busy=true;$('refresh').disabled=true;state(false,'CANLI VERİ ALINIYOR');try{
-let source='SportScore canlı fikstür servisi';
 const utcDate=new Date().toISOString().slice(0,10);
-let data=await get('https://sportscore.com/api/v1/fixtures/?sport=football&date='+utcDate+'&status=live&limit=200');
-let rows=extractRows(data);
-let matches=uniqueMatches(rows.map(x=>normalize(x,false)).filter(Boolean));
-if(!matches.length){source='SportScore canlı maç servisi';data=await get(API+'/matches/?sport=football&limit=50&src=gol-radar');rows=extractRows(data);matches=uniqueMatches(rows.map(x=>normalize(x,false)).filter(Boolean));}
+const source='SportScore doğrulanmış canlı fikstür';
+const data=await get('https://sportscore.com/api/v1/fixtures/?sport=football&date='+utcDate+'&status=live&limit=200');
+const rows=extractRows(data);
+const matches=uniqueMatches(rows.map(x=>normalize(x,false)).filter(Boolean));
 const items=matches.map(m=>({m,a:analyze(m,m.raw)}));
 function paint(list){const signals=list.filter(x=>x.a.has&&x.a.score>=85);
 $('signals').innerHTML=signals.length?signals.map(x=>card(x.m,x.a,true)).join(''):'<div class="empty signal-empty"><b>Şu anda güçlü gol sinyali yok</b><span>İstatistik verisi gelen ve 85/100 eşiğini geçen maçlar burada gösterilir.</span></div>';
-$('matches').innerHTML=list.length?list.map(x=>card(x.m,x.a,false)).join(''):'<div class="empty">Kaynak şu anda doğrulanmış canlı maç döndürmedi. Kaynak '+rows.length+' kayıt verdi; canlı olmayan veya durumu belirsiz kayıtlar listeye alınmadı.</div>';
+$('matches').innerHTML=list.length?list.map(x=>card(x.m,x.a,false)).join(''):'<div class="empty">Şu anda canlı olduğu doğrulanan maç bulunamadı. Tamamlanan, başlayacak veya durumu belirsiz maçlar gösterilmiyor.</div>';
 $('liveCount').textContent=list.length;$('signalCount').textContent=signals.length;$('analysisCount').textContent=list.filter(x=>x.a.has).length;$('scanTime').textContent=new Date().toLocaleTimeString('tr-TR',{hour:'2-digit',minute:'2-digit',second:'2-digit'});for(const x of signals)saveSignal(x.m,x.a);renderHistory();}
-paint(items);$('message').textContent=source+' · '+rows.length+' kaynak kaydı · '+matches.length+' tekil ve doğrulanmış canlı maç.';$('message').classList.remove('error');state(true,'CANLI TAKİP AKTİF');busy=false;$('refresh').disabled=false;
-const details=await Promise.all(matches.slice(0,35).map(async m=>({m,a:analyze(m,await matchDetail(m))})));const byId=new Map(details.map(x=>[x.m.slug||x.m.id,x]));const full=items.map(x=>byId.get(x.m.slug||x.m.id)||x);paint(full);$('message').textContent=source+' · '+matches.length+' tekil canlı maç · '+full.filter(x=>x.a.has).length+' istatistikli maç · 60 saniyede yenilenir.';
+paint(items);$('message').textContent=source+' · '+rows.length+' kayıt kontrol edildi · '+matches.length+' tekil canlı maç.';$('message').classList.remove('error');state(true,'CANLI TAKİP AKTİF');
+const details=await Promise.all(matches.map(m=>matchDetail(m)));
+const full=items.map((x,i)=>({m:x.m,a:details[i]?analyze(x.m,details[i]):x.a}));
+paint(full);$('message').textContent=source+' · '+matches.length+' tekil canlı maç · '+full.filter(x=>x.a.has).length+' istatistikli maç · 60 saniyede yenilenir.';
 }catch(e){$('message').textContent='Canlı veri bağlantısı hatası: '+esc(e.message);$('message').classList.add('error');$('signals').innerHTML='<div class="empty">Veri sağlayıcısı yanıt vermiyor.</div>';$('matches').innerHTML='<div class="empty">Canlı maçlar şu anda alınamıyor.</div>';state(false,'VERİ BAĞLANTISI YOK')}finally{busy=false;$('refresh').disabled=false}}
 $('refresh').addEventListener('click',refresh);
 $('clear').addEventListener('click',()=>{if(confirm('Sinyal geçmişi temizlensin mi?')){history=[];localStorage.removeItem('gr_history');renderHistory()}});
