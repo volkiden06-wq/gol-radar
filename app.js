@@ -1,7 +1,7 @@
 'use strict';
 const $=id=>document.getElementById(id);
 const API='https://sportscore.com/api/widget';
-let history=[],seen=new Set(),busy=false,notifyOn=false,audioCtx=null;
+let history=[],seen=new Set(),busy=false,notifyOn=false,audioCtx=null,detailCursor=Number(localStorage.getItem('gr_detail_cursor')||0);
 try{history=JSON.parse(localStorage.getItem('gr_history')||'[]')}catch{}
 try{seen=new Set(JSON.parse(localStorage.getItem('gr_seen')||'[]'))}catch{}
 notifyOn=localStorage.getItem('gr_notify')==='1';
@@ -63,7 +63,7 @@ $('signals').innerHTML=signals.length?signals.map(x=>card(x.m,x.a,true)).join(''
 $('matches').innerHTML='';
 $('liveCount').textContent=list.length;$('signalCount').textContent=signals.length;$('analysisCount').textContent=list.filter(x=>x.a.has).length;$('scanTime').textContent=new Date().toLocaleTimeString('tr-TR',{hour:'2-digit',minute:'2-digit',second:'2-digit'});for(const x of signals)saveSignal(x.m,x.a);renderHistory();}
 paint(items);$('message').textContent=source+' · '+rows.length+' kayıt kontrol edildi · '+matches.length+' tekil canlı maç.';$('message').classList.remove('error');state(true,'CANLI TAKİP AKTİF');
-const detailTargets=matches.slice(0,10);const details=await Promise.all(detailTargets.map(m=>matchDetail(m)));
+const detailTargets=matches.length?Array.from({length:Math.min(10,matches.length)},(_,i)=>matches[(detailCursor+i)%matches.length]):[];detailCursor=matches.length?(detailCursor+detailTargets.length)%matches.length:0;localStorage.setItem('gr_detail_cursor',String(detailCursor));const details=await Promise.all(detailTargets.map(m=>matchDetail(m)));
 const detailMap=new Map(detailTargets.map((m,i)=>[signalIdentity(m),details[i]]));const full=items.map(x=>({m:x.m,a:detailMap.get(signalIdentity(x.m))?analyze(x.m,detailMap.get(signalIdentity(x.m))):x.a})).filter(x=>x.a.has&&x.a.score>=85).sort((a,b)=>b.a.score-a.a.score);
 paint(full);$('message').textContent=source+' · '+full.length+' güçlü sinyal · yalnızca istatistik verisi yeterli maçlar gösteriliyor.';
 }catch(e){$('message').textContent='Canlı veri bağlantısı hatası: '+esc(e.message);$('message').classList.add('error');$('signals').innerHTML='<div class="empty">Veri sağlayıcısı yanıt vermiyor.</div>';$('matches').innerHTML='<div class="empty">Canlı maçlar şu anda alınamıyor.</div>';state(false,'VERİ BAĞLANTISI YOK')}finally{busy=false;$('refresh').disabled=false}}
