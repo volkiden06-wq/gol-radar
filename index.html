@@ -1,22 +1,12 @@
 <!doctype html>
-<html lang="tr"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#07131e"><meta name="description" content="Kişisel canlı futbol maç takip ve baskı radarı">
-<link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon.svg"><link rel="stylesheet" href="./style.css">
-<title>GOL RADAR</title></head><body>
-<header><div class="brand"><div class="logo">⚽</div><div><b>GOL RADAR</b><small>KİŞİSEL CANLI MAÇ RADARI</small></div></div><div class="state"><i id="dot"></i><span id="state">BAĞLANIYOR</span></div></header>
-<main>
-<section class="hero"><small>CANLI FUTBOL TAKİBİ</small><h1>Gol baskısını<br><em>erken yakala.</em></h1><p>Canlı maçları tarar, erişilebilen istatistiklerden baskı puanı hesaplar. En yüksek puanlı maçları üstte gösterir.</p><div class="metrics"><div><b>85+</b><span>SİNYAL EŞİĞİ</span></div><div><b>1Y + 2Y</b><span>İKİ DEVRE</span></div><div><b>ÜCRETSİZ</b><span>AÇIK VERİ</span></div></div></section>
-<div class="heading"><div><small>ÖNCELİKLİ UYARILAR</small><h2>Gol sinyalleri</h2></div><div class="actions"><button id="notify">♧ Bildirimleri aç</button><button id="refresh">↻ Yenile</button></div></div>
-<div id="message" class="message">Canlı veri kaynağına bağlanılıyor…</div><section id="signals" class="signal-list"><div class="empty">Sinyaller taranıyor…</div></section><div class="heading"><div><small>CANLI KARŞILAŞMALAR</small><h2>Oynanan maçlar</h2></div></div><section id="matches"><div class="empty">Maçlar yükleniyor…</div></section>
-<div class="heading"><div><small>KİŞİSEL TERCİHLER</small><h2>Radar ayarları</h2></div></div>
-<section class="panel">
-<div class="row"><div><b>Gol baskı puanı</b><small>85/100 ve üzeri güçlü sinyal</small></div><strong>85/100</strong></div><div class="bar"><i></i></div>
-<div class="tags"><span>İlk yarı</span><span>İkinci yarı</span><span>Erişilebilen ligler</span></div>
-<div class="row divider"><div><b>Tarama sıklığı</b><small>Uygulama ekranda açıkken 60 saniyede bir</small></div><strong class="green">AÇIK</strong></div>
-<div class="row divider"><div><b>Masaüstüne ekleme</b><small>Chrome menüsünden “Sayfayı uygulama olarak yükle”</small></div><span class="green">HAZIR</span></div>
-</section>
-<div class="heading"><div><small>ŞEFFAF RAPOR</small><h2>Sinyal geçmişi</h2></div><button id="clear" class="plain">Temizle</button></div>
-<section class="panel"><div class="stats"><div><b id="total">0</b><small>Sinyal</small></div><div><b>—</b><small>Doğrulanmış gol</small></div><div><b>—</b><small>Başarı oranı</small></div></div><p class="fine">85/100 bir istatistiksel baskı puanıdır; %85 gol olasılığı değildir. Kalibre edilmiş tahmin modeli veya gol garantisi değildir. İstatistik bulunmayan maçta sinyal gösterilmez.</p><div id="history" class="history">Henüz sinyal yok.</div></section>
-<footer>GOL RADAR · Tahmin garantisi yoktur. <a href="https://sportscore.com/" rel="dofollow" title="Sports data by SportScore">Powered by SportScore</a></footer>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#07111f"><meta name="description" content="GOL RADAR canlı futbol analizi ve gol baskı sinyalleri"><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon.svg"><link rel="stylesheet" href="./style.css"><title>GOL RADAR · Canlı Analiz</title></head><body>
+<header class="topbar"><a class="brand" href="./"><span class="brand-mark">GR</span><span><b>GOL RADAR</b><small>LIVE INTELLIGENCE</small></span></a><div class="top-actions"><span class="connection"><i id="dot"></i><span id="state">BAĞLANIYOR</span></span><button id="notify" class="btn btn-quiet">♧ Bildirimler</button><button id="refresh" class="btn btn-primary">↻ Yenile</button></div></header>
+<main class="shell">
+<section class="welcome"><div><div class="eyebrow">CANLI FUTBOL RADARI</div><h1>Maçları takip et. <em>Sinyali yakala.</em></h1><p>Canlı karşılaşmalar ve istatistiklerden hesaplanan gol baskı göstergeleri tek ekranda.</p></div><div class="live-pill"><i></i> LIVE SCAN</div></section>
+<section class="overview"><article class="metric-card"><span>CANLI MAÇ</span><b id="liveCount">—</b><small>Şu anda oynanan</small></article><article class="metric-card accent"><span>GÜÇLÜ SİNYAL</span><b id="signalCount">—</b><small>85/100 baskı eşiği</small></article><article class="metric-card"><span>İSTATİSTİKLİ MAÇ</span><b id="analysisCount">—</b><small>Analiz verisi alınan</small></article><article class="metric-card"><span>SON TARAMA</span><b id="scanTime">—</b><small>Otomatik 60 saniye</small></article></section>
+<div id="message" class="statusline">Canlı veri kaynağına bağlanılıyor…</div>
+<section class="section-block"><div class="section-head"><div><div class="eyebrow">ÖNCELİKLİ RADAR</div><h2>Gol sinyalleri</h2><p>Yalnızca istatistik verisi bulunan ve eşik puanını geçen maçlar.</p></div><span class="section-count">ÖNCE SİNYALLER</span></div><div id="signals" class="signal-grid"><div class="empty">Sinyaller taranıyor…</div></div></section>
+<section class="section-block"><div class="section-head"><div><div class="eyebrow">SAHADAKİ DURUM</div><h2>Canlı maçlar</h2><p>İlk yarı ve ikinci yarı karşılaşmaları. Dakika, veri kaynağında mevcutsa gösterilir.</p></div><span class="section-count">CANLI SKORLAR</span></div><div id="matches" class="match-list"><div class="empty">Maçlar yükleniyor…</div></div></section>
+<section class="section-block history-section"><div class="section-head"><div><div class="eyebrow">TAKİP KAYDI</div><h2>Sinyal geçmişi</h2></div><button id="clear" class="btn btn-quiet">Geçmişi temizle</button></div><div class="history-panel"><div class="history-summary"><b id="total">0</b><span>Kaydedilen sinyal</span></div><div id="history" class="history">Henüz sinyal yok.</div></div></section>
+<footer><span>GOL RADAR · Canlı veri ve istatistik takibi</span><span>85/100 baskı puanı gol olasılığı yüzdesi değildir; garanti vermez.</span></footer>
 </main><script src="./app.js"></script></body></html>
