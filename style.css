@@ -24,3 +24,8 @@ header{padding:8px 12px}
 .brand b{font-size:12px}
 .brand small{font-size:8px}
 @media(min-width:600px){main{padding-top:15px}.hero{padding:19px}.hero h1{font-size:27px}}
+
+.signal-label{color:#5af0a7;font-weight:900}
+.match.signal{background:linear-gradient(110deg,#103c32,#102432);border:1px solid #4ce3a0;box-shadow:0 0 20px #45d99926}
+.analysis{max-width:60%;line-height:1.4}
+@media(max-width:520px){.matchbottom{flex-direction:column}.analysis{text-align:left;max-width:100%}}
