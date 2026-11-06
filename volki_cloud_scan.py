@@ -41,7 +41,8 @@ def telegram_api(method, payload=None):
 def telegram_check():
     bot = telegram_api("getMe")
     chat = telegram_api("getChat", {"chat_id": CHAT_ID})
-    print(f"Telegram bağlantısı doğrulandı: @{bot.get('username', 'bot')} | hedef sohbet türü: {chat.get('type', 'bilinmiyor')}")
+    target = chat.get("title") or chat.get("username") or chat.get("first_name") or "adı görünmeyen sohbet"
+    print(f"Telegram bağlantısı doğrulandı: @{bot.get('username', 'bot')} | HEDEF SOHBET: {target} | tür: {chat.get('type', 'bilinmiyor')} | chat_id sonu: {str(chat.get('id', ''))[-4:]}")
 
 def telegram(message):
     telegram_api("sendMessage", {
@@ -110,8 +111,13 @@ def main():
 
     try:
         telegram_check()
+        if not state.get("telegram_test_sent"):
+            telegram("✅ VOLKI FOOTBALL AI\\nTelegram bağlantı testi başarılı. Bu sohbet, botun bildirim göndereceği hedeftir.")
+            state["telegram_test_sent"] = True
+            STATE_FILE.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
+            print("TELEGRAM TEST MESAJI BAŞARIYLA GÖNDERİLDİ.")
     except Exception as exc:
-        print(f"TELEGRAM BAĞLANTI KONTROLÜ BAŞARISIZ: {exc}")
+        print(f"TELEGRAM BAĞLANTI/TEST GÖNDERİMİ BAŞARISIZ: {exc}")
         raise
 
     calls_today = int(state.get("api_calls_today", 0))
