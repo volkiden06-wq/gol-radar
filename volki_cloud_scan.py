@@ -8,7 +8,7 @@ API_KEY = os.getenv("API_FOOTBALL_KEY", "").strip()
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "").strip()
 THRESHOLD = int(os.getenv("ALERT_SCORE_THRESHOLD", "65"))
-MAX_STATS = int(os.getenv("MAX_STATS_REQUESTS_PER_RUN", "1"))
+MAX_STATS = int(os.getenv("MAX_STATS_REQUESTS_PER_RUN", "8"))
 
 if not API_KEY or not BOT_TOKEN or not CHAT_ID:
     raise SystemExit("Eksik GitHub Actions Secrets: API_FOOTBALL_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID")
