@@ -2,7 +2,8 @@ name: VOLKI Football AI Live Scan
 
 on:
   schedule:
-    - cron: "0 */3 * * *"
+    - cron: "0 0,3,6,9,12,15,18,21 * * *"
+    - cron: "30 1,4,7,10,13,16,19,22 * * *"
   workflow_dispatch:
 
 permissions:
@@ -31,7 +32,7 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           ALERT_SCORE_THRESHOLD: "65"
-          MAX_STATS_REQUESTS_PER_RUN: "8"
+          MAX_STATS_REQUESTS_PER_RUN: "5"
         run: python volki_cloud_scan.py
       - name: Sinyal geçmişini kaydet
         run: |
