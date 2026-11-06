@@ -91,9 +91,14 @@ def main():
                    f"📊 Baskı puanı: {points}/100\n"
                    f"Şut: {int(totals.get('totalshots',0))} | İsabetli: {int(totals.get('shotsongoal',0))} | Korner: {int(totals.get('cornerkicks',0))}\n"
                    "Not: İstatistiksel uyarıdır, gol garantisi veya bahis tavsiyesi değildir.")
-            telegram(msg)
-            state.setdefault("sent", {})[fid] = {"minute": minute, "score": points, "home": home, "away": away, "goals": [gh,ga]}
-            state.setdefault("signals", {})[fid] = state["sent"][fid]
+            try:
+                telegram(msg)
+                state.setdefault("sent", {})[fid] = {"minute": minute, "score": points, "home": home, "away": away, "goals": [gh,ga]}
+                state.setdefault("signals", {})[fid] = state["sent"][fid]
+                print(f"Telegram alarmı gönderildi: {home} - {away}")
+            except Exception as exc:
+                print(f"TELEGRAM GÖNDERİM HATASI ({home} - {away}): {exc}")
+                print("Bu maç gönderilmiş olarak işaretlenmedi; sonraki taramada yeniden denenebilir.")
     state["cursor"] = last_index
     state["stats_today"] = state.get("stats_today", 0) + used
     STATE_FILE.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
