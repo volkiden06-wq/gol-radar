@@ -1,6 +1,28 @@
 {
-  "sent": {},
-  "signals": {},
+  "sent": {
+    "1553226": {
+      "minute": 45,
+      "score": 70,
+      "home": "Wisla Krakow",
+      "away": "Cracovia Krakow",
+      "goals": [
+        2,
+        1
+      ]
+    }
+  },
+  "signals": {
+    "1553226": {
+      "minute": 45,
+      "score": 70,
+      "home": "Wisla Krakow",
+      "away": "Cracovia Krakow",
+      "goals": [
+        2,
+        1
+      ]
+    }
+  },
   "date": "2026-11-06",
   "stats_today": 6,
   "cursor": 6
