@@ -1,0 +1,42 @@
+name: VOLKI Football AI Live Scan
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: volki-football-ai
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Kodları al
+        uses: actions/checkout@v4
+      - name: Python kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Bağımlılıkları yükle
+        run: pip install -r requirements-volki.txt
+      - name: Canlı maçları tara
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          ALERT_SCORE_THRESHOLD: "65"
+          MAX_STATS_REQUESTS_PER_RUN: "3"
+        run: python volki_cloud_scan.py
+      - name: Sinyal geçmişini kaydet
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add volki_state.json
+          git diff --cached --quiet || git commit -m "Update VOLKI signal state"
+          git push
