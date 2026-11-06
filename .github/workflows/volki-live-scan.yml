@@ -2,7 +2,7 @@ name: VOLKI Football AI Live Scan
 
 on:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "*/30 * * * *"
   workflow_dispatch:
 
 permissions:
