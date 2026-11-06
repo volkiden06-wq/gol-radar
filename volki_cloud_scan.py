@@ -7,7 +7,7 @@ STATE_FILE = BASE / "volki_state.json"
 API_KEY = os.getenv("API_FOOTBALL_KEY", "").strip()
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "").strip()
-THRESHOLD = int(os.getenv("ALERT_SCORE_THRESHOLD", "65"))
+THRESHOLD = int(os.getenv("ALERT_SCORE_THRESHOLD", "60"))
 MAX_STATS = int(os.getenv("MAX_STATS_REQUESTS_PER_RUN", "8"))
 MAX_DAILY_CALLS = int(os.getenv("MAX_API_CALLS_PER_DAY", "90"))
 API_CALLS_THIS_RUN = 0
@@ -100,6 +100,7 @@ def score(stats, minute):
 
 def main():
     global API_CALLS_THIS_RUN
+    print(f"AYARLAR | Güçlü sinyal eşiği: {THRESHOLD}/100 | Tarama başına en fazla maç: {MAX_STATS} | Günlük API bütçesi: {MAX_DAILY_CALLS}")
     state = json.loads(STATE_FILE.read_text("utf-8")) if STATE_FILE.exists() else {
         "sent": {}, "signals": {}, "date": "", "cursor": 0
     }
