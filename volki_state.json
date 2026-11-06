@@ -9,6 +9,39 @@
         2,
         1
       ]
+    },
+    "1558677": {
+      "minute": 83,
+      "score": 85,
+      "pressure_team": "Standard Liege",
+      "home": "Standard Liege",
+      "away": "SK Beveren",
+      "goals": [
+        3,
+        0
+      ]
+    },
+    "1563256": {
+      "minute": 72,
+      "score": 85,
+      "pressure_team": "Bolton",
+      "home": "Derby",
+      "away": "Bolton",
+      "goals": [
+        2,
+        1
+      ]
+    },
+    "1570450": {
+      "minute": 65,
+      "score": 61,
+      "pressure_team": "Sevilla",
+      "home": "Sevilla",
+      "away": "Alaves",
+      "goals": [
+        0,
+        0
+      ]
     }
   },
   "signals": {
@@ -21,9 +54,44 @@
         2,
         1
       ]
+    },
+    "1558677": {
+      "minute": 83,
+      "score": 85,
+      "pressure_team": "Standard Liege",
+      "home": "Standard Liege",
+      "away": "SK Beveren",
+      "goals": [
+        3,
+        0
+      ]
+    },
+    "1563256": {
+      "minute": 72,
+      "score": 85,
+      "pressure_team": "Bolton",
+      "home": "Derby",
+      "away": "Bolton",
+      "goals": [
+        2,
+        1
+      ]
+    },
+    "1570450": {
+      "minute": 65,
+      "score": 61,
+      "pressure_team": "Sevilla",
+      "home": "Sevilla",
+      "away": "Alaves",
+      "goals": [
+        0,
+        0
+      ]
     }
   },
   "date": "2026-11-06",
-  "stats_today": 6,
-  "cursor": 6
+  "stats_today": 14,
+  "cursor": 14,
+  "telegram_test_sent": true,
+  "api_calls_today": 9
 }
