@@ -97,6 +97,28 @@
         2,
         0
       ]
+    },
+    "1639859": {
+      "minute": 71,
+      "score": 85,
+      "pressure_team": "Emelec",
+      "home": "Libertad",
+      "away": "Emelec",
+      "goals": [
+        0,
+        2
+      ]
+    },
+    "1645535": {
+      "minute": 70,
+      "score": 87,
+      "pressure_team": "Real Oruro",
+      "home": "Gualberto Villarroel SJ",
+      "away": "Real Oruro",
+      "goals": [
+        0,
+        3
+      ]
     }
   },
   "signals": {
@@ -197,12 +219,37 @@
         2,
         0
       ]
+    },
+    "1639859": {
+      "minute": 71,
+      "score": 85,
+      "pressure_team": "Emelec",
+      "home": "Libertad",
+      "away": "Emelec",
+      "goals": [
+        0,
+        2
+      ]
+    },
+    "1645535": {
+      "minute": 70,
+      "score": 87,
+      "pressure_team": "Real Oruro",
+      "home": "Gualberto Villarroel SJ",
+      "away": "Real Oruro",
+      "goals": [
+        0,
+        3
+      ]
     }
   },
   "date": "2026-11-07",
-  "stats_today": 52,
-  "cursor": 30,
+  "stats_today": 56,
+  "cursor": 34,
   "telegram_test_sent": true,
-  "api_calls_today": 59,
-  "no_stats_until": {}
+  "api_calls_today": 64,
+  "no_stats_until": {
+    "1647448": "2026-11-07T23:33:19.460649+00:00",
+    "1648313": "2026-11-07T23:33:19.719766+00:00"
+  }
 }
