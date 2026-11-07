@@ -131,6 +131,88 @@ def main():
 
     fixtures = api("fixtures", {"live": "all"})
     state["api_calls_today"] = calls_today + API_CALLS_THIS_RUN
+
+    # Önceki sinyallerin maç sonu sonuçlarını kontrol et. Her çalışmada en fazla
+    # 4 bitmiş maç sorgulanır; sorgular günlük API bütçesine dahildir.
+    pending = [
+        (fid, rec) for fid, rec in state.get("signals", {}).items()
+        if isinstance(rec, dict) and not rec.get("result")
+    ]
+    checked_results = 0
+    for fid, rec in pending:
+        if checked_results >= 4:
+            break
+        if int(state.get("api_calls_today", 0)) >= MAX_DAILY_CALLS:
+            print("Günlük API bütçesi sonuç kontrolü sırasında doldu.")
+            break
+        try:
+            details = api("fixtures", {"id": fid})
+            state["api_calls_today"] = int(state.get("api_calls_today", 0)) + 1
+            checked_results += 1
+            if not details:
+                continue
+            match = details[0]
+            status = (match.get("fixture", {}).get("status", {}).get("short") or "").upper()
+            if status not in ("FT", "AET", "PEN"):
+                continue
+
+            final_goals = match.get("goals") or {}
+            final_home = final_goals.get("home")
+            final_away = final_goals.get("away")
+            if final_home is None or final_away is None:
+                continue
+            signal_goals = rec.get("goals") or [0, 0]
+            signal_home = int(signal_goals[0] or 0)
+            signal_away = int(signal_goals[1] or 0)
+            pressure_team = rec.get("pressure_team")
+            home_name = rec.get("home") or match.get("teams", {}).get("home", {}).get("name", "Ev sahibi")
+            away_name = rec.get("away") or match.get("teams", {}).get("away", {}).get("name", "Deplasman")
+
+            if pressure_team and pressure_team == home_name:
+                success = int(final_home) > signal_home
+                basis = "pressure_team"
+            elif pressure_team and pressure_team == away_name:
+                success = int(final_away) > signal_away
+                basis = "pressure_team"
+            else:
+                # Eski kayıtlarda baskı yapan takım saklanmamış olabilir.
+                success = (int(final_home) + int(final_away)) > (signal_home + signal_away)
+                basis = "any_goal"
+
+            label = "BAŞARILI" if success else "BAŞARISIZ"
+            if basis == "pressure_team":
+                explanation = (
+                    f"{pressure_team}, sinyalden sonra gol attı."
+                    if success else f"{pressure_team}, sinyalden sonra gol atamadı."
+                )
+            else:
+                explanation = (
+                    "Sinyalden sonra maçta en az bir gol oldu (eski kayıtta baskı takımı yok)."
+                    if success else "Sinyalden sonra maçta gol olmadı (eski kayıtta baskı takımı yok)."
+                )
+
+            result_message = (
+                "📊 VOLKI FOOTBALL AI | SİNYAL SONUCU\\n"
+                f"{home_name} - {away_name}\\n"
+                f"⏱ Sinyal anı: {rec.get('minute', '?')}' | Skor: {signal_home}-{signal_away}\\n"
+                f"🏁 Maç sonu: {final_home}-{final_away}\\n"
+                f"{'✅' if success else '❌'} {label}\\n"
+                f"🎯 {explanation}\\n"
+                "Not: Bu değerlendirme, sinyalden sonra gol olup olmadığını ölçer; maç kazananını veya bahis sonucunu ifade etmez."
+            )
+            telegram(result_message)
+            rec["result"] = label
+            rec["final_goals"] = [int(final_home), int(final_away)]
+            rec["result_basis"] = basis
+            rec["result_checked_at"] = datetime.now(timezone.utc).isoformat()
+            state.setdefault("signals", {})[fid] = rec
+            if fid in state.get("sent", {}):
+                state["sent"][fid] = rec
+            STATE_FILE.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
+            print(f"SİNYAL SONUCU GÖNDERİLDİ: {home_name} - {away_name} | {label}")
+        except Exception as exc:
+            print(f"SONUÇ KONTROL HATASI | fixture={fid}: {exc}")
+
     live = []
     for fixture in fixtures:
         status = fixture.get("fixture", {}).get("status", {}).get("short")
