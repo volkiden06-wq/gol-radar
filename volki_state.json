@@ -134,8 +134,8 @@
     }
   },
   "date": "2026-11-07",
-  "stats_today": 16,
-  "cursor": 12,
+  "stats_today": 24,
+  "cursor": 2,
   "telegram_test_sent": true,
-  "api_calls_today": 18
+  "api_calls_today": 27
 }
