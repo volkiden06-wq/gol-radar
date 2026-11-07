@@ -1,5 +1,5 @@
 import os, json, re, requests
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 BASE = Path(__file__).resolve().parent
@@ -11,6 +11,8 @@ THRESHOLD = int(os.getenv("ALERT_SCORE_THRESHOLD", "60"))
 MAX_STATS = int(os.getenv("MAX_STATS_REQUESTS_PER_RUN", "8"))
 MAX_DAILY_CALLS = int(os.getenv("MAX_API_CALLS_PER_DAY", "90"))
 API_CALLS_THIS_RUN = 0
+PREFERRED_LEAGUES = {2,3,39,40,41,42,43,45,46,48,61,62,71,72,78,79,88,94,98,103,106,119,128,135,136,140,141,144,179,180,197,203,204,207,218,235,253,262,265,271,281,307,318,333,345,357,365,383,399,475,848}
+EMPTY_RETRY_HOURS = 3
 
 if not API_KEY or not BOT_TOKEN or not CHAT_ID:
     raise SystemExit("Eksik GitHub Actions Secrets: API_FOOTBALL_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID")
@@ -109,6 +111,7 @@ def main():
         state["date"] = today
         state["stats_today"] = 0
         state["api_calls_today"] = 0
+        state["no_stats_until"] = {}
 
     try:
         telegram_check()
@@ -148,8 +151,14 @@ def main():
         STATE_FILE.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
         return
 
+    preferred = [f for f in live if f.get("league", {}).get("id") in PREFERRED_LEAGUES]
+    others = [f for f in live if f.get("league", {}).get("id") not in PREFERRED_LEAGUES]
+    live = preferred + others
+    print(f"Öncelikli liglerdeki canlı maç: {len(preferred)} | Diğer: {len(others)}")
     start = int(state.get("cursor", 0)) % len(live)
     used = 0
+    skipped_missing = 0
+    with_stats = 0
     last_index = start
     for offset in range(len(live)):
         if used >= scan_limit:
@@ -161,6 +170,15 @@ def main():
         if fid in state.get("sent", {}):
             last_index = (original_index + 1) % len(live)
             continue
+        retry_at = state.get("no_stats_until", {}).get(fid)
+        if retry_at:
+            try:
+                if datetime.fromisoformat(retry_at) > datetime.now(timezone.utc):
+                    skipped_missing += 1
+                    last_index = (original_index + 1) % len(live)
+                    continue
+            except (ValueError, TypeError):
+                pass
 
         minute = fixture["fixture"]["status"].get("elapsed") or 0
         stats = api("fixtures/statistics", {"fixture": fid})
@@ -174,8 +192,13 @@ def main():
 
         print(f"{home} - {away} | {minute}' | {gh}-{ga} | baskı yapan: {pressure_team} | {points}/100")
         if not stats:
-            print(f"İstatistik alınamadı: fixture={fid}")
-        elif points >= THRESHOLD:
+            state.setdefault("no_stats_until", {})[fid] = (
+                datetime.now(timezone.utc) + timedelta(hours=EMPTY_RETRY_HOURS)
+            ).isoformat()
+            print(f"İstatistik alınamadı: fixture={fid}; {EMPTY_RETRY_HOURS} saat yeniden sorgulanmayacak")
+        else:
+            with_stats += 1
+        if stats and points >= THRESHOLD:
             msg = (
                 "⚽ VOLKI FOOTBALL AI\n"
                 "🔥 GÜÇLÜ GOL BASKISI SİNYALİ\n"
@@ -204,10 +227,16 @@ def main():
         last_index = (original_index + 1) % len(live)
 
     state["cursor"] = last_index
+    now = datetime.now(timezone.utc)
+    state["no_stats_until"] = {
+        fid: until for fid, until in state.get("no_stats_until", {}).items()
+        if isinstance(until, str) and until > now.isoformat()
+    }
     state["stats_today"] = int(state.get("stats_today", 0)) + used
     STATE_FILE.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
     print(
-        f"İstatistik analizi: {used} maç | Günlük API çağrısı: "
+        f"İstatistik sorgusu: {used} maç | Veri bulunan: {with_stats} | "
+        f"Geçici atlanan verisiz maç: {skipped_missing} | Günlük API çağrısı: "
         f"{state['api_calls_today']}/{MAX_DAILY_CALLS} | "
         f"Sonraki tarama indeksi: {state['cursor']}"
     )
