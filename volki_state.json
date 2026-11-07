@@ -64,6 +64,39 @@
         0,
         2
       ]
+    },
+    "1646792": {
+      "minute": 63,
+      "score": 70,
+      "pressure_team": "Wigan",
+      "home": "Boreham Wood",
+      "away": "Wigan",
+      "goals": [
+        0,
+        2
+      ]
+    },
+    "1646793": {
+      "minute": 57,
+      "score": 77,
+      "pressure_team": "Bradford",
+      "home": "Bradford",
+      "away": "Marine",
+      "goals": [
+        4,
+        0
+      ]
+    },
+    "1646796": {
+      "minute": 61,
+      "score": 60,
+      "pressure_team": "Burton Albion",
+      "home": "Burton Albion",
+      "away": "AFC Rushden & Diamonds",
+      "goals": [
+        2,
+        0
+      ]
     }
   },
   "signals": {
@@ -131,11 +164,45 @@
         0,
         2
       ]
+    },
+    "1646792": {
+      "minute": 63,
+      "score": 70,
+      "pressure_team": "Wigan",
+      "home": "Boreham Wood",
+      "away": "Wigan",
+      "goals": [
+        0,
+        2
+      ]
+    },
+    "1646793": {
+      "minute": 57,
+      "score": 77,
+      "pressure_team": "Bradford",
+      "home": "Bradford",
+      "away": "Marine",
+      "goals": [
+        4,
+        0
+      ]
+    },
+    "1646796": {
+      "minute": 61,
+      "score": 60,
+      "pressure_team": "Burton Albion",
+      "home": "Burton Albion",
+      "away": "AFC Rushden & Diamonds",
+      "goals": [
+        2,
+        0
+      ]
     }
   },
   "date": "2026-11-07",
-  "stats_today": 48,
-  "cursor": 26,
+  "stats_today": 52,
+  "cursor": 30,
   "telegram_test_sent": true,
-  "api_calls_today": 54
+  "api_calls_today": 59,
+  "no_stats_until": {}
 }
