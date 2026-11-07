@@ -116,7 +116,7 @@ def main():
     try:
         telegram_check()
         if not state.get("telegram_test_sent"):
-            telegram("✅ VOLKI FOOTBALL AI\\nTelegram bağlantı testi başarılı. Bu sohbet, botun bildirim göndereceği hedeftir.")
+            telegram("✅ VOLKI FOOTBALL AI\nTelegram bağlantı testi başarılı. Bu sohbet, botun bildirim göndereceği hedeftir.")
             state["telegram_test_sent"] = True
             STATE_FILE.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
             print("TELEGRAM TEST MESAJI BAŞARIYLA GÖNDERİLDİ.")
@@ -192,12 +192,12 @@ def main():
                 )
 
             result_message = (
-                "📊 VOLKI FOOTBALL AI | SİNYAL SONUCU\\n"
-                f"{home_name} - {away_name}\\n"
-                f"⏱ Sinyal anı: {rec.get('minute', '?')}' | Skor: {signal_home}-{signal_away}\\n"
-                f"🏁 Maç sonu: {final_home}-{final_away}\\n"
-                f"{'✅' if success else '❌'} {label}\\n"
-                f"🎯 {explanation}\\n"
+                "📊 VOLKI FOOTBALL AI | SİNYAL SONUCU\n"
+                f"{home_name} - {away_name}\n"
+                f"⏱ Sinyal anı: {rec.get('minute', '?')}' | Skor: {signal_home}-{signal_away}\n"
+                f"🏁 Maç sonu: {final_home}-{final_away}\n"
+                f"{'✅' if success else '❌'} {label}\n"
+                f"🎯 {explanation}\n"
                 "Not: Bu değerlendirme, sinyalden sonra gol olup olmadığını ölçer; maç kazananını veya bahis sonucunu ifade etmez."
             )
             telegram(result_message)
