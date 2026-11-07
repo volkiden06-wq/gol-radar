@@ -8,7 +8,14 @@
       "goals": [
         2,
         1
-      ]
+      ],
+      "result": "BAŞARISIZ",
+      "final_goals": [
+        2,
+        1
+      ],
+      "result_basis": "any_goal",
+      "result_checked_at": "2026-11-07T21:50:42.862768+00:00"
     },
     "1558677": {
       "minute": 83,
@@ -19,7 +26,14 @@
       "goals": [
         3,
         0
-      ]
+      ],
+      "result": "BAŞARISIZ",
+      "final_goals": [
+        3,
+        0
+      ],
+      "result_basis": "pressure_team",
+      "result_checked_at": "2026-11-07T21:50:43.580293+00:00"
     },
     "1563256": {
       "minute": 72,
@@ -30,7 +44,14 @@
       "goals": [
         2,
         1
-      ]
+      ],
+      "result": "BAŞARISIZ",
+      "final_goals": [
+        3,
+        1
+      ],
+      "result_basis": "pressure_team",
+      "result_checked_at": "2026-11-07T21:50:44.284028+00:00"
     },
     "1570450": {
       "minute": 65,
@@ -41,7 +62,14 @@
       "goals": [
         0,
         0
-      ]
+      ],
+      "result": "BAŞARISIZ",
+      "final_goals": [
+        0,
+        0
+      ],
+      "result_basis": "pressure_team",
+      "result_checked_at": "2026-11-07T21:50:44.941761+00:00"
     },
     "1645534": {
       "minute": 75,
@@ -118,6 +146,28 @@
       "goals": [
         0,
         3
+      ]
+    },
+    "1549549": {
+      "minute": 62,
+      "score": 83,
+      "pressure_team": "FC Cajamarca",
+      "home": "FC Cajamarca",
+      "away": "Alianza Atletico",
+      "goals": [
+        1,
+        0
+      ]
+    },
+    "1575543": {
+      "minute": 64,
+      "score": 85,
+      "pressure_team": "Sporting CP",
+      "home": "Sporting CP",
+      "away": "Moreirense",
+      "goals": [
+        1,
+        0
       ]
     }
   },
@@ -130,7 +180,14 @@
       "goals": [
         2,
         1
-      ]
+      ],
+      "result": "BAŞARISIZ",
+      "final_goals": [
+        2,
+        1
+      ],
+      "result_basis": "any_goal",
+      "result_checked_at": "2026-11-07T21:50:42.862768+00:00"
     },
     "1558677": {
       "minute": 83,
@@ -141,7 +198,14 @@
       "goals": [
         3,
         0
-      ]
+      ],
+      "result": "BAŞARISIZ",
+      "final_goals": [
+        3,
+        0
+      ],
+      "result_basis": "pressure_team",
+      "result_checked_at": "2026-11-07T21:50:43.580293+00:00"
     },
     "1563256": {
       "minute": 72,
@@ -152,7 +216,14 @@
       "goals": [
         2,
         1
-      ]
+      ],
+      "result": "BAŞARISIZ",
+      "final_goals": [
+        3,
+        1
+      ],
+      "result_basis": "pressure_team",
+      "result_checked_at": "2026-11-07T21:50:44.284028+00:00"
     },
     "1570450": {
       "minute": 65,
@@ -163,7 +234,14 @@
       "goals": [
         0,
         0
-      ]
+      ],
+      "result": "BAŞARISIZ",
+      "final_goals": [
+        0,
+        0
+      ],
+      "result_basis": "pressure_team",
+      "result_checked_at": "2026-11-07T21:50:44.941761+00:00"
     },
     "1645534": {
       "minute": 75,
@@ -241,15 +319,38 @@
         0,
         3
       ]
+    },
+    "1549549": {
+      "minute": 62,
+      "score": 83,
+      "pressure_team": "FC Cajamarca",
+      "home": "FC Cajamarca",
+      "away": "Alianza Atletico",
+      "goals": [
+        1,
+        0
+      ]
+    },
+    "1575543": {
+      "minute": 64,
+      "score": 85,
+      "pressure_team": "Sporting CP",
+      "home": "Sporting CP",
+      "away": "Moreirense",
+      "goals": [
+        1,
+        0
+      ]
     }
   },
   "date": "2026-11-07",
-  "stats_today": 56,
-  "cursor": 34,
+  "stats_today": 60,
+  "cursor": 16,
   "telegram_test_sent": true,
-  "api_calls_today": 64,
+  "api_calls_today": 73,
   "no_stats_until": {
     "1647448": "2026-11-07T23:33:19.460649+00:00",
-    "1648313": "2026-11-07T23:33:19.719766+00:00"
+    "1648313": "2026-11-07T23:33:19.719766+00:00",
+    "1559699": "2026-11-08T00:50:50.005671+00:00"
   }
 }
