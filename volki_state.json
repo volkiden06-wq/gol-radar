@@ -42,6 +42,28 @@
         0,
         0
       ]
+    },
+    "1645534": {
+      "minute": 75,
+      "score": 73,
+      "pressure_team": "Real Tomayapo",
+      "home": "Independiente Petrolero",
+      "away": "Real Tomayapo",
+      "goals": [
+        0,
+        1
+      ]
+    },
+    "1492449": {
+      "minute": 75,
+      "score": 87,
+      "pressure_team": "Fluminense",
+      "home": "Vitoria",
+      "away": "Fluminense",
+      "goals": [
+        0,
+        2
+      ]
     }
   },
   "signals": {
@@ -87,11 +109,33 @@
         0,
         0
       ]
+    },
+    "1645534": {
+      "minute": 75,
+      "score": 73,
+      "pressure_team": "Real Tomayapo",
+      "home": "Independiente Petrolero",
+      "away": "Real Tomayapo",
+      "goals": [
+        0,
+        1
+      ]
+    },
+    "1492449": {
+      "minute": 75,
+      "score": 87,
+      "pressure_team": "Fluminense",
+      "home": "Vitoria",
+      "away": "Fluminense",
+      "goals": [
+        0,
+        2
+      ]
     }
   },
-  "date": "2026-11-06",
-  "stats_today": 14,
-  "cursor": 14,
+  "date": "2026-11-07",
+  "stats_today": 8,
+  "cursor": 4,
   "telegram_test_sent": true,
   "api_calls_today": 9
 }
