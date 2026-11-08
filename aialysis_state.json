@@ -510,7 +510,9 @@
       "yontem": "piyasa_v1",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T22:37:34.371417+00:00"
+      "settled_at": "2026-11-08T22:37:34.371417+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94367248:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-03T06:45:16.684+00:00",
@@ -1361,14 +1363,14 @@
       "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Ind. Yumbo - U. Magdalena</b>\n🏆 Primera B\n🗓 09.11 20:30\n━━━━━━━━━━━━━━\n🎯 <b>Ev Sahibi Gol 0.5 ÜST</b>  |  Güven <b>%71</b>  |  Oran <b>1.35</b>\n━━━━━━━━━━━━━━\n🧠 <i>aiALYSIS veri temelli tahminidir; garanti değildir.</i>"
     }
   },
-  "last_run": "2026-11-08T22:37:35.546785+00:00",
+  "last_run": "2026-11-08T22:43:22.416745+00:00",
   "last_counts": {
     "live": 0,
     "prematch": 9,
     "sent_messages": 0,
     "sent_predictions": 0,
     "queued_matches": 0,
-    "settled_predictions": 1
+    "settled_predictions": 0
   },
   "last_live_report_at": "2026-11-08T21:23:12.903116+00:00"
 }
