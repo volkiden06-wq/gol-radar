@@ -10,7 +10,9 @@
       "yontem": "",
       "settled": true,
       "result": "KAYBETTİ",
-      "settled_at": "2026-11-08T20:03:33.932132+00:00"
+      "settled_at": "2026-11-08T20:03:33.932132+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "CANLI:94466352:i̇y toplam gol|1.5|alt|": {
       "created_at": "2026-11-08T18:07:23.117476+00:00",
@@ -22,7 +24,9 @@
       "yontem": "",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:03:38.414435+00:00"
+      "settled_at": "2026-11-08T20:03:38.414435+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "CANLI:94465908:i̇y toplam gol|1.5|alt|": {
       "created_at": "2026-11-08T18:09:30.105904+00:00",
@@ -34,7 +38,9 @@
       "yontem": "",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:03:42.877111+00:00"
+      "settled_at": "2026-11-08T20:03:42.877111+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "CANLI:94384012:toplam gol|1.5|alt|": {
       "created_at": "2026-11-08T18:09:33.739059+00:00",
@@ -46,7 +52,9 @@
       "yontem": "",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:03:47.358016+00:00"
+      "settled_at": "2026-11-08T20:03:47.358016+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "CANLI:94371984:i̇y toplam gol|1.5|alt|": {
       "created_at": "2026-11-08T18:11:54.352682+00:00",
@@ -58,7 +66,9 @@
       "yontem": "",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:03:51.758197+00:00"
+      "settled_at": "2026-11-08T20:03:51.758197+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "CANLI:94422187:toplam gol|1.5|alt|": {
       "created_at": "2026-11-08T18:13:09.782778+00:00",
@@ -70,7 +80,9 @@
       "yontem": "",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:03:56.226035+00:00"
+      "settled_at": "2026-11-08T20:03:56.226035+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "CANLI:94404449:i̇y toplam gol|1.5|alt|": {
       "created_at": "2026-11-08T18:17:45.857176+00:00",
@@ -82,7 +94,9 @@
       "yontem": "",
       "settled": true,
       "result": "KAYBETTİ",
-      "settled_at": "2026-11-08T20:04:00.632158+00:00"
+      "settled_at": "2026-11-08T20:04:00.632158+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "CANLI:94313970:i̇y toplam gol|1.5|alt|": {
       "created_at": "2026-11-08T18:22:59.360525+00:00",
@@ -94,7 +108,9 @@
       "yontem": "",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:04:05.031371+00:00"
+      "settled_at": "2026-11-08T20:04:05.031371+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "CANLI:94375295:i̇y toplam gol|1.5|alt|": {
       "created_at": "2026-11-08T18:23:04.335641+00:00",
@@ -106,7 +122,9 @@
       "yontem": "",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:04:09.439621+00:00"
+      "settled_at": "2026-11-08T20:04:09.439621+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "CANLI:94435434:toplam gol|3.5|üst|": {
       "created_at": "2026-11-08T18:28:22.398838+00:00",
@@ -118,7 +136,9 @@
       "yontem": "",
       "settled": true,
       "result": "KAYBETTİ",
-      "settled_at": "2026-11-08T20:04:13.816472+00:00"
+      "settled_at": "2026-11-08T20:04:13.816472+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "CANLI:94391449:toplam korner|6.5|üst|": {
       "created_at": "2026-11-08T18:33:25.444756+00:00",
@@ -130,7 +150,9 @@
       "yontem": "",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:04:18.226685+00:00"
+      "settled_at": "2026-11-08T20:04:18.226685+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "CANLI:94391454:toplam gol|2.5|alt|": {
       "created_at": "2026-11-08T18:37:19.300593+00:00",
@@ -142,7 +164,9 @@
       "yontem": "",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:04:22.647764+00:00"
+      "settled_at": "2026-11-08T20:04:22.647764+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "CANLI:94391453:toplam korner|6.5|üst|": {
       "created_at": "2026-11-08T18:37:19.831025+00:00",
@@ -154,7 +178,9 @@
       "yontem": "",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:04:27.123027+00:00"
+      "settled_at": "2026-11-08T20:04:27.123027+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "CANLI:94388186:toplam gol|1.5|alt|": {
       "created_at": "2026-11-08T18:45:12.58479+00:00",
@@ -166,7 +192,9 @@
       "yontem": "",
       "settled": true,
       "result": "KAYBETTİ",
-      "settled_at": "2026-11-08T20:04:31.531707+00:00"
+      "settled_at": "2026-11-08T20:04:31.531707+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "CANLI:94466597:toplam gol|2.5|alt|": {
       "created_at": "2026-11-08T18:45:28.808295+00:00",
@@ -178,7 +206,9 @@
       "yontem": "",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:04:35.950149+00:00"
+      "settled_at": "2026-11-08T20:04:35.950149+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "CANLI:94466597:toplam korner|10.5|üst|": {
       "created_at": "2026-11-08T18:35:24.231648+00:00",
@@ -190,7 +220,9 @@
       "yontem": "",
       "settled": true,
       "result": "KAYBETTİ",
-      "settled_at": "2026-11-08T20:04:40.356349+00:00"
+      "settled_at": "2026-11-08T20:04:40.356349+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94369508:toplam gol|2.5|üst|piyasa_v1": {
       "created_at": "2026-11-01T00:45:17.856+00:00",
@@ -202,7 +234,9 @@
       "yontem": "piyasa_v1",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T21:28:34.250589+00:00"
+      "settled_at": "2026-11-08T21:28:34.250589+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94367595:toplam gol|3.5|alt|piyasa_v1": {
       "created_at": "2026-11-01T00:55:12.636+00:00",
@@ -214,7 +248,9 @@
       "yontem": "piyasa_v1",
       "settled": true,
       "result": "KAYBETTİ",
-      "settled_at": "2026-11-08T21:47:53.284312+00:00"
+      "settled_at": "2026-11-08T21:47:53.284312+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94367595:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-01T00:55:12.636+00:00",
@@ -226,7 +262,9 @@
       "yontem": "piyasa_v1",
       "settled": true,
       "result": "KAYBETTİ",
-      "settled_at": "2026-11-08T21:47:53.285488+00:00"
+      "settled_at": "2026-11-08T21:47:53.285488+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94367595:ev sahibi gol|0.5|üst|piyasa_v1": {
       "created_at": "2026-11-01T00:55:12.636+00:00",
@@ -238,7 +276,9 @@
       "yontem": "piyasa_v1",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:04:44.845797+00:00"
+      "settled_at": "2026-11-08T20:04:44.845797+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94369231:toplam gol|2.5|üst|piyasa_v1": {
       "created_at": "2026-11-01T01:05:12.937+00:00",
@@ -250,7 +290,9 @@
       "yontem": "piyasa_v1",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:20:39.982309+00:00"
+      "settled_at": "2026-11-08T20:20:39.982309+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94388177:deplasman gol|2.5|alt|piyasa_v1": {
       "created_at": "2026-11-01T01:25:09.021+00:00",
@@ -262,7 +304,9 @@
       "yontem": "piyasa_v1",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T22:15:45.510197+00:00"
+      "settled_at": "2026-11-08T22:15:45.510197+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94388177:toplam gol|4.5|alt|piyasa_v1": {
       "created_at": "2026-11-01T01:25:09.021+00:00",
@@ -274,7 +318,9 @@
       "yontem": "piyasa_v1",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T22:15:45.511036+00:00"
+      "settled_at": "2026-11-08T22:15:45.511036+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94388177:2y toplam gol|2.5|alt|piyasa_v1": {
       "created_at": "2026-11-01T01:25:09.021+00:00",
@@ -286,7 +332,9 @@
       "yontem": "piyasa_v1",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T22:15:45.511835+00:00"
+      "settled_at": "2026-11-08T22:15:45.511835+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94413610:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-01T11:31:53.067+00:00",
@@ -298,7 +346,9 @@
       "yontem": "piyasa_v1",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:04:49.252153+00:00"
+      "settled_at": "2026-11-08T20:04:49.252153+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94312224:toplam gol|3.5|alt|piyasa_v1": {
       "created_at": "2026-11-02T00:15:07.128+00:00",
@@ -310,7 +360,9 @@
       "yontem": "piyasa_v1",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:04:53.640437+00:00"
+      "settled_at": "2026-11-08T20:04:53.640437+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94312227:2y toplam gol|0.5|üst|piyasa_v1": {
       "created_at": "2026-11-02T00:15:09.705+00:00",
@@ -322,7 +374,9 @@
       "yontem": "piyasa_v1",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:04:58.096250+00:00"
+      "settled_at": "2026-11-08T20:04:58.096250+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94458144:toplam gol|3.5|alt|piyasa_v1": {
       "created_at": "2026-11-02T00:25:00.299+00:00",
@@ -334,7 +388,9 @@
       "yontem": "piyasa_v1",
       "settled": true,
       "result": "KAYBETTİ",
-      "settled_at": "2026-11-08T20:05:02.539870+00:00"
+      "settled_at": "2026-11-08T20:05:02.539870+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94312217:ev sahibi gol|0.5|üst|piyasa_v1": {
       "created_at": "2026-11-02T01:44:57.52+00:00",
@@ -346,7 +402,9 @@
       "yontem": "piyasa_v1",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:05:06.999093+00:00"
+      "settled_at": "2026-11-08T20:05:06.999093+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94312220:deplasman gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-02T01:45:00.199+00:00",
@@ -358,7 +416,9 @@
       "yontem": "piyasa_v1",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:05:11.559774+00:00"
+      "settled_at": "2026-11-08T20:05:11.559774+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94312220:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-02T01:45:00.199+00:00",
@@ -370,7 +430,9 @@
       "yontem": "piyasa_v1",
       "settled": true,
       "result": "KAYBETTİ",
-      "settled_at": "2026-11-08T20:05:15.944490+00:00"
+      "settled_at": "2026-11-08T20:05:15.944490+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94312223:2y toplam gol|0.5|üst|piyasa_v1": {
       "created_at": "2026-11-02T01:45:03.174+00:00",
@@ -382,7 +444,9 @@
       "yontem": "piyasa_v1",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:05:20.341639+00:00"
+      "settled_at": "2026-11-08T20:05:20.341639+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94394837:deplasman gol|2.5|alt|piyasa_v1": {
       "created_at": "2026-11-02T02:14:57.451+00:00",
@@ -414,7 +478,9 @@
       "yontem": "piyasa_v1",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:05:24.747890+00:00"
+      "settled_at": "2026-11-08T20:05:24.747890+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94312228:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-02T07:44:58.437+00:00",
@@ -426,7 +492,9 @@
       "yontem": "piyasa_v1",
       "settled": true,
       "result": "KAYBETTİ",
-      "settled_at": "2026-11-08T20:05:29.140039+00:00"
+      "settled_at": "2026-11-08T20:05:29.140039+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94367058:toplam gol|3.5|alt|piyasa_v1": {
       "created_at": "2026-11-02T23:15:00.519+00:00",
@@ -448,7 +516,9 @@
       "yontem": "piyasa_v1",
       "settled": true,
       "result": "KAYBETTİ",
-      "settled_at": "2026-11-08T20:05:33.528548+00:00"
+      "settled_at": "2026-11-08T20:05:33.528548+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94463762:2y toplam gol|2.5|alt|piyasa_v1": {
       "created_at": "2026-11-04T21:45:15.259+00:00",
@@ -500,7 +570,9 @@
       "yontem": "piyasa_v1",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T21:23:04.268744+00:00"
+      "settled_at": "2026-11-08T21:23:04.268744+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94458150:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-06T08:35:28.333+00:00",
@@ -532,7 +604,9 @@
       "yontem": "piyasa_v1",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T22:15:45.512561+00:00"
+      "settled_at": "2026-11-08T22:15:45.512561+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94465188:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-07T19:15:18.007+00:00",
@@ -542,7 +616,9 @@
       "cizgi": "1.5",
       "ust_alt": "alt",
       "yontem": "piyasa_v1",
-      "settled": false
+      "settled": true,
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T22:23:05.934109+00:00"
     },
     "MAÇ ÖNÜ:94373095:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-08T05:45:08.197+00:00",
@@ -566,7 +642,9 @@
       "yontem": "piyasa_v1",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T22:15:45.513265+00:00"
+      "settled_at": "2026-11-08T22:15:45.513265+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "CANLI:94463761:i̇y toplam gol|1.5|alt|": {
       "created_at": "2026-11-08T19:05:17.752897+00:00",
@@ -579,7 +657,9 @@
       "yontem": null,
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:05:37.925375+00:00"
+      "settled_at": "2026-11-08T20:05:37.925375+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "CANLI:97371114:i̇y toplam gol|0.5|üst|": {
       "created_at": "2026-11-08T19:07:44.030289+00:00",
@@ -592,7 +672,9 @@
       "yontem": null,
       "settled": true,
       "result": "KAYBETTİ",
-      "settled_at": "2026-11-08T20:05:42.427392+00:00"
+      "settled_at": "2026-11-08T20:05:42.427392+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "CANLI:94442564:i̇y toplam gol|1.5|alt|": {
       "created_at": "2026-11-08T19:13:10.294549+00:00",
@@ -605,7 +687,9 @@
       "yontem": null,
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:05:46.906984+00:00"
+      "settled_at": "2026-11-08T20:05:46.906984+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "CANLI:94465149:toplam gol|4.5|üst|": {
       "created_at": "2026-11-08T19:25:16.75797+00:00",
@@ -618,7 +702,9 @@
       "yontem": null,
       "settled": true,
       "result": "KAYBETTİ",
-      "settled_at": "2026-11-08T20:05:51.310940+00:00"
+      "settled_at": "2026-11-08T20:05:51.310940+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "CANLI:97368937:toplam gol|3.5|üst|": {
       "created_at": "2026-11-08T19:30:26.038268+00:00",
@@ -631,7 +717,9 @@
       "yontem": null,
       "settled": true,
       "result": "KAYBETTİ",
-      "settled_at": "2026-11-08T20:06:58.695493+00:00"
+      "settled_at": "2026-11-08T20:06:58.695493+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "CANLI:94421726:i̇y toplam gol|1.5|alt|": {
       "created_at": "2026-11-08T19:35:07.811963+00:00",
@@ -644,7 +732,9 @@
       "yontem": null,
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:05:55.746872+00:00"
+      "settled_at": "2026-11-08T20:05:55.746872+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "CANLI:94463431:i̇y toplam gol|1.5|alt|": {
       "created_at": "2026-11-08T19:36:59.051571+00:00",
@@ -657,7 +747,9 @@
       "yontem": null,
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:28:22.252955+00:00"
+      "settled_at": "2026-11-08T20:28:22.252955+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "CANLI:94367248:i̇y toplam gol|2.5|alt|": {
       "created_at": "2026-11-08T19:42:52.126905+00:00",
@@ -670,7 +762,9 @@
       "yontem": null,
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:06:00.173488+00:00"
+      "settled_at": "2026-11-08T20:06:00.173488+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "CANLI:94465597:toplam gol|4.5|alt|": {
       "created_at": "2026-11-08T19:45:38.536451+00:00",
@@ -683,7 +777,9 @@
       "yontem": null,
       "settled": true,
       "result": "KAYBETTİ",
-      "settled_at": "2026-11-08T20:06:04.571678+00:00"
+      "settled_at": "2026-11-08T20:06:04.571678+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94324408:toplam gol|1.5|üst|piyasa_v1": {
       "created_at": "2026-11-01T11:40:24.001+00:00",
@@ -696,7 +792,9 @@
       "yontem": "piyasa_v1",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T21:23:04.270620+00:00"
+      "settled_at": "2026-11-08T21:23:04.270620+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94324405:toplam gol|3.5|alt|piyasa_v1": {
       "created_at": "2026-11-01T12:45:02.897+00:00",
@@ -709,7 +807,9 @@
       "yontem": "piyasa_v1",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:06:09.090635+00:00"
+      "settled_at": "2026-11-08T20:06:09.090635+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "CANLI:94458144:toplam gol|4.5|üst|": {
       "created_at": "2026-11-08T19:57:18.275007+00:00",
@@ -722,7 +822,9 @@
       "yontem": null,
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:20:39.983139+00:00"
+      "settled_at": "2026-11-08T20:20:39.983139+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "CANLI:94375295:toplam gol|4.5|alt|": {
       "created_at": "2026-11-08T20:03:08.172014+00:00",
@@ -735,7 +837,9 @@
       "yontem": null,
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:20:39.983818+00:00"
+      "settled_at": "2026-11-08T20:20:39.983818+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94312214:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-02T00:15:01.184+00:00",
@@ -748,7 +852,9 @@
       "yontem": "piyasa_v1",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:06:58.696975+00:00"
+      "settled_at": "2026-11-08T20:06:58.696975+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94312224:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-02T00:15:07.128+00:00",
@@ -761,7 +867,9 @@
       "yontem": "piyasa_v1",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:06:58.698206+00:00"
+      "settled_at": "2026-11-08T20:06:58.698206+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94312224:ev sahibi gol|1.5|üst|piyasa_v1": {
       "created_at": "2026-11-02T00:15:07.128+00:00",
@@ -774,7 +882,9 @@
       "yontem": "piyasa_v1",
       "settled": true,
       "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:06:58.699347+00:00"
+      "settled_at": "2026-11-08T20:06:58.699347+00:00",
+      "result_posted": false,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94458144:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-02T00:25:00.299+00:00",
@@ -790,7 +900,6 @@
       "telegram_message_text": "⚽ Aucas - Ind. del Valle\n🏆 Liga Pro\n🗓 08.11 18:45\n• İY Toplam Gol 1.5 ALT | Güven %69 | Oran 1.36\n• Ev Sahibi Gol 1.5 ALT | Güven %68 | Oran 1.36\nℹ️ Tahminler analiz üzerine verilmektedir.",
       "result": "KAYBETTİ",
       "settled_at": "2026-11-08T21:23:04.272258+00:00",
-      "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}",
       "result_edit_unavailable": true,
       "result_posted": true
     },
@@ -808,7 +917,6 @@
       "telegram_message_text": "⚽ Aucas - Ind. del Valle\n🏆 Liga Pro\n🗓 08.11 18:45\n• İY Toplam Gol 1.5 ALT | Güven %69 | Oran 1.36\n• Ev Sahibi Gol 1.5 ALT | Güven %68 | Oran 1.36\nℹ️ Tahminler analiz üzerine verilmektedir.",
       "result": "KAYBETTİ",
       "settled_at": "2026-11-08T21:23:04.273908+00:00",
-      "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}",
       "result_edit_unavailable": true,
       "result_posted": true
     },
@@ -839,7 +947,6 @@
       "telegram_message_text": "⚽ Sporting Escaldes - Inter Escaldes\n🏆 Primera Division\n⏱ 63' | Skor 0-1\n• Toplam Gol 2.5 ALT | Güven %69 | Oran 1.36\nℹ️ Tahminler analiz üzerine verilmektedir.",
       "result": "KAZANDI",
       "settled_at": "2026-11-08T21:23:04.275541+00:00",
-      "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}",
       "result_edit_unavailable": true,
       "result_posted": true
     },
@@ -857,7 +964,6 @@
       "telegram_message_text": "⚽ Humble Lions - Cavalier\n🏆 Premier League\n⏱ 21' | Skor 0-0\n• İY Toplam Gol 1.5 ALT | Güven %67 | Oran 1.50\nℹ️ Tahminler analiz üzerine verilmektedir.",
       "result": "KAZANDI",
       "settled_at": "2026-11-08T21:23:04.277176+00:00",
-      "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}",
       "result_edit_unavailable": true,
       "result_posted": true
     },
@@ -875,7 +981,6 @@
       "telegram_message_text": "⚽ Washington Spirit W - Portland Thorns W\n🏆 NWSL Women\n⏱ 15' | Skor 1-0\n• İY Toplam Gol 1.5 ÜST | Güven %67 | Oran 1.38\nℹ️ Tahminler analiz üzerine verilmektedir.",
       "result": "KAZANDI",
       "settled_at": "2026-11-08T21:23:04.278827+00:00",
-      "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}",
       "result_edit_unavailable": true,
       "result_posted": true
     },
@@ -893,7 +998,8 @@
       "telegram_message_text": "⚽ Provincial Ovalle - S. Morning\n🏆 Segunda Division\n⏱ 56' | Skor 2-1\n• Toplam Gol 2.5 ÜST | Güven %69 | Oran 1.40\nℹ️ Tahminler analiz üzerine verilmektedir.",
       "result": "KAZANDI",
       "settled_at": "2026-11-08T20:28:22.254052+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:97370385:toplam gol|2.5|üst|": {
       "created_at": "2026-11-08T20:15:16.363956+00:00",
@@ -909,7 +1015,8 @@
       "telegram_message_text": "⚽ Marsaxlokk - Hamrun\n🏆 Premier Division\n⏱ 57' | Skor 1-1\n• Toplam Gol 2.5 ÜST | Güven %69 | Oran 1.38\nℹ️ Tahminler analiz üzerine verilmektedir.",
       "result": "KAZANDI",
       "settled_at": "2026-11-08T21:23:04.280476+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94394204:toplam gol|3.5|alt|": {
       "created_at": "2026-11-08T20:18:01.802464+00:00",
@@ -925,7 +1032,8 @@
       "telegram_message_text": "⚽ Hoffenheim - Schalke\n🏆 Bundesliga\n⏱ 92' | Skor 2-1\n• Toplam Gol 3.5 ALT | Güven %69 | Oran 1.57\nℹ️ Tahminler analiz üzerine verilmektedir.",
       "result": "KAZANDI",
       "settled_at": "2026-11-08T20:28:22.639493+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94367248:toplam gol|4.5|alt|": {
       "created_at": "2026-11-08T20:19:22.410768+00:00",
@@ -941,7 +1049,8 @@
       "telegram_message_text": "⚽ Santa Fe - Dep. Pasto\n🏆 Primera Division\n⏱ 60' | Skor 3-0\n• Toplam Gol 4.5 ALT | Güven %69 | Oran 1.50\nℹ️ Tahminler analiz üzerine verilmektedir.",
       "result": "KAYBETTİ",
       "settled_at": "2026-11-08T21:23:04.282093+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94458149:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-02T00:25:05.838+00:00",
@@ -957,7 +1066,8 @@
       "telegram_message_text": "⚽ Macara - U. Catolica\n🏆 Liga Pro\n🗓 08.11 16:15\n• İY Toplam Gol 1.5 ALT | Güven %68 | Oran 1.40\nℹ️ Tahminler analiz üzerine verilmektedir.",
       "result": "KAZANDI",
       "settled_at": "2026-11-08T20:28:22.976366+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94384016:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-02T00:44:50.776+00:00",
@@ -986,7 +1096,8 @@
       "telegram_message_text": "⚽ Fiorentina - Juventus\n🏆 Serie A\n⏱ 39' | Skor 1-1\n• İY Toplam Gol 2.5 ALT | Güven %67 | Oran 1.38\nℹ️ Tahminler analiz üzerine verilmektedir.",
       "result": "KAZANDI",
       "settled_at": "2026-11-08T21:23:04.283778+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94466533:i̇y toplam gol|0.5|alt|": {
       "created_at": "2026-11-08T20:27:38.576364+00:00",
@@ -1002,7 +1113,8 @@
       "telegram_message_text": "⚽ Juventud Antoniana - Cipolletti\n🏆 Argentino A\n⏱ 27' | Skor 0-0\n• İY Toplam Gol 0.5 ALT | Güven %67 | Oran 1.50\nℹ️ Tahminler analiz üzerine verilmektedir.",
       "result": "KAZANDI",
       "settled_at": "2026-11-08T21:23:04.285429+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94371293:toplam gol|3.5|alt|": {
       "created_at": "2026-11-08T20:28:06.764855+00:00",
@@ -1018,7 +1130,8 @@
       "telegram_message_text": "⚽ Lech Poznan - Zaglebie\n🏆 Ekstraklasa\n⏱ 47' | Skor 0-1\n• Toplam Gol 3.5 ALT | Güven %69 | Oran 1.36\nℹ️ Tahminler analiz üzerine verilmektedir.",
       "result": "KAYBETTİ",
       "settled_at": "2026-11-08T21:23:04.287124+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94458147:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-02T01:55:06.395+00:00",
@@ -1034,7 +1147,8 @@
       "telegram_message_text": "⚽ Leones del Norte - Guayaquil City\n🏆 Liga Pro\n🗓 07.11 21:30\n• İY Toplam Gol 1.5 ALT | Güven %68 | Oran 1.40\nℹ️ Tahminler analiz üzerine verilmektedir.",
       "result": "KAYBETTİ",
       "settled_at": "2026-11-08T21:23:04.288785+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94458148:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-02T01:55:10.044+00:00",
@@ -1050,7 +1164,8 @@
       "telegram_message_text": "⚽ Libertad - Emelec\n🏆 Liga Pro\n🗓 07.11 19:00\n• İY Toplam Gol 1.5 ALT | Güven %69 | Oran 1.36\n• Toplam Gol 1.5 ÜST | Güven %69 | Oran 1.36\nℹ️ Tahminler analiz üzerine verilmektedir.",
       "result": "KAZANDI",
       "settled_at": "2026-11-08T21:23:04.290448+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94458148:toplam gol|1.5|üst|piyasa_v1": {
       "created_at": "2026-11-02T01:55:10.044+00:00",
@@ -1066,7 +1181,8 @@
       "telegram_message_text": "⚽ Libertad - Emelec\n🏆 Liga Pro\n🗓 07.11 19:00\n• İY Toplam Gol 1.5 ALT | Güven %69 | Oran 1.36\n• Toplam Gol 1.5 ÜST | Güven %69 | Oran 1.36\nℹ️ Tahminler analiz üzerine verilmektedir.",
       "result": "KAYBETTİ",
       "settled_at": "2026-11-08T21:23:04.292122+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94466598:toplam gol|3.5|üst|": {
       "created_at": "2026-11-08T21:00:20.227811+00:00",
@@ -1082,7 +1198,8 @@
       "telegram_message_text": "⚽ Chemal - Douane\n🏆 Premier League\n⏱ 74' | Skor 2-1\n• Toplam Gol 3.5 ÜST | Güven %68 | Oran 1.35\nℹ️ Tahminler analiz üzerine verilmektedir.",
       "result": "KAYBETTİ",
       "settled_at": "2026-11-08T21:53:44.445086+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:97371409:toplam gol|1.5|alt|": {
       "created_at": "2026-11-08T21:12:42.487662+00:00",
@@ -1111,7 +1228,8 @@
       "telegram_message_text": "⚽ Portmore - Tru-Juice\n🏆 Premier League\n⏱ 63' | Skor 0-2\n• Toplam Gol 2.5 ALT | Güven %68 | Oran 1.43\nℹ️ Tahminler analiz üzerine verilmektedir.",
       "result": "KAYBETTİ",
       "settled_at": "2026-11-08T22:15:45.513951+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94467475:toplam gol|2.5|alt|": {
       "created_at": "2026-11-08T21:18:32.744212+00:00",
@@ -1166,7 +1284,8 @@
       "telegram_message_text": "⚽ Bolivar - The Strongest\n🏆 Primera Division\n⏱ 9' | Skor 0-0\n• İY Toplam Gol 1.5 ALT | Güven %67 | Oran 1.52\nℹ️ Tahminler analiz üzerine verilmektedir.",
       "result": "KAZANDI",
       "settled_at": "2026-11-08T22:15:45.514636+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94339249:toplam gol|2.5|üst|piyasa_v1": {
       "created_at": "2026-11-03T22:05:02.641+00:00",
@@ -1234,14 +1353,14 @@
       "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Ind. Yumbo - U. Magdalena</b>\n🏆 Primera B\n🗓 09.11 20:30\n━━━━━━━━━━━━━━\n🎯 <b>Ev Sahibi Gol 0.5 ÜST</b>  |  Güven <b>%71</b>  |  Oran <b>1.35</b>\n━━━━━━━━━━━━━━\n🧠 <i>aiALYSIS veri temelli tahminidir; garanti değildir.</i>"
     }
   },
-  "last_run": "2026-11-08T22:15:47.608982+00:00",
+  "last_run": "2026-11-08T22:23:07.518086+00:00",
   "last_counts": {
     "live": 0,
     "prematch": 9,
     "sent_messages": 0,
     "sent_predictions": 0,
     "queued_matches": 0,
-    "settled_predictions": 7
+    "settled_predictions": 1
   },
   "last_live_report_at": "2026-11-08T21:23:12.903116+00:00"
 }
