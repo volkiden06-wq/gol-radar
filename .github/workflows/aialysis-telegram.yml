@@ -1,0 +1,42 @@
+name: aiALYSIS Telegram Predictions
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: aialysis-telegram
+  cancel-in-progress: false
+
+jobs:
+  forward:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Depoyu al
+        uses: actions/checkout@v4
+      - name: Python kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Bağımlılıkları kur
+        run: pip install requests
+      - name: aiALYSIS tahminlerini Telegram'a gönder
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          AIALYSIS_UPCOMING_HOURS: "24"
+          AIALYSIS_MAX_SEND_PER_RUN: "80"
+        run: python aialysis_telegram.py
+      - name: Gönderim geçmişini kaydet
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add aialysis_state.json
+          git diff --cached --quiet || git commit -m "Update aiALYSIS Telegram delivery state"
+          git pull --rebase origin main
+          git push
