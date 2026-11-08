@@ -260,7 +260,9 @@
       "cizgi": "2.5",
       "ust_alt": "alt",
       "yontem": "piyasa_v1",
-      "settled": false
+      "settled": true,
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T22:15:45.510197+00:00"
     },
     "MAÇ ÖNÜ:94388177:toplam gol|4.5|alt|piyasa_v1": {
       "created_at": "2026-11-01T01:25:09.021+00:00",
@@ -270,7 +272,9 @@
       "cizgi": "4.5",
       "ust_alt": "alt",
       "yontem": "piyasa_v1",
-      "settled": false
+      "settled": true,
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T22:15:45.511036+00:00"
     },
     "MAÇ ÖNÜ:94388177:2y toplam gol|2.5|alt|piyasa_v1": {
       "created_at": "2026-11-01T01:25:09.021+00:00",
@@ -280,7 +284,9 @@
       "cizgi": "2.5",
       "ust_alt": "alt",
       "yontem": "piyasa_v1",
-      "settled": false
+      "settled": true,
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T22:15:45.511835+00:00"
     },
     "MAÇ ÖNÜ:94413610:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-01T11:31:53.067+00:00",
@@ -524,7 +530,9 @@
       "cizgi": "1.5",
       "ust_alt": "alt",
       "yontem": "piyasa_v1",
-      "settled": false
+      "settled": true,
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T22:15:45.512561+00:00"
     },
     "MAÇ ÖNÜ:94465188:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-07T19:15:18.007+00:00",
@@ -556,7 +564,9 @@
       "cizgi": 2.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false
+      "settled": true,
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T22:15:45.513265+00:00"
     },
     "CANLI:94463761:i̇y toplam gol|1.5|alt|": {
       "created_at": "2026-11-08T19:05:17.752897+00:00",
@@ -1096,9 +1106,12 @@
       "cizgi": 2.5,
       "ust_alt": "ALT",
       "yontem": null,
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 250,
-      "telegram_message_text": "⚽ Portmore - Tru-Juice\n🏆 Premier League\n⏱ 63' | Skor 0-2\n• Toplam Gol 2.5 ALT | Güven %68 | Oran 1.43\nℹ️ Tahminler analiz üzerine verilmektedir."
+      "telegram_message_text": "⚽ Portmore - Tru-Juice\n🏆 Premier League\n⏱ 63' | Skor 0-2\n• Toplam Gol 2.5 ALT | Güven %68 | Oran 1.43\nℹ️ Tahminler analiz üzerine verilmektedir.",
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-08T22:15:45.513951+00:00",
+      "result_posted": true
     },
     "CANLI:94467475:toplam gol|2.5|alt|": {
       "created_at": "2026-11-08T21:18:32.744212+00:00",
@@ -1148,9 +1161,12 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": null,
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 260,
-      "telegram_message_text": "⚽ Bolivar - The Strongest\n🏆 Primera Division\n⏱ 9' | Skor 0-0\n• İY Toplam Gol 1.5 ALT | Güven %67 | Oran 1.52\nℹ️ Tahminler analiz üzerine verilmektedir."
+      "telegram_message_text": "⚽ Bolivar - The Strongest\n🏆 Primera Division\n⏱ 9' | Skor 0-0\n• İY Toplam Gol 1.5 ALT | Güven %67 | Oran 1.52\nℹ️ Tahminler analiz üzerine verilmektedir.",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T22:15:45.514636+00:00",
+      "result_posted": true
     },
     "MAÇ ÖNÜ:94339249:toplam gol|2.5|üst|piyasa_v1": {
       "created_at": "2026-11-03T22:05:02.641+00:00",
@@ -1218,14 +1234,14 @@
       "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Ind. Yumbo - U. Magdalena</b>\n🏆 Primera B\n🗓 09.11 20:30\n━━━━━━━━━━━━━━\n🎯 <b>Ev Sahibi Gol 0.5 ÜST</b>  |  Güven <b>%71</b>  |  Oran <b>1.35</b>\n━━━━━━━━━━━━━━\n🧠 <i>aiALYSIS veri temelli tahminidir; garanti değildir.</i>"
     }
   },
-  "last_run": "2026-11-08T21:53:46.007372+00:00",
+  "last_run": "2026-11-08T22:15:47.608982+00:00",
   "last_counts": {
     "live": 0,
     "prematch": 9,
     "sent_messages": 0,
     "sent_predictions": 0,
     "queued_matches": 0,
-    "settled_predictions": 1
+    "settled_predictions": 7
   },
   "last_live_report_at": "2026-11-08T21:23:12.903116+00:00"
 }
