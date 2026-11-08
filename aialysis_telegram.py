@@ -126,15 +126,26 @@ def safe_time(value):
 
 def telegram_send(text):
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
-    r = requests.post(url, json={
-        "chat_id": CHAT_ID,
-        "text": text,
-        "disable_web_page_preview": True,
-    }, timeout=20)
-    r.raise_for_status()
-    data = r.json()
-    if not data.get("ok"):
-        raise RuntimeError(f"Telegram gönderim hatası: {str(data)[:250]}")
+    for attempt in range(3):
+        r = requests.post(url, json={
+            "chat_id": CHAT_ID,
+            "text": text,
+            "disable_web_page_preview": True,
+        }, timeout=30)
+        if r.status_code == 429:
+            try:
+                wait = int((r.json().get("parameters") or {}).get("retry_after", 5))
+            except Exception:
+                wait = 5
+            if attempt < 2:
+                time.sleep(min(max(wait + 1, 2), 60))
+                continue
+        r.raise_for_status()
+        data = r.json()
+        if not data.get("ok"):
+            raise RuntimeError(f"Telegram gönderim hatası: {str(data)[:250]}")
+        return
+    raise RuntimeError("Telegram hız sınırı aşıldı; mesaj sonraki taramada yeniden denenecek.")
 
 
 def load_state():
@@ -186,35 +197,34 @@ def prediction_key(source, row):
     return f"{source}:{row.get('mac_id', row.get('fixture_id'))}:{market}"
 
 
-def make_message(source, row, match):
-    home = (match or {}).get("ev_takim_adi") or row.get("ev_sahibi") or row.get("ev_takim_adi") or "Ev sahibi"
-    away = (match or {}).get("dep_takim_adi") or row.get("deplasman") or row.get("dep_takim_adi") or "Deplasman"
-    league = (match or {}).get("lig_adi") or row.get("lig") or ""
+def make_message(source, rows, match):
+    first = rows[0]
+    home = (match or {}).get("ev_takim_adi") or first.get("ev_sahibi") or first.get("ev_takim_adi") or "Ev sahibi"
+    away = (match or {}).get("dep_takim_adi") or first.get("deplasman") or first.get("dep_takim_adi") or "Deplasman"
+    league = (match or {}).get("lig_adi") or first.get("lig") or ""
     minute = (match or {}).get("elapsed")
-    status = str((match or {}).get("durum") or "").upper()
-    kickoff = safe_time((match or {}).get("mac_tarihi") or row.get("mac_tarihi"))
+    kickoff = safe_time((match or {}).get("mac_tarihi") or first.get("mac_tarihi"))
     score = ""
     if (match or {}).get("ev_gol") is not None and (match or {}).get("dep_gol") is not None:
         score = f" | Skor {match['ev_gol']}-{match['dep_gol']}"
-    if source == "CANLI":
-        time_line = f"⏱ {minute or '?'}'"+score
-    else:
-        time_line = f"🗓 {kickoff or 'Saat bilgisi yok'}"
-    g = confidence(row)
-    o = odds(row)
-    odds_line = f"\n💹 Oran: {o:.2f}" if o is not None else ""
-    link_id = row.get("mac_id") or row.get("fixture_id")
+    time_line = (f"⏱ {minute or '?'}'"+score) if source == "CANLI" else f"🗓 {kickoff or 'Saat bilgisi yok'}"
+    markets = []
+    for row in rows:
+        g = confidence(row)
+        o = odds(row)
+        odds_line = f" | Oran {o:.2f}" if o is not None else ""
+        markets.append(f"• {market_text(row)} | Güven %{g}{odds_line}")
+    link_id = first.get("mac_id") or first.get("fixture_id")
     slug = re.sub(r"[^a-z0-9]+", "-", f"{home}-vs-{away}".lower()).strip("-")
     link = f"https://aialysis.live/mac/{slug}-{link_id}" if link_id else "https://aialysis.live/aialysis"
     return (
-        f"🤖 aiALYSIS | {source} TAHMİNİ\n"
-        f"⚽ {home} - {away}\n"
-        + (f"🏆 {league}\n" if league else "")
-        + f"{time_line}\n"
-        f"🎯 {market_text(row)}\n"
-        f"📊 Güven: %{g}{odds_line}\n"
-        f"🔎 {link}\n"
-        "ℹ️ İstatistiksel tahmindir; gol veya bahis sonucu garantisi değildir."
+        f"🤖 aiALYSIS | {source} TAHMİNLERİ\\n"
+        f"⚽ {home} - {away}\\n"
+        + (f"🏆 {league}\\n" if league else "")
+        + f"{time_line}\\n"
+        + "\\n".join(markets)
+        + f"\\n🔎 {link}\\n"
+        "ℹ️ İstatistiksel tahmindir; sonuç veya bahis garantisi değildir."
     )
 
 
@@ -299,33 +309,53 @@ def main():
     prematch, prematch_matches = collect_prematch()
     ids = [x.get("mac_id") for x in live] + [x.get("fixture_id") for x in prematch_matches]
     matches = fixture_map(ids)
-    queue = []
+
+    grouped = {}
     for source, rows in (("CANLI", live), ("MAÇ ÖNÜ", prematch)):
         for row in rows:
             key = prediction_key(source, row)
-            if key not in state["sent"]:
-                match_id = row.get("mac_id") or row.get("fixture_id")
+            if key in state["sent"]:
+                continue
+            match_id = row.get("mac_id") or row.get("fixture_id")
+            group_key = (source, str(match_id))
+            if group_key not in grouped:
                 match = matches.get(int(match_id)) if match_id and str(match_id).isdigit() else None
                 if source == "MAÇ ÖNÜ" and match is None:
                     match = row
-                queue.append((key, source, row, match))
-    queue.sort(key=lambda x: (0 if x[1] == "CANLI" else 1, str(x[2].get("created_at") or "")))
+                grouped[group_key] = {"match": match, "rows": []}
+            grouped[group_key]["rows"].append((key, row))
+
+    queue = sorted(
+        grouped.items(),
+        key=lambda item: (0 if item[0][0] == "CANLI" else 1,
+                          str(item[1]["rows"][0][1].get("created_at") or ""))
+    )
     sent_now = 0
-    for key, source, row, match in queue[:MAX_SEND_PER_RUN]:
-        telegram_send(make_message(source, row, match))
-        state["sent"][key] = {
-            "created_at": row.get("created_at") or datetime.now(timezone.utc).isoformat(),
-            "source": source,
-        }
+    prediction_count = 0
+    for (source, match_id), group in queue[:MAX_SEND_PER_RUN]:
+        rows = [x[1] for x in group["rows"]]
+        telegram_send(make_message(source, rows, group["match"]))
+        stamp = datetime.now(timezone.utc).isoformat()
+        for key, row in group["rows"]:
+            state["sent"][key] = {
+                "created_at": row.get("created_at") or stamp,
+                "source": source,
+            }
         sent_now += 1
+        prediction_count += len(rows)
         save_state(state)
-        time.sleep(0.12)
+        # Stay well below Telegram's per-chat/channel message rate.
+        time.sleep(4.0)
     state["last_run"] = datetime.now(timezone.utc).isoformat()
-    state["last_counts"] = {"live": len(live), "prematch": len(prematch), "sent": sent_now, "queued": len(queue)}
+    state["last_counts"] = {
+        "live": len(live), "prematch": len(prematch),
+        "sent_messages": sent_now, "sent_predictions": prediction_count,
+        "queued_matches": len(queue),
+    }
     save_state(state)
-    print(f"aiALYSIS | canlı tahmin: {len(live)} | maç önü tahmin: {len(prematch)} | gönderilen: {sent_now} | kuyruk: {len(queue)}")
+    print(f"aiALYSIS | canlı tahmin: {len(live)} | maç önü tahmin: {len(prematch)} | gönderilen maç mesajı: {sent_now} | gönderilen tahmin: {prediction_count} | kuyruk maç: {len(queue)}")
     if len(queue) > MAX_SEND_PER_RUN:
-        print(f"Kalan {len(queue)-MAX_SEND_PER_RUN} tahmin sonraki 5 dakikalık çalışmada gönderilecek.")
+        print(f"Kalan {len(queue)-MAX_SEND_PER_RUN} maç sonraki 5 dakikalık çalışmalarda gönderilecek.")
 
 
 if __name__ == "__main__":
