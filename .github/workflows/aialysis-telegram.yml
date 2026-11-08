@@ -15,7 +15,7 @@ permissions:
 
 concurrency:
   group: aialysis-telegram
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   forward:
@@ -35,7 +35,7 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           AIALYSIS_UPCOMING_HOURS: "24"
-          AIALYSIS_MAX_SEND_PER_RUN: "20"
+          AIALYSIS_MAX_SEND_PER_RUN: "12"
         run: python aialysis_telegram.py
       - name: Gönderim geçmişini kaydet
         run: |
