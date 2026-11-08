@@ -6,7 +6,7 @@ on:
       - "aialysis_telegram.py"
       - ".github/workflows/aialysis-telegram.yml"
   schedule:
-    - cron: "* * * * *"
+    - cron: "*/5 * * * *"
   workflow_dispatch:
 
 permissions:
