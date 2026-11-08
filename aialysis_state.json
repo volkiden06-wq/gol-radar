@@ -211,13 +211,13 @@
       "settled": false
     }
   },
-  "last_run": "2026-11-08T18:55:12.268363+00:00",
+  "last_run": "2026-11-08T19:04:20.695758+00:00",
   "last_counts": {
     "live": 0,
-    "prematch": 27,
-    "sent_messages": 2,
-    "sent_predictions": 2,
-    "queued_matches": 2,
+    "prematch": 25,
+    "sent_messages": 0,
+    "sent_predictions": 0,
+    "queued_matches": 0,
     "settled_predictions": 0
   }
 }
