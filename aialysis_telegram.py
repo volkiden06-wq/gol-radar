@@ -361,6 +361,21 @@ def settle_sent_predictions(state):
                if isinstance(item, dict) and not item.get('settled') and item.get('match_id')]
     ids = sorted({str(item['match_id']) for _, item in pending if str(item['match_id']).isdigit()})
     settled_count = 0
+    # A winning market can be confirmed while the fixture is still live.
+    # A losing market is only final after the fixture itself has ended.
+    fixture_status = {}
+    for offset in range(0, len(ids), 100):
+        batch_ids = ids[offset:offset + 100]
+        if not batch_ids:
+            continue
+        fixtures = get_json('maclar', {
+            'select': 'fixture_id,durum',
+            'fixture_id': 'in.(' + ','.join(batch_ids) + ')',
+            'limit': 1000,
+        })
+        for fixture in fixtures:
+            fixture_status[str(fixture.get('fixture_id'))] = str(fixture.get('durum') or '').strip().upper()
+    final_statuses = {'FT', 'AET', 'PEN', 'FT_PEN'}
     for offset in range(0, len(ids), 100):
         batch = ids[offset:offset + 100]
         if not batch:
@@ -389,6 +404,10 @@ def settle_sent_predictions(state):
             if not result:
                 candidates = [v for k, v in by_market.items() if k[0] == mid and k[1] == mk[1] and k[2] == mk[2]]
                 result = candidates[0] if candidates and len(set(candidates)) == 1 else None
+            # Trust an early win as soon as the market result says KAZANDI.
+            # Never publish KAYBETTİ until the match is officially finished.
+            if result == 'KAYBETTİ' and fixture_status.get(mid) not in final_statuses:
+                result = None
             if result:
                 item['settled'] = True
                 item['result'] = result
@@ -407,7 +426,7 @@ def settle_sent_predictions(state):
                         for x in related
                     ]
                     base_text = item.get('telegram_message_text') or ''
-                    telegram_edit(message_id, base_text + "\\n\\n" + "\\n".join(result_lines))
+                    telegram_edit(message_id, base_text + "\n\n" + "\n".join(result_lines))
                 settled_count += 1
                 save_state(state)
     return settled_count
