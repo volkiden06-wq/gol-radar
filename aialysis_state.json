@@ -2,191 +2,529 @@
   "sent": {
     "CANLI:97371844:toplam gol|1.5|üst|": {
       "created_at": "2026-11-08T17:53:07.781502+00:00",
-      "source": "CANLI"
+      "source": "CANLI",
+      "match_id": "97371844",
+      "kategori": "toplam gol",
+      "cizgi": "1.5",
+      "ust_alt": "üst",
+      "yontem": "",
+      "settled": true,
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-08T20:03:33.932132+00:00"
     },
     "CANLI:94466352:i̇y toplam gol|1.5|alt|": {
       "created_at": "2026-11-08T18:07:23.117476+00:00",
-      "source": "CANLI"
+      "source": "CANLI",
+      "match_id": "94466352",
+      "kategori": "i̇y toplam gol",
+      "cizgi": "1.5",
+      "ust_alt": "alt",
+      "yontem": "",
+      "settled": true,
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T20:03:38.414435+00:00"
     },
     "CANLI:94465908:i̇y toplam gol|1.5|alt|": {
       "created_at": "2026-11-08T18:09:30.105904+00:00",
-      "source": "CANLI"
+      "source": "CANLI",
+      "match_id": "94465908",
+      "kategori": "i̇y toplam gol",
+      "cizgi": "1.5",
+      "ust_alt": "alt",
+      "yontem": "",
+      "settled": true,
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T20:03:42.877111+00:00"
     },
     "CANLI:94384012:toplam gol|1.5|alt|": {
       "created_at": "2026-11-08T18:09:33.739059+00:00",
-      "source": "CANLI"
+      "source": "CANLI",
+      "match_id": "94384012",
+      "kategori": "toplam gol",
+      "cizgi": "1.5",
+      "ust_alt": "alt",
+      "yontem": "",
+      "settled": true,
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T20:03:47.358016+00:00"
     },
     "CANLI:94371984:i̇y toplam gol|1.5|alt|": {
       "created_at": "2026-11-08T18:11:54.352682+00:00",
-      "source": "CANLI"
+      "source": "CANLI",
+      "match_id": "94371984",
+      "kategori": "i̇y toplam gol",
+      "cizgi": "1.5",
+      "ust_alt": "alt",
+      "yontem": "",
+      "settled": true,
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T20:03:51.758197+00:00"
     },
     "CANLI:94422187:toplam gol|1.5|alt|": {
       "created_at": "2026-11-08T18:13:09.782778+00:00",
-      "source": "CANLI"
+      "source": "CANLI",
+      "match_id": "94422187",
+      "kategori": "toplam gol",
+      "cizgi": "1.5",
+      "ust_alt": "alt",
+      "yontem": "",
+      "settled": true,
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T20:03:56.226035+00:00"
     },
     "CANLI:94404449:i̇y toplam gol|1.5|alt|": {
       "created_at": "2026-11-08T18:17:45.857176+00:00",
-      "source": "CANLI"
+      "source": "CANLI",
+      "match_id": "94404449",
+      "kategori": "i̇y toplam gol",
+      "cizgi": "1.5",
+      "ust_alt": "alt",
+      "yontem": "",
+      "settled": true,
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-08T20:04:00.632158+00:00"
     },
     "CANLI:94313970:i̇y toplam gol|1.5|alt|": {
       "created_at": "2026-11-08T18:22:59.360525+00:00",
-      "source": "CANLI"
+      "source": "CANLI",
+      "match_id": "94313970",
+      "kategori": "i̇y toplam gol",
+      "cizgi": "1.5",
+      "ust_alt": "alt",
+      "yontem": "",
+      "settled": true,
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T20:04:05.031371+00:00"
     },
     "CANLI:94375295:i̇y toplam gol|1.5|alt|": {
       "created_at": "2026-11-08T18:23:04.335641+00:00",
-      "source": "CANLI"
+      "source": "CANLI",
+      "match_id": "94375295",
+      "kategori": "i̇y toplam gol",
+      "cizgi": "1.5",
+      "ust_alt": "alt",
+      "yontem": "",
+      "settled": true,
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T20:04:09.439621+00:00"
     },
     "CANLI:94435434:toplam gol|3.5|üst|": {
       "created_at": "2026-11-08T18:28:22.398838+00:00",
-      "source": "CANLI"
+      "source": "CANLI",
+      "match_id": "94435434",
+      "kategori": "toplam gol",
+      "cizgi": "3.5",
+      "ust_alt": "üst",
+      "yontem": "",
+      "settled": true,
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-08T20:04:13.816472+00:00"
     },
     "CANLI:94391449:toplam korner|6.5|üst|": {
       "created_at": "2026-11-08T18:33:25.444756+00:00",
-      "source": "CANLI"
+      "source": "CANLI",
+      "match_id": "94391449",
+      "kategori": "toplam korner",
+      "cizgi": "6.5",
+      "ust_alt": "üst",
+      "yontem": "",
+      "settled": true,
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T20:04:18.226685+00:00"
     },
     "CANLI:94391454:toplam gol|2.5|alt|": {
       "created_at": "2026-11-08T18:37:19.300593+00:00",
-      "source": "CANLI"
+      "source": "CANLI",
+      "match_id": "94391454",
+      "kategori": "toplam gol",
+      "cizgi": "2.5",
+      "ust_alt": "alt",
+      "yontem": "",
+      "settled": true,
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T20:04:22.647764+00:00"
     },
     "CANLI:94391453:toplam korner|6.5|üst|": {
       "created_at": "2026-11-08T18:37:19.831025+00:00",
-      "source": "CANLI"
+      "source": "CANLI",
+      "match_id": "94391453",
+      "kategori": "toplam korner",
+      "cizgi": "6.5",
+      "ust_alt": "üst",
+      "yontem": "",
+      "settled": true,
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T20:04:27.123027+00:00"
     },
     "CANLI:94388186:toplam gol|1.5|alt|": {
       "created_at": "2026-11-08T18:45:12.58479+00:00",
-      "source": "CANLI"
+      "source": "CANLI",
+      "match_id": "94388186",
+      "kategori": "toplam gol",
+      "cizgi": "1.5",
+      "ust_alt": "alt",
+      "yontem": "",
+      "settled": true,
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-08T20:04:31.531707+00:00"
     },
     "CANLI:94466597:toplam gol|2.5|alt|": {
       "created_at": "2026-11-08T18:45:28.808295+00:00",
-      "source": "CANLI"
+      "source": "CANLI",
+      "match_id": "94466597",
+      "kategori": "toplam gol",
+      "cizgi": "2.5",
+      "ust_alt": "alt",
+      "yontem": "",
+      "settled": true,
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T20:04:35.950149+00:00"
     },
     "CANLI:94466597:toplam korner|10.5|üst|": {
       "created_at": "2026-11-08T18:35:24.231648+00:00",
-      "source": "CANLI"
+      "source": "CANLI",
+      "match_id": "94466597",
+      "kategori": "toplam korner",
+      "cizgi": "10.5",
+      "ust_alt": "üst",
+      "yontem": "",
+      "settled": true,
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-08T20:04:40.356349+00:00"
     },
     "MAÇ ÖNÜ:94369508:toplam gol|2.5|üst|piyasa_v1": {
       "created_at": "2026-11-01T00:45:17.856+00:00",
-      "source": "MAÇ ÖNÜ"
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94369508",
+      "kategori": "toplam gol",
+      "cizgi": "2.5",
+      "ust_alt": "üst",
+      "yontem": "piyasa_v1",
+      "settled": false
     },
     "MAÇ ÖNÜ:94367595:toplam gol|3.5|alt|piyasa_v1": {
       "created_at": "2026-11-01T00:55:12.636+00:00",
-      "source": "MAÇ ÖNÜ"
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94367595",
+      "kategori": "toplam gol",
+      "cizgi": "3.5",
+      "ust_alt": "alt",
+      "yontem": "piyasa_v1",
+      "settled": false
     },
     "MAÇ ÖNÜ:94367595:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-01T00:55:12.636+00:00",
-      "source": "MAÇ ÖNÜ"
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94367595",
+      "kategori": "i̇y toplam gol",
+      "cizgi": "1.5",
+      "ust_alt": "alt",
+      "yontem": "piyasa_v1",
+      "settled": false
     },
     "MAÇ ÖNÜ:94367595:ev sahibi gol|0.5|üst|piyasa_v1": {
       "created_at": "2026-11-01T00:55:12.636+00:00",
-      "source": "MAÇ ÖNÜ"
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94367595",
+      "kategori": "ev sahibi gol",
+      "cizgi": "0.5",
+      "ust_alt": "üst",
+      "yontem": "piyasa_v1",
+      "settled": true,
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T20:04:44.845797+00:00"
     },
     "MAÇ ÖNÜ:94369231:toplam gol|2.5|üst|piyasa_v1": {
       "created_at": "2026-11-01T01:05:12.937+00:00",
-      "source": "MAÇ ÖNÜ"
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94369231",
+      "kategori": "toplam gol",
+      "cizgi": "2.5",
+      "ust_alt": "üst",
+      "yontem": "piyasa_v1",
+      "settled": false
     },
     "MAÇ ÖNÜ:94388177:deplasman gol|2.5|alt|piyasa_v1": {
       "created_at": "2026-11-01T01:25:09.021+00:00",
-      "source": "MAÇ ÖNÜ"
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94388177",
+      "kategori": "deplasman gol",
+      "cizgi": "2.5",
+      "ust_alt": "alt",
+      "yontem": "piyasa_v1",
+      "settled": false
     },
     "MAÇ ÖNÜ:94388177:toplam gol|4.5|alt|piyasa_v1": {
       "created_at": "2026-11-01T01:25:09.021+00:00",
-      "source": "MAÇ ÖNÜ"
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94388177",
+      "kategori": "toplam gol",
+      "cizgi": "4.5",
+      "ust_alt": "alt",
+      "yontem": "piyasa_v1",
+      "settled": false
     },
     "MAÇ ÖNÜ:94388177:2y toplam gol|2.5|alt|piyasa_v1": {
       "created_at": "2026-11-01T01:25:09.021+00:00",
-      "source": "MAÇ ÖNÜ"
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94388177",
+      "kategori": "2y toplam gol",
+      "cizgi": "2.5",
+      "ust_alt": "alt",
+      "yontem": "piyasa_v1",
+      "settled": false
     },
     "MAÇ ÖNÜ:94413610:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-01T11:31:53.067+00:00",
-      "source": "MAÇ ÖNÜ"
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94413610",
+      "kategori": "i̇y toplam gol",
+      "cizgi": "1.5",
+      "ust_alt": "alt",
+      "yontem": "piyasa_v1",
+      "settled": true,
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T20:04:49.252153+00:00"
     },
     "MAÇ ÖNÜ:94312224:toplam gol|3.5|alt|piyasa_v1": {
       "created_at": "2026-11-02T00:15:07.128+00:00",
-      "source": "MAÇ ÖNÜ"
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94312224",
+      "kategori": "toplam gol",
+      "cizgi": "3.5",
+      "ust_alt": "alt",
+      "yontem": "piyasa_v1",
+      "settled": true,
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T20:04:53.640437+00:00"
     },
     "MAÇ ÖNÜ:94312227:2y toplam gol|0.5|üst|piyasa_v1": {
       "created_at": "2026-11-02T00:15:09.705+00:00",
-      "source": "MAÇ ÖNÜ"
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94312227",
+      "kategori": "2y toplam gol",
+      "cizgi": "0.5",
+      "ust_alt": "üst",
+      "yontem": "piyasa_v1",
+      "settled": true,
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T20:04:58.096250+00:00"
     },
     "MAÇ ÖNÜ:94458144:toplam gol|3.5|alt|piyasa_v1": {
       "created_at": "2026-11-02T00:25:00.299+00:00",
-      "source": "MAÇ ÖNÜ"
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94458144",
+      "kategori": "toplam gol",
+      "cizgi": "3.5",
+      "ust_alt": "alt",
+      "yontem": "piyasa_v1",
+      "settled": true,
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-08T20:05:02.539870+00:00"
     },
     "MAÇ ÖNÜ:94312217:ev sahibi gol|0.5|üst|piyasa_v1": {
       "created_at": "2026-11-02T01:44:57.52+00:00",
-      "source": "MAÇ ÖNÜ"
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94312217",
+      "kategori": "ev sahibi gol",
+      "cizgi": "0.5",
+      "ust_alt": "üst",
+      "yontem": "piyasa_v1",
+      "settled": true,
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T20:05:06.999093+00:00"
     },
     "MAÇ ÖNÜ:94312220:deplasman gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-02T01:45:00.199+00:00",
-      "source": "MAÇ ÖNÜ"
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94312220",
+      "kategori": "deplasman gol",
+      "cizgi": "1.5",
+      "ust_alt": "alt",
+      "yontem": "piyasa_v1",
+      "settled": true,
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T20:05:11.559774+00:00"
     },
     "MAÇ ÖNÜ:94312220:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-02T01:45:00.199+00:00",
-      "source": "MAÇ ÖNÜ"
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94312220",
+      "kategori": "i̇y toplam gol",
+      "cizgi": "1.5",
+      "ust_alt": "alt",
+      "yontem": "piyasa_v1",
+      "settled": true,
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-08T20:05:15.944490+00:00"
     },
     "MAÇ ÖNÜ:94312223:2y toplam gol|0.5|üst|piyasa_v1": {
       "created_at": "2026-11-02T01:45:03.174+00:00",
-      "source": "MAÇ ÖNÜ"
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94312223",
+      "kategori": "2y toplam gol",
+      "cizgi": "0.5",
+      "ust_alt": "üst",
+      "yontem": "piyasa_v1",
+      "settled": true,
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T20:05:20.341639+00:00"
     },
     "MAÇ ÖNÜ:94394837:deplasman gol|2.5|alt|piyasa_v1": {
       "created_at": "2026-11-02T02:14:57.451+00:00",
-      "source": "MAÇ ÖNÜ"
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94394837",
+      "kategori": "deplasman gol",
+      "cizgi": "2.5",
+      "ust_alt": "alt",
+      "yontem": "piyasa_v1",
+      "settled": false
     },
     "MAÇ ÖNÜ:94367239:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-02T06:24:53.093+00:00",
-      "source": "MAÇ ÖNÜ"
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94367239",
+      "kategori": "i̇y toplam gol",
+      "cizgi": "1.5",
+      "ust_alt": "alt",
+      "yontem": "piyasa_v1",
+      "settled": false
     },
     "MAÇ ÖNÜ:94312226:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-02T07:44:55.03+00:00",
-      "source": "MAÇ ÖNÜ"
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94312226",
+      "kategori": "i̇y toplam gol",
+      "cizgi": "1.5",
+      "ust_alt": "alt",
+      "yontem": "piyasa_v1",
+      "settled": true,
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T20:05:24.747890+00:00"
     },
     "MAÇ ÖNÜ:94312228:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-02T07:44:58.437+00:00",
-      "source": "MAÇ ÖNÜ"
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94312228",
+      "kategori": "i̇y toplam gol",
+      "cizgi": "1.5",
+      "ust_alt": "alt",
+      "yontem": "piyasa_v1",
+      "settled": true,
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-08T20:05:29.140039+00:00"
     },
     "MAÇ ÖNÜ:94367058:toplam gol|3.5|alt|piyasa_v1": {
       "created_at": "2026-11-02T23:15:00.519+00:00",
-      "source": "MAÇ ÖNÜ"
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94367058",
+      "kategori": "toplam gol",
+      "cizgi": "3.5",
+      "ust_alt": "alt",
+      "yontem": "piyasa_v1",
+      "settled": false
     },
     "MAÇ ÖNÜ:94367248:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-03T06:45:16.684+00:00",
-      "source": "MAÇ ÖNÜ"
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94367248",
+      "kategori": "i̇y toplam gol",
+      "cizgi": "1.5",
+      "ust_alt": "alt",
+      "yontem": "piyasa_v1",
+      "settled": true,
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-08T20:05:33.528548+00:00"
     },
     "MAÇ ÖNÜ:94463762:2y toplam gol|2.5|alt|piyasa_v1": {
       "created_at": "2026-11-04T21:45:15.259+00:00",
-      "source": "MAÇ ÖNÜ"
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94463762",
+      "kategori": "2y toplam gol",
+      "cizgi": "2.5",
+      "ust_alt": "alt",
+      "yontem": "piyasa_v1",
+      "settled": false
     },
     "MAÇ ÖNÜ:94463762:toplam gol|4.5|alt|piyasa_v1": {
       "created_at": "2026-11-04T21:45:15.259+00:00",
-      "source": "MAÇ ÖNÜ"
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94463762",
+      "kategori": "toplam gol",
+      "cizgi": "4.5",
+      "ust_alt": "alt",
+      "yontem": "piyasa_v1",
+      "settled": false
     },
     "MAÇ ÖNÜ:94368875:deplasman gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-05T00:05:17.115+00:00",
-      "source": "MAÇ ÖNÜ"
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94368875",
+      "kategori": "deplasman gol",
+      "cizgi": "1.5",
+      "ust_alt": "alt",
+      "yontem": "piyasa_v1",
+      "settled": false
     },
     "MAÇ ÖNÜ:94372416:toplam gol|3.5|alt|piyasa_v1": {
       "created_at": "2026-11-05T10:45:17.281+00:00",
-      "source": "MAÇ ÖNÜ"
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94372416",
+      "kategori": "toplam gol",
+      "cizgi": "3.5",
+      "ust_alt": "alt",
+      "yontem": "piyasa_v1",
+      "settled": false
     },
     "MAÇ ÖNÜ:94456494:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-05T20:44:55.209+00:00",
-      "source": "MAÇ ÖNÜ"
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94456494",
+      "kategori": "i̇y toplam gol",
+      "cizgi": "1.5",
+      "ust_alt": "alt",
+      "yontem": "piyasa_v1",
+      "settled": false
     },
     "MAÇ ÖNÜ:94458150:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-06T08:35:28.333+00:00",
-      "source": "MAÇ ÖNÜ"
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94458150",
+      "kategori": "i̇y toplam gol",
+      "cizgi": "1.5",
+      "ust_alt": "alt",
+      "yontem": "piyasa_v1",
+      "settled": false
     },
     "MAÇ ÖNÜ:94372420:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-06T19:54:51.269+00:00",
-      "source": "MAÇ ÖNÜ"
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94372420",
+      "kategori": "i̇y toplam gol",
+      "cizgi": "1.5",
+      "ust_alt": "alt",
+      "yontem": "piyasa_v1",
+      "settled": false
     },
     "MAÇ ÖNÜ:94377833:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-07T01:55:02.351+00:00",
-      "source": "MAÇ ÖNÜ"
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94377833",
+      "kategori": "i̇y toplam gol",
+      "cizgi": "1.5",
+      "ust_alt": "alt",
+      "yontem": "piyasa_v1",
+      "settled": false
     },
     "MAÇ ÖNÜ:94465188:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-07T19:15:18.007+00:00",
-      "source": "MAÇ ÖNÜ"
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94465188",
+      "kategori": "i̇y toplam gol",
+      "cizgi": "1.5",
+      "ust_alt": "alt",
+      "yontem": "piyasa_v1",
+      "settled": false
     },
     "MAÇ ÖNÜ:94373095:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-08T05:45:08.197+00:00",
@@ -219,7 +557,9 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": null,
-      "settled": false
+      "settled": true,
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T20:05:37.925375+00:00"
     },
     "CANLI:97371114:i̇y toplam gol|0.5|üst|": {
       "created_at": "2026-11-08T19:07:44.030289+00:00",
@@ -230,7 +570,9 @@
       "cizgi": 0.5,
       "ust_alt": "ÜST",
       "yontem": null,
-      "settled": false
+      "settled": true,
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-08T20:05:42.427392+00:00"
     },
     "CANLI:94442564:i̇y toplam gol|1.5|alt|": {
       "created_at": "2026-11-08T19:13:10.294549+00:00",
@@ -241,7 +583,9 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": null,
-      "settled": false
+      "settled": true,
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T20:05:46.906984+00:00"
     },
     "CANLI:94465149:toplam gol|4.5|üst|": {
       "created_at": "2026-11-08T19:25:16.75797+00:00",
@@ -252,7 +596,9 @@
       "cizgi": 4.5,
       "ust_alt": "ÜST",
       "yontem": null,
-      "settled": false
+      "settled": true,
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-08T20:05:51.310940+00:00"
     },
     "CANLI:97368937:toplam gol|3.5|üst|": {
       "created_at": "2026-11-08T19:30:26.038268+00:00",
@@ -274,7 +620,9 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": null,
-      "settled": false
+      "settled": true,
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T20:05:55.746872+00:00"
     },
     "CANLI:94463431:i̇y toplam gol|1.5|alt|": {
       "created_at": "2026-11-08T19:36:59.051571+00:00",
@@ -296,7 +644,9 @@
       "cizgi": 2.5,
       "ust_alt": "ALT",
       "yontem": null,
-      "settled": false
+      "settled": true,
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T20:06:00.173488+00:00"
     },
     "CANLI:94465597:toplam gol|4.5|alt|": {
       "created_at": "2026-11-08T19:45:38.536451+00:00",
@@ -307,7 +657,9 @@
       "cizgi": 4.5,
       "ust_alt": "ALT",
       "yontem": null,
-      "settled": false
+      "settled": true,
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-08T20:06:04.571678+00:00"
     },
     "MAÇ ÖNÜ:94324408:toplam gol|1.5|üst|piyasa_v1": {
       "created_at": "2026-11-01T11:40:24.001+00:00",
@@ -329,16 +681,73 @@
       "cizgi": 3.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
+      "settled": true,
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T20:06:09.090635+00:00"
+    },
+    "CANLI:94458144:toplam gol|4.5|üst|": {
+      "created_at": "2026-11-08T19:57:18.275007+00:00",
+      "source": "CANLI",
+      "match_id": "94458144",
+      "home": "Aucas - Ind. del Valle",
+      "kategori": "Toplam Gol",
+      "cizgi": 4.5,
+      "ust_alt": "ÜST",
+      "yontem": null,
+      "settled": false
+    },
+    "CANLI:94375295:toplam gol|4.5|alt|": {
+      "created_at": "2026-11-08T20:03:08.172014+00:00",
+      "source": "CANLI",
+      "match_id": "94375295",
+      "home": "Sporting Lokeren - Dender",
+      "kategori": "Toplam Gol",
+      "cizgi": 4.5,
+      "ust_alt": "ALT",
+      "yontem": null,
+      "settled": false
+    },
+    "MAÇ ÖNÜ:94312214:i̇y toplam gol|1.5|alt|piyasa_v1": {
+      "created_at": "2026-11-02T00:15:01.184+00:00",
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94312214",
+      "home": "Aldosivi - River Plate",
+      "kategori": "İY Toplam Gol",
+      "cizgi": 1.5,
+      "ust_alt": "ALT",
+      "yontem": "piyasa_v1",
+      "settled": false
+    },
+    "MAÇ ÖNÜ:94312224:i̇y toplam gol|1.5|alt|piyasa_v1": {
+      "created_at": "2026-11-02T00:15:07.128+00:00",
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94312224",
+      "home": "Rosario Central - Estudiantes Rio Cuarto",
+      "kategori": "İY Toplam Gol",
+      "cizgi": 1.5,
+      "ust_alt": "ALT",
+      "yontem": "piyasa_v1",
+      "settled": false
+    },
+    "MAÇ ÖNÜ:94312224:ev sahibi gol|1.5|üst|piyasa_v1": {
+      "created_at": "2026-11-02T00:15:07.128+00:00",
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94312224",
+      "home": "Rosario Central - Estudiantes Rio Cuarto",
+      "kategori": "Ev Sahibi Gol",
+      "cizgi": 1.5,
+      "ust_alt": "ÜST",
+      "yontem": "piyasa_v1",
       "settled": false
     }
   },
-  "last_run": "2026-11-08T19:47:26.921844+00:00",
+  "last_run": "2026-11-08T20:06:32.491003+00:00",
   "last_counts": {
-    "live": 9,
-    "prematch": 89,
-    "sent_messages": 11,
-    "sent_predictions": 11,
-    "queued_matches": 11,
-    "settled_predictions": 0
+    "live": 3,
+    "prematch": 78,
+    "sent_messages": 4,
+    "sent_predictions": 5,
+    "queued_matches": 4,
+    "settled_predictions": 36
   }
 }
