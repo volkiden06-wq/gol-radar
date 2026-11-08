@@ -467,7 +467,7 @@ def flush_result_message_edits(state):
                 seen.add(line)
                 lines.append(line)
         try:
-            telegram_edit(int(message_id), base_text + "\\n\\n" + "\\n".join(lines))
+            telegram_edit(int(message_id), base_text + "\n\n" + "\n".join(lines))
             for x in related:
                 x["result_posted"] = True
                 x.pop("result_edit_error", None)
