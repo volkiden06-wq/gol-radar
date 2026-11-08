@@ -20,7 +20,7 @@ ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI
 STATE_PATH = Path("aialysis_state.json")
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "").strip()
-CONFIDENCE_MIN = 60
+CONFIDENCE_MIN = 70
 ODDS_MIN = 1.35
 UPCOMING_HOURS = int(os.getenv("AIALYSIS_UPCOMING_HOURS", "24"))
 MAX_SEND_PER_RUN = int(os.getenv("AIALYSIS_MAX_SEND_PER_RUN", "80"))
@@ -71,6 +71,10 @@ def odds(row):
 
 
 def passes_site_filter(row):
+    # Only first-half / full-time goal markets; exclude corners, cards, etc.
+    category = str(row.get("kategori") or "").strip().casefold()
+    if "gol" not in category or "gol geldi geliyor" in category:
+        return False
     g = confidence(row)
     o = odds(row)
     return g >= CONFIDENCE_MIN and (o is None or o >= ODDS_MIN)
@@ -78,7 +82,7 @@ def passes_site_filter(row):
 
 def latest_per_market(rows):
     # Mirrors aiALYSIS' visible client filtering: newest first, one prediction
-    # per match + category + line; then its 60% confidence / 1.35 odds gate.
+    # per match + category + line; then its 70% confidence / 1.35 odds gate.
     ordered = sorted(rows, key=lambda x: x.get("created_at") or "", reverse=True)
     seen = set()
     result = []
