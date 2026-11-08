@@ -1,6 +1,10 @@
 name: aiALYSIS Telegram Predictions
 
 on:
+  push:
+    paths:
+      - "aialysis_telegram.py"
+      - ".github/workflows/aialysis-telegram.yml"
   schedule:
     - cron: "*/5 * * * *"
   workflow_dispatch:
