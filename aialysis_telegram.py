@@ -6,6 +6,7 @@ own client bundle; it is not a service-role credential. Access remains subject
 to the site's public database policies.
 """
 import json
+import html
 import os
 import re
 import sys
@@ -14,6 +15,8 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 BASE = "https://fohmlwoewjupceznwmdr.supabase.co"
 ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZvaG1sd29ld2p1cGNlem53bWRyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM5NDE4MjYsImV4cCI6MjA4OTUxNzgyNn0.Ye-85hcsrLeORp-ThZCxssrc92WOm4ZI-B3mvTmwju4"
@@ -28,6 +31,14 @@ MAX_PREMATCH_SEND_PER_RUN = int(os.getenv("AIALYSIS_MAX_PREMATCH_SEND_PER_RUN", 
 HEADERS = {"apikey": ANON_KEY, "Authorization": f"Bearer {ANON_KEY}"}
 SESSION = requests.Session()
 SESSION.headers.update(HEADERS)
+RETRY_POLICY = Retry(
+    total=4, connect=4, read=3, status=3,
+    backoff_factor=0.6,
+    status_forcelist=(429, 500, 502, 503, 504),
+    allowed_methods=frozenset({"GET"}),
+    respect_retry_after_header=True,
+)
+SESSION.mount("https://", HTTPAdapter(max_retries=RETRY_POLICY))
 
 
 def get_json(path, params=None):
@@ -135,6 +146,7 @@ def telegram_send(text):
         r = requests.post(url, json={
             "chat_id": CHAT_ID,
             "text": text,
+            "parse_mode": "HTML",
             "disable_web_page_preview": True,
         }, timeout=30)
         if r.status_code == 429:
@@ -158,6 +170,7 @@ def telegram_edit(message_id, text):
         "chat_id": CHAT_ID,
         "message_id": message_id,
         "text": text,
+        "parse_mode": "HTML",
         "disable_web_page_preview": True,
     }, timeout=30)
     try:
@@ -238,14 +251,18 @@ def make_message(source, rows, match):
     for row in rows:
         g = confidence(row)
         o = odds(row)
-        odds_line = f" | Oran {o:.2f}" if o is not None else ""
-        markets.append(f"• {market_text(row)} | Güven %{g}{odds_line}")
+        odds_line = f"  |  Oran <b>{o:.2f}</b>" if o is not None else ""
+        markets.append(f"🎯 <b>{html.escape(market_text(row))}</b>  |  Güven <b>%{g}</b>{odds_line}")
+    heading = "🔴 CANLI MAÇ SİNYALİ" if source == "CANLI" else "🟡 MAÇ ÖNÜ ANALİZİ"
     return (
-        f"⚽ {home} - {away}\n"
-        + (f"🏆 {league}\n" if league else "")
+        f"<b>{heading}</b>\n"
+        f"⚽ <b>{html.escape(str(home))} - {html.escape(str(away))}</b>\n"
+        + (f"🏆 {html.escape(str(league))}\n" if league else "")
         + f"{time_line}\n"
+        + "━━━━━━━━━━━━━━\n"
         + "\n".join(markets)
-        + "\nℹ️ Tahminler analiz üzerine verilmektedir."
+        + "\n━━━━━━━━━━━━━━\n"
+        + "🧠 <i>aiALYSIS veri temelli tahminidir; garanti değildir.</i>"
     )
 
 
@@ -432,7 +449,6 @@ def settle_sent_predictions(state):
                 item['settled_at'] = datetime.now(timezone.utc).isoformat()
                 settled_count += 1
                 save_state(state)
-                save_state(state)
     flush_result_message_edits(state)
     return settled_count
 
@@ -445,7 +461,7 @@ def flush_result_message_edits(state):
         if not isinstance(item, dict) or not item.get("settled"):
             continue
         message_id = item.get("telegram_message_id")
-        if not message_id or item.get("result_posted"):
+        if not message_id or item.get("result_posted") or item.get("result_edit_unavailable"):
             continue
         grouped.setdefault(str(message_id), []).append(item)
 
@@ -473,13 +489,21 @@ def flush_result_message_edits(state):
                 x.pop("result_edit_error", None)
             save_state(state)
         except Exception as exc:
+            error_text = str(exc)
+            missing_original = "message to edit not found" in error_text.casefold()
             for x in related:
-                x["result_edit_error"] = str(exc)[:250]
-            print(f"Telegram sonuç düzenleme ertelendi (mesaj {message_id}): {exc}")
+                if missing_original:
+                    # Old/deleted posts cannot be edited; do not retry forever.
+                    x["result_edit_unavailable"] = True
+                    x["result_posted"] = True
+                else:
+                    x["result_edit_error"] = error_text[:250]
+            print(f"Telegram sonuç düzenleme {'atlanıyor' if missing_original else 'ertelendi'} (mesaj {message_id}): {exc}")
             save_state(state)
 
 def send_live_performance_report(state):
-    # Daily live-only totals; the report is posted once every three hours.
+    # Every three hours: report the predictions sent in the last interval,
+    # plus today's cumulative live-only scorecard.
     now = datetime.now().astimezone()
     last_value = state.get("last_live_report_at")
     if not last_value:
@@ -493,43 +517,57 @@ def send_live_performance_report(state):
             last_report = last_report.astimezone()
     except (ValueError, TypeError):
         last_report = now
+
     if now - last_report < timedelta(hours=3):
         return False
 
     today = now.date()
     live_items = []
+    interval_items = []
     for item in state.get("sent", {}).values():
         if not isinstance(item, dict) or item.get("source") != "CANLI":
             continue
-        created = item.get("created_at")
         try:
-            created_at = datetime.fromisoformat(str(created).replace("Z", "+00:00"))
-            if created_at.astimezone().date() == today:
-                live_items.append(item)
+            created_at = datetime.fromisoformat(str(item.get("created_at") or "").replace("Z", "+00:00"))
+            local_created = created_at.astimezone()
         except (ValueError, TypeError):
             continue
+        if local_created.date() == today:
+            live_items.append(item)
+        if last_report <= local_created <= now:
+            interval_items.append(item)
 
-    total = len(live_items)
-    won = sum(1 for x in live_items if x.get("settled") and x.get("result") == "KAZANDI")
-    lost = sum(1 for x in live_items if x.get("settled") and x.get("result") == "KAYBETTİ")
-    pending = total - won - lost
-    decided = won + lost
-    rate = (won / decided * 100) if decided else 0.0
+    def counts(items):
+        won = sum(1 for x in items if x.get("settled") and x.get("result") == "KAZANDI")
+        lost = sum(1 for x in items if x.get("settled") and x.get("result") == "KAYBETTİ")
+        total = len(items)
+        pending = max(0, total - won - lost)
+        decided = won + lost
+        rate = (won / decided * 100) if decided else 0.0
+        return total, won, lost, pending, rate
+
+    period = counts(interval_items)
+    daily = counts(live_items)
     report = (
-        "📊 aiALYSIS CANLI MAÇ PERFORMANS RAPORU\n"
-        f"📅 {now.strftime('%d.%m.%Y')}\n\n"
-        f"🎯 Toplam tahmin: {total}\n"
-        f"✅ Kazanan: {won}\n"
-        f"❌ Kaybeden: {lost}\n"
-        f"⏳ Bekleyen: {pending}\n"
-        f"📈 Başarı oranı: %{rate:.1f}\n\n"
-        "ℹ️ Başarı oranı yalnızca sonuçlanan tahminler üzerinden hesaplanır."
+        "📊 <b>aiALYSIS | CANLI PERFORMANS RAPORU</b>\n"
+        f"🕒 <b>Son 3 saat</b>  ·  {last_report.astimezone().strftime('%H:%M')}–{now.strftime('%H:%M')}\n"
+        "━━━━━━━━━━━━━━\n"
+        f"🎯 Gönderilen tahmin: <b>{period[0]}</b>\n"
+        f"✅ Kazanan: <b>{period[1]}</b>\n"
+        f"❌ Kaybeden: <b>{period[2]}</b>\n"
+        f"⏳ Bekleyen: <b>{period[3]}</b>\n"
+        f"📈 Başarı oranı: <b>%{period[4]:.1f}</b>\n"
+        "━━━━━━━━━━━━━━\n"
+        f"📅 <b>Bugün toplam</b>: {daily[0]} tahmin  |  ✅ {daily[1]}  |  ❌ {daily[2]}  |  ⏳ {daily[3]}\n"
+        f"🏆 Günlük başarı: <b>%{daily[4]:.1f}</b>\n"
+        "<i>Başarı oranı yalnızca sonucu kesinleşen canlı tahminlerden hesaplanır. Bekleyenler paydaya dahil değildir.</i>"
     )
     telegram_send(report)
     state["last_live_report_at"] = now.isoformat()
     save_state(state)
-    print(f"Canlı performans raporu gönderildi | toplam: {total} | kazandı: {won} | kaybetti: {lost} | bekleyen: {pending} | başarı: %{rate:.1f}")
+    print(f"Canlı performans raporu gönderildi | son 3 saat: {period[0]} | kazandı: {period[1]} | kaybetti: {period[2]} | bekleyen: {period[3]} | başarı: %{period[4]:.1f}")
     return True
+
 
 def main():
     if not BOT_TOKEN or not CHAT_ID:
