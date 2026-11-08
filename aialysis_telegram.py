@@ -247,11 +247,26 @@ def make_message(source, rows, match):
 
 def collect_live():
     active = get_json("maclar", {
-        "select": "fixture_id",
+        "select": "fixture_id,durum,elapsed",
         "durum": "in.(1H,HT,2H,ET,P,LIVE,BT,SUSP,INT)",
         "limit": 1000,
     })
-    ids = [int(x["fixture_id"]) for x in active if x.get("fixture_id")]
+    # Only send signals from the normal 0-90 minute window.
+    # Ignore stoppage time (90+) and extra-time periods.
+    eligible = []
+    for match in active:
+        status = str(match.get("durum") or "").strip().upper()
+        raw_elapsed = match.get("elapsed")
+        try:
+            minute = int(float(str(raw_elapsed).replace("'", "").strip()))
+        except (ValueError, TypeError):
+            continue
+        if status in {"ET", "P"} or minute > 90:
+            continue
+        if minute < 0 or minute > 90:
+            continue
+        eligible.append(match)
+    ids = [int(x["fixture_id"]) for x in eligible if x.get("fixture_id")]
     rows = []
     for i in range(0, len(ids), 150):
         batch = ids[i:i + 150]
@@ -267,7 +282,6 @@ def collect_live():
             "limit": 1000,
         }))
     return latest_per_market(rows)
-
 
 def collect_prematch():
     now = datetime.now(timezone.utc)
