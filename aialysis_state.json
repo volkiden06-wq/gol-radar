@@ -1067,9 +1067,12 @@
       "cizgi": 3.5,
       "ust_alt": "ÜST",
       "yontem": null,
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 248,
-      "telegram_message_text": "⚽ Chemal - Douane\n🏆 Premier League\n⏱ 74' | Skor 2-1\n• Toplam Gol 3.5 ÜST | Güven %68 | Oran 1.35\nℹ️ Tahminler analiz üzerine verilmektedir."
+      "telegram_message_text": "⚽ Chemal - Douane\n🏆 Premier League\n⏱ 74' | Skor 2-1\n• Toplam Gol 3.5 ÜST | Güven %68 | Oran 1.35\nℹ️ Tahminler analiz üzerine verilmektedir.",
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-08T21:53:44.445086+00:00",
+      "result_posted": true
     },
     "CANLI:97371409:toplam gol|1.5|alt|": {
       "created_at": "2026-11-08T21:12:42.487662+00:00",
@@ -1215,14 +1218,14 @@
       "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Ind. Yumbo - U. Magdalena</b>\n🏆 Primera B\n🗓 09.11 20:30\n━━━━━━━━━━━━━━\n🎯 <b>Ev Sahibi Gol 0.5 ÜST</b>  |  Güven <b>%71</b>  |  Oran <b>1.35</b>\n━━━━━━━━━━━━━━\n🧠 <i>aiALYSIS veri temelli tahminidir; garanti değildir.</i>"
     }
   },
-  "last_run": "2026-11-08T21:48:37.632612+00:00",
+  "last_run": "2026-11-08T21:53:46.007372+00:00",
   "last_counts": {
     "live": 0,
     "prematch": 9,
     "sent_messages": 0,
     "sent_predictions": 0,
     "queued_matches": 0,
-    "settled_predictions": 0
+    "settled_predictions": 1
   },
   "last_live_report_at": "2026-11-08T21:23:12.903116+00:00"
 }
