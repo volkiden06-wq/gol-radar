@@ -5,7 +5,6 @@ on:
     paths:
       - "aialysis_telegram.py"
       - ".github/workflows/aialysis-telegram.yml"
-      - "aialysis_state.json"
   schedule:
     - cron: "* * * * *"
   workflow_dispatch:
