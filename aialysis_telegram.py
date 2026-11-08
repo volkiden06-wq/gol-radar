@@ -362,11 +362,11 @@ def normalize_result(value):
     s = re.sub(r'[^a-z0-9]+', ' ', s).strip()
     win = {
         'kazandi', 'won', 'win', 'basarili', 'dogru', 'tuttu', 'geldi',
-        'isabet', 'olumlu', 'true', 'success', 'successful', '1'
+        'isabet', 'olumlu', 'success', 'successful'
     }
     lose = {
         'kaybetti', 'lost', 'lose', 'basarisiz', 'yanlis', 'tutmadi',
-        'gelmedi', 'isabet degil', 'olumsuz', 'false', 'failed', '0'
+        'gelmedi', 'isabet degil', 'olumsuz', 'failed'
     }
     if s in win:
         return 'KAZANDI'
@@ -439,7 +439,14 @@ def settle_sent_predictions(state):
                   side_text(item.get('ust_alt')).casefold(), str(item.get('yontem') or ''))
             result = by_market.get(mk)
             if not result:
-                candidates = [v for k, v in by_market.items() if k[0] == mid and k[1] == mk[1] and k[2] == mk[2]]
+                # If the method label differs or is absent, allow a fallback
+                # only when match, market, line, and side all match uniquely.
+                # Never infer a result from the opposite side or another line.
+                candidates = [
+                    v for k, v in by_market.items()
+                    if k[0] == mid and k[1] == mk[1] and k[2] == mk[2]
+                    and k[3] == mk[3] and (not mk[4] or k[4] == mk[4])
+                ]
                 result = candidates[0] if candidates and len(set(candidates)) == 1 else None
             # Trust an early win as soon as the market result says KAZANDI.
             # Never publish KAYBETTİ until the match is officially finished.
