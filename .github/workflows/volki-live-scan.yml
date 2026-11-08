@@ -1,45 +1,14 @@
-name: VOLKI Football AI Live Scan
+name: VOLKI Legacy Scan (manual only)
 
 on:
-  schedule:
-    - cron: "17 0,3,6,9,12,15,18,21 * * *"
-    - cron: "47 1,4,7,10,13,16,19,22 * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
 
-concurrency:
-  group: volki-football-ai
-  cancel-in-progress: false
-
 jobs:
-  scan:
+  legacy:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
     steps:
-      - name: Kodları al
-        uses: actions/checkout@v4
-      - name: Python kur
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - name: Bağımlılıkları yükle
-        run: pip install -r requirements-volki.txt
-      - name: Canlı maçları tara
-        env:
-          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          ALERT_SCORE_THRESHOLD: "60"
-          MAX_STATS_REQUESTS_PER_RUN: "4"
-          MAX_API_CALLS_PER_DAY: "90"
-        run: python volki_cloud_scan.py
-      - name: Sinyal geçmişini kaydet
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add volki_state.json
-          git diff --cached --quiet || git commit -m "Update VOLKI signal state"
-          git pull --rebase origin main
-          git push
+      - name: Legacy scan disabled
+        run: echo "Scheduled VOLKI scan disabled; aiALYSIS Telegram workflow is the active prediction source."
