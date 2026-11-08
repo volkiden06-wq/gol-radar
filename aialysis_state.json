@@ -1215,10 +1215,10 @@
       "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Ind. Yumbo - U. Magdalena</b>\n🏆 Primera B\n🗓 09.11 20:30\n━━━━━━━━━━━━━━\n🎯 <b>Ev Sahibi Gol 0.5 ÜST</b>  |  Güven <b>%71</b>  |  Oran <b>1.35</b>\n━━━━━━━━━━━━━━\n🧠 <i>aiALYSIS veri temelli tahminidir; garanti değildir.</i>"
     }
   },
-  "last_run": "2026-11-08T21:48:24.983388+00:00",
+  "last_run": "2026-11-08T21:48:37.632612+00:00",
   "last_counts": {
     "live": 0,
-    "prematch": 0,
+    "prematch": 9,
     "sent_messages": 0,
     "sent_predictions": 0,
     "queued_matches": 0,
