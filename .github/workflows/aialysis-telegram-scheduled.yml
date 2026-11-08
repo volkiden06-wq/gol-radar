@@ -1,6 +1,9 @@
 name: aiALYSIS Telegram Scheduled Scan
 
 on:
+  push:
+    paths:
+      - ".github/workflows/aialysis-telegram-scheduled.yml"
   schedule:
     # Offset from the top of the hour to reduce GitHub scheduler congestion.
     - cron: "2-59/5 * * * *"
