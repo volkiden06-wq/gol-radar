@@ -23,7 +23,8 @@ CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "").strip()
 CONFIDENCE_MIN = 70
 ODDS_MIN = 1.35
 UPCOMING_HOURS = int(os.getenv("AIALYSIS_UPCOMING_HOURS", "24"))
-MAX_SEND_PER_RUN = int(os.getenv("AIALYSIS_MAX_SEND_PER_RUN", "80"))
+MAX_SEND_PER_RUN = int(os.getenv("AIALYSIS_MAX_SEND_PER_RUN", "20"))
+MAX_PREMATCH_SEND_PER_RUN = int(os.getenv("AIALYSIS_MAX_PREMATCH_SEND_PER_RUN", "2"))
 HEADERS = {"apikey": ANON_KEY, "Authorization": f"Bearer {ANON_KEY}"}
 SESSION = requests.Session()
 SESSION.headers.update(HEADERS)
@@ -377,11 +378,19 @@ def main():
                 grouped[group_key] = {"match": match, "rows": []}
             grouped[group_key]["rows"].append((key, row))
 
-    queue = sorted(
-        grouped.items(),
-        key=lambda item: (0 if item[0][0] == "CANLI" else 1,
-                          str(item[1]["rows"][0][1].get("created_at") or ""))
+    live_queue = sorted(
+        ((k, v) for k, v in grouped.items() if k[0] == "CANLI"),
+        key=lambda item: str(item[1]["rows"][0][1].get("created_at") or "")
     )
+    prematch_queue = sorted(
+        ((k, v) for k, v in grouped.items() if k[0] == "MAÇ ÖNÜ"),
+        key=lambda item: str(item[1]["rows"][0][1].get("created_at") or "")
+    )
+    # Live signals always have priority. Pre-match messages are deliberately
+    # limited so they cannot crowd out live match alerts.
+    queue = live_queue[:MAX_SEND_PER_RUN]
+    remaining_slots = max(0, MAX_SEND_PER_RUN - len(queue))
+    queue.extend(prematch_queue[:min(MAX_PREMATCH_SEND_PER_RUN, remaining_slots)])
     sent_now = 0
     prediction_count = 0
     for (source, match_id), group in queue[:MAX_SEND_PER_RUN]:
@@ -413,8 +422,11 @@ def main():
     }
     save_state(state)
     print(f"aiALYSIS | canlı tahmin: {len(live)} | maç önü tahmin: {len(prematch)} | gönderilen maç mesajı: {sent_now} | gönderilen tahmin: {prediction_count} | kuyruk maç: {len(queue)}")
-    if len(queue) > MAX_SEND_PER_RUN:
-        print(f"Kalan {len(queue)-MAX_SEND_PER_RUN} maç sonraki 5 dakikalık çalışmalarda gönderilecek.")
+    print(f"Öncelik: canlı maçlar | maç önü üst sınırı: {MAX_PREMATCH_SEND_PER_RUN} mesaj/çalışma")
+    if len(live_queue) > MAX_SEND_PER_RUN:
+        print(f"Kalan {len(live_queue)-MAX_SEND_PER_RUN} canlı maç sonraki taramalarda gönderilecek.")
+    elif len(prematch_queue) > MAX_PREMATCH_SEND_PER_RUN:
+        print(f"Kalan {len(prematch_queue)-MAX_PREMATCH_SEND_PER_RUN} maç önü maçı sonraki taramalarda değerlendirilecek.")
 
 
 if __name__ == "__main__":
