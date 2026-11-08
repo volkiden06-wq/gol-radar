@@ -445,11 +445,66 @@ def settle_sent_predictions(state):
                 save_state(state)
     return settled_count
 
+
+def send_live_performance_report(state):
+    # Daily live-only totals; the report is posted once every three hours.
+    now = datetime.now().astimezone()
+    last_value = state.get("last_live_report_at")
+    if not last_value:
+        state["last_live_report_at"] = now.isoformat()
+        save_state(state)
+        print("Canlı performans raporu zamanlayıcısı başlatıldı; ilk rapor 3 saat sonra gönderilecek.")
+        return False
+    try:
+        last_report = datetime.fromisoformat(str(last_value))
+        if last_report.tzinfo is None:
+            last_report = last_report.astimezone()
+    except (ValueError, TypeError):
+        last_report = now
+    if now - last_report < timedelta(hours=3):
+        return False
+
+    today = now.date()
+    live_items = []
+    for item in state.get("sent", {}).values():
+        if not isinstance(item, dict) or item.get("source") != "CANLI":
+            continue
+        created = item.get("created_at")
+        try:
+            created_at = datetime.fromisoformat(str(created).replace("Z", "+00:00"))
+            if created_at.astimezone().date() == today:
+                live_items.append(item)
+        except (ValueError, TypeError):
+            continue
+
+    total = len(live_items)
+    won = sum(1 for x in live_items if x.get("settled") and x.get("result") == "KAZANDI")
+    lost = sum(1 for x in live_items if x.get("settled") and x.get("result") == "KAYBETTİ")
+    pending = total - won - lost
+    decided = won + lost
+    rate = (won / decided * 100) if decided else 0.0
+    report = (
+        "📊 aiALYSIS CANLI MAÇ PERFORMANS RAPORU\\n"
+        f"📅 {now.strftime('%d.%m.%Y')}\\n\\n"
+        f"🎯 Toplam tahmin: {total}\\n"
+        f"✅ Kazanan: {won}\\n"
+        f"❌ Kaybeden: {lost}\\n"
+        f"⏳ Bekleyen: {pending}\\n"
+        f"📈 Başarı oranı: %{rate:.1f}\\n\\n"
+        "ℹ️ Başarı oranı yalnızca sonuçlanan tahminler üzerinden hesaplanır."
+    )
+    telegram_send(report)
+    state["last_live_report_at"] = now.isoformat()
+    save_state(state)
+    print(f"Canlı performans raporu gönderildi | toplam: {total} | kazandı: {won} | kaybetti: {lost} | bekleyen: {pending} | başarı: %{rate:.1f}")
+    return True
+
 def main():
     if not BOT_TOKEN or not CHAT_ID:
         raise SystemExit("TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID GitHub Secrets eksik.")
     state = load_state()
     settled_count = settle_sent_predictions(state)
+    send_live_performance_report(state)
     live = collect_live()
     prematch, prematch_matches = collect_prematch()
     ids = [x.get("mac_id") for x in live] + [x.get("fixture_id") for x in prematch_matches]
