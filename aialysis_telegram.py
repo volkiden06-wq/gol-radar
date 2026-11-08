@@ -300,10 +300,63 @@ def collect_prematch():
     return result, rows
 
 
+def normalize_result(value):
+    s = str(value or '').strip().casefold()
+    if s in {'kazandi', 'kazandı', 'won', 'win', 'basarili', 'başarılı', 'dogru', 'doğru'}:
+        return 'KAZANDI'
+    if s in {'kaybetti', 'lost', 'lose', 'basarisiz', 'başarısız', 'yanlis', 'yanlış'}:
+        return 'KAYBETTİ'
+    return None
+
+
+def settle_sent_predictions(state):
+    pending = [(key, item) for key, item in state.get('sent', {}).items()
+               if isinstance(item, dict) and not item.get('settled') and item.get('match_id')]
+    ids = sorted({str(item['match_id']) for _, item in pending if str(item['match_id']).isdigit()})
+    settled_count = 0
+    for offset in range(0, len(ids), 100):
+        batch = ids[offset:offset + 100]
+        if not batch:
+            continue
+        rows = get_json('tahmin_sonuclari', {
+            'mac_id': 'in.(' + ','.join(batch) + ')',
+            'user_id': 'is.null',
+            'select': 'mac_id,kategori,cizgi,ust_alt,yontem,sonuc',
+            'limit': 1000,
+        })
+        by_market = {}
+        for row in rows:
+            result = normalize_result(row.get('sonuc'))
+            if result:
+                k = (str(row.get('mac_id')), str(row.get('kategori') or '').casefold(),
+                     str(row.get('cizgi') or ''), side_text(row.get('ust_alt')).casefold(),
+                     str(row.get('yontem') or ''))
+                by_market[k] = result
+        for _, item in pending:
+            mid = str(item.get('match_id'))
+            if mid not in batch:
+                continue
+            mk = (mid, str(item.get('kategori') or '').casefold(), str(item.get('cizgi') or ''),
+                  side_text(item.get('ust_alt')).casefold(), str(item.get('yontem') or ''))
+            result = by_market.get(mk)
+            if not result:
+                candidates = [v for k, v in by_market.items() if k[0] == mid and k[1] == mk[1] and k[2] == mk[2]]
+                result = candidates[0] if candidates and len(set(candidates)) == 1 else None
+            if result:
+                item['settled'] = True
+                item['result'] = result
+                item['settled_at'] = datetime.now(timezone.utc).isoformat()
+                telegram_send(f"{'✅' if result == 'KAZANDI' else '❌'} {result}\\n⚽ {item.get('home', 'Maç')}\\n🎯 {item.get('kategori', 'Gol')} {item.get('cizgi') or ''} {side_text(item.get('ust_alt'))}")
+                settled_count += 1
+                save_state(state)
+                time.sleep(4.0)
+    return settled_count
+
 def main():
     if not BOT_TOKEN or not CHAT_ID:
         raise SystemExit("TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID GitHub Secrets eksik.")
     state = load_state()
+    settled_count = settle_sent_predictions(state)
     live = collect_live()
     prematch, prematch_matches = collect_prematch()
     ids = [x.get("mac_id") for x in live] + [x.get("fixture_id") for x in prematch_matches]
@@ -339,6 +392,13 @@ def main():
             state["sent"][key] = {
                 "created_at": row.get("created_at") or stamp,
                 "source": source,
+                "match_id": str(match_id),
+                "home": f"{(group['match'] or {}).get('ev_takim_adi') or row.get('ev_takim_adi') or row.get('ev_sahibi') or 'Ev sahibi'} - {(group['match'] or {}).get('dep_takim_adi') or row.get('dep_takim_adi') or row.get('deplasman') or 'Deplasman'}",
+                "kategori": row.get("kategori"),
+                "cizgi": row.get("cizgi"),
+                "ust_alt": row.get("ust_alt"),
+                "yontem": row.get("yontem"),
+                "settled": False,
             }
         sent_now += 1
         prediction_count += len(rows)
@@ -349,7 +409,7 @@ def main():
     state["last_counts"] = {
         "live": len(live), "prematch": len(prematch),
         "sent_messages": sent_now, "sent_predictions": prediction_count,
-        "queued_matches": len(queue),
+        "queued_matches": len(queue), "settled_predictions": settled_count,
     }
     save_state(state)
     print(f"aiALYSIS | canlı tahmin: {len(live)} | maç önü tahmin: {len(prematch)} | gönderilen maç mesajı: {sent_now} | gönderilen tahmin: {prediction_count} | kuyruk maç: {len(queue)}")
