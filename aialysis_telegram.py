@@ -16,7 +16,7 @@ from pathlib import Path
 import requests
 
 BASE = "https://fohmlwoewjupceznwmdr.supabase.co"
-ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJIUzI1NiIsInJlZiI6ImZvaG1sd29ld2p1Y2V6bndtZHIiLCJyb2xlIjoiYW5vbiIsImlhdCI6MTc3Mzk0MTgyNiwiZXhwIjoyMDg5NTE3ODI2fQ.Ye-85hcsrLeORp-ThZCxssrc92WOm4ZI-B3mvTmwju4"
+ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZvaG1sd29ld2p1Y2V6bndtZHIiLCJyb2xlIjoiYW5vbiIsImlhdCI6MTc3Mzk0MTgyNiwiZXhwIjoyMDg5NTE3ODI2fQ.Ye-85hcsrLeORp-ThZCxssrc92WOm4ZI-B3mvTmwju4"
 STATE_PATH = Path("aialysis_state.json")
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "").strip()
@@ -204,7 +204,8 @@ def make_message(source, row, match):
     o = odds(row)
     odds_line = f"\n💹 Oran: {o:.2f}" if o is not None else ""
     link_id = row.get("mac_id") or row.get("fixture_id")
-    link = f"https://aialysis.live/mac/{link_id}" if link_id else "https://aialysis.live/aialysis"
+    slug = re.sub(r"[^a-z0-9]+", "-", f"{home}-vs-{away}".lower()).strip("-")
+    link = f"https://aialysis.live/mac/{slug}-{link_id}" if link_id else "https://aialysis.live/aialysis"
     return (
         f"🤖 aiALYSIS | {source} TAHMİNİ\n"
         f"⚽ {home} - {away}\n"
@@ -317,6 +318,7 @@ def main():
             "source": source,
         }
         sent_now += 1
+        save_state(state)
         time.sleep(0.12)
     state["last_run"] = datetime.now(timezone.utc).isoformat()
     state["last_counts"] = {"live": len(live), "prematch": len(prematch), "sent": sent_now, "queued": len(queue)}
