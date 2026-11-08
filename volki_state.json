@@ -80,7 +80,14 @@
       "goals": [
         0,
         1
-      ]
+      ],
+      "result": "BAŞARILI",
+      "final_goals": [
+        0,
+        2
+      ],
+      "result_basis": "pressure_team",
+      "result_checked_at": "2026-11-08T01:53:45.644695+00:00"
     },
     "1492449": {
       "minute": 75,
@@ -91,7 +98,14 @@
       "goals": [
         0,
         2
-      ]
+      ],
+      "result": "BAŞARILI",
+      "final_goals": [
+        0,
+        3
+      ],
+      "result_basis": "pressure_team",
+      "result_checked_at": "2026-11-08T01:53:46.129608+00:00"
     },
     "1646792": {
       "minute": 63,
@@ -102,7 +116,14 @@
       "goals": [
         0,
         2
-      ]
+      ],
+      "result": "BAŞARILI",
+      "final_goals": [
+        0,
+        3
+      ],
+      "result_basis": "pressure_team",
+      "result_checked_at": "2026-11-08T01:53:46.607143+00:00"
     },
     "1646793": {
       "minute": 57,
@@ -113,7 +134,14 @@
       "goals": [
         4,
         0
-      ]
+      ],
+      "result": "BAŞARILI",
+      "final_goals": [
+        7,
+        0
+      ],
+      "result_basis": "pressure_team",
+      "result_checked_at": "2026-11-08T01:53:47.273816+00:00"
     },
     "1646796": {
       "minute": 61,
@@ -168,6 +196,50 @@
       "goals": [
         1,
         0
+      ]
+    },
+    "1490610": {
+      "minute": 83,
+      "score": 85,
+      "pressure_team": "FC Dallas",
+      "home": "FC Dallas",
+      "away": "Colorado Rapids",
+      "goals": [
+        1,
+        1
+      ]
+    },
+    "1490611": {
+      "minute": 83,
+      "score": 87,
+      "pressure_team": "Austin",
+      "home": "Austin",
+      "away": "Portland Timbers",
+      "goals": [
+        0,
+        2
+      ]
+    },
+    "1490612": {
+      "minute": 83,
+      "score": 93,
+      "pressure_team": "San Diego",
+      "home": "San Diego",
+      "away": "Sporting Kansas City",
+      "goals": [
+        0,
+        1
+      ]
+    },
+    "1490613": {
+      "minute": 84,
+      "score": 89,
+      "pressure_team": "Minnesota United FC",
+      "home": "Minnesota United FC",
+      "away": "San Jose Earthquakes",
+      "goals": [
+        2,
+        1
       ]
     }
   },
@@ -252,7 +324,14 @@
       "goals": [
         0,
         1
-      ]
+      ],
+      "result": "BAŞARILI",
+      "final_goals": [
+        0,
+        2
+      ],
+      "result_basis": "pressure_team",
+      "result_checked_at": "2026-11-08T01:53:45.644695+00:00"
     },
     "1492449": {
       "minute": 75,
@@ -263,7 +342,14 @@
       "goals": [
         0,
         2
-      ]
+      ],
+      "result": "BAŞARILI",
+      "final_goals": [
+        0,
+        3
+      ],
+      "result_basis": "pressure_team",
+      "result_checked_at": "2026-11-08T01:53:46.129608+00:00"
     },
     "1646792": {
       "minute": 63,
@@ -274,7 +360,14 @@
       "goals": [
         0,
         2
-      ]
+      ],
+      "result": "BAŞARILI",
+      "final_goals": [
+        0,
+        3
+      ],
+      "result_basis": "pressure_team",
+      "result_checked_at": "2026-11-08T01:53:46.607143+00:00"
     },
     "1646793": {
       "minute": 57,
@@ -285,7 +378,14 @@
       "goals": [
         4,
         0
-      ]
+      ],
+      "result": "BAŞARILI",
+      "final_goals": [
+        7,
+        0
+      ],
+      "result_basis": "pressure_team",
+      "result_checked_at": "2026-11-08T01:53:47.273816+00:00"
     },
     "1646796": {
       "minute": 61,
@@ -341,16 +441,56 @@
         1,
         0
       ]
+    },
+    "1490610": {
+      "minute": 83,
+      "score": 85,
+      "pressure_team": "FC Dallas",
+      "home": "FC Dallas",
+      "away": "Colorado Rapids",
+      "goals": [
+        1,
+        1
+      ]
+    },
+    "1490611": {
+      "minute": 83,
+      "score": 87,
+      "pressure_team": "Austin",
+      "home": "Austin",
+      "away": "Portland Timbers",
+      "goals": [
+        0,
+        2
+      ]
+    },
+    "1490612": {
+      "minute": 83,
+      "score": 93,
+      "pressure_team": "San Diego",
+      "home": "San Diego",
+      "away": "Sporting Kansas City",
+      "goals": [
+        0,
+        1
+      ]
+    },
+    "1490613": {
+      "minute": 84,
+      "score": 89,
+      "pressure_team": "Minnesota United FC",
+      "home": "Minnesota United FC",
+      "away": "San Jose Earthquakes",
+      "goals": [
+        2,
+        1
+      ]
     }
   },
-  "date": "2026-11-07",
-  "stats_today": 60,
-  "cursor": 16,
+  "date": "2026-11-08",
+  "stats_today": 4,
+  "cursor": 7,
   "telegram_test_sent": true,
-  "api_calls_today": 73,
-  "no_stats_until": {
-    "1647448": "2026-11-07T23:33:19.460649+00:00",
-    "1648313": "2026-11-07T23:33:19.719766+00:00",
-    "1559699": "2026-11-08T00:50:50.005671+00:00"
-  }
+  "api_calls_today": 9,
+  "no_stats_until": {}
 }
