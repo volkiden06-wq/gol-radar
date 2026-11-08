@@ -248,7 +248,7 @@ def collect_prematch():
     rows = pages("mac_oncu_analizler", {
         "mac_tarihi": f"gte.{now.isoformat()}",
         "order": "mac_tarihi.asc",
-        "select": "fixture_id,mac_tarihi,ev_takim_adi,dep_takim_adi,lig_adi,ulke,analiz,created_at",
+        "select": "fixture_id,mac_tarihi,ev_takim_adi,dep_takim_adi,lig_adi,analiz,created_at",
     }, max_pages=10)
     result = []
     for match in rows:
