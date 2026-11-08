@@ -296,7 +296,14 @@
       "goals": [
         2,
         1
-      ]
+      ],
+      "result": "BAŞARILI",
+      "final_goals": [
+        3,
+        1
+      ],
+      "result_basis": "pressure_team",
+      "result_checked_at": "2026-11-08T13:24:44.099614+00:00"
     }
   },
   "signals": {
@@ -596,15 +603,26 @@
       "goals": [
         2,
         1
-      ]
+      ],
+      "result": "BAŞARILI",
+      "final_goals": [
+        3,
+        1
+      ],
+      "result_basis": "pressure_team",
+      "result_checked_at": "2026-11-08T13:24:44.099614+00:00"
     }
   },
   "date": "2026-11-08",
-  "stats_today": 8,
-  "cursor": 11,
+  "stats_today": 12,
+  "cursor": 15,
   "telegram_test_sent": true,
-  "api_calls_today": 23,
+  "api_calls_today": 29,
   "no_stats_until": {
-    "1516178": "2026-11-08T14:33:46.913758+00:00"
+    "1516178": "2026-11-08T14:33:46.913758+00:00",
+    "1503719": "2026-11-08T16:24:44.304529+00:00",
+    "1554217": "2026-11-08T16:24:44.529071+00:00",
+    "1558560": "2026-11-08T16:24:44.731490+00:00",
+    "1558991": "2026-11-08T16:24:44.934352+00:00"
   }
 }
