@@ -264,7 +264,7 @@ def make_message(source, rows, match):
         + "━━━━━━━━━━━━━━\n"
         + "\n".join(markets)
         + "\n━━━━━━━━━━━━━━\n"
-        + "🧠 <i>aiALYSIS veri temelli tahminidir; garanti değildir.</i>"
+        + "<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
     )
 
 
@@ -551,7 +551,7 @@ def send_live_performance_report(state):
     period = counts(interval_items)
     daily = counts(live_items)
     report = (
-        "📊 <b>aiALYSIS | CANLI PERFORMANS RAPORU</b>\n"
+        "📊 <b>CANLI PERFORMANS RAPORU</b>\n"
         f"🕒 <b>Son 3 saat</b>  ·  {last_report.astimezone().strftime('%H:%M')}–{now.strftime('%H:%M')}\n"
         "━━━━━━━━━━━━━━\n"
         f"🎯 Gönderilen tahmin: <b>{period[0]}</b>\n"
