@@ -70,7 +70,9 @@ def confidence(row):
     if value in (None, ""):
         value = row.get("guc", row.get("olasilik"))
     try:
-        return min(int(float(value or 0)), 95)
+        normalized = str(value or 0).strip().replace("%", "").replace(",", ".")
+        match = re.search(r"-?\\d+(?:\\.\\d+)?", normalized)
+        return min(max(int(float(match.group(0))), 0), 95) if match else 0
     except (ValueError, TypeError):
         return 0
 
