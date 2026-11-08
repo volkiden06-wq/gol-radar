@@ -223,7 +223,7 @@ def make_message(source, rows, match):
         + (f"🏆 {league}\n" if league else "")
         + f"{time_line}\n"
         + "\n".join(markets)
-        + "\nℹ️ İstatistiksel tahmindir; sonuç veya bahis garantisi değildir."
+        + "\nℹ️ Tahminler analiz üzerine verilmektedir."
     )
 
 
