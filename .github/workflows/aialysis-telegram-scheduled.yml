@@ -1,0 +1,167 @@
+name: aiALYSIS Telegram Scheduled Scan
+
+on:
+  schedule:
+    # Offset from the top of the hour to reduce GitHub scheduler congestion.
+    - cron: "2-59/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: aialysis-telegram
+  cancel-in-progress: false
+
+jobs:
+  forward:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Depoyu al
+        uses: actions/checkout@v4
+      - name: Python kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Bağımlılıkları kur
+        run: pip install requests
+      - name: aiALYSIS tahminlerini Telegram'a gönder
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          AIALYSIS_UPCOMING_HOURS: "24"
+          AIALYSIS_MAX_SEND_PER_RUN: "12"
+        run: python aialysis_telegram.py
+      - name: Gönderim geçmişini güvenli şekilde birleştir ve kaydet
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          LOCAL_STATE="$(mktemp)"
+          REMOTE_STATE="$(mktemp)"
+          MERGED_STATE="$(mktemp)"
+          cp aialysis_state.json "$LOCAL_STATE"
+
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            if git show origin/main:aialysis_state.json > "$REMOTE_STATE" 2>/dev/null; then
+              python - "$LOCAL_STATE" "$REMOTE_STATE" "$MERGED_STATE" <<'PY'
+          import json
+          import sys
+          from datetime import datetime, timedelta, timezone
+
+          local_path, remote_path, output_path = sys.argv[1:4]
+
+          def load(path):
+              try:
+                  with open(path, encoding="utf-8") as f:
+                      value = json.load(f)
+                  return value if isinstance(value, dict) else {}
+              except Exception:
+                  return {}
+
+          local = load(local_path)
+          remote = load(remote_path)
+          merged = {**remote, **local}
+          local_sent = local.get("sent") if isinstance(local.get("sent"), dict) else {}
+          remote_sent = remote.get("sent") if isinstance(remote.get("sent"), dict) else {}
+          sent = dict(remote_sent)
+
+          settlement_fields = (
+              "settled", "result", "settled_at", "result_posted",
+              "result_edit_unavailable", "result_edit_error"
+          )
+
+          for key, local_item in local_sent.items():
+              if not isinstance(local_item, dict):
+                  continue
+              remote_item = sent.get(key)
+              if not isinstance(remote_item, dict):
+                  sent[key] = local_item
+                  continue
+
+              combined = {**remote_item, **local_item}
+              remote_id = remote_item.get("telegram_message_id")
+              local_id = local_item.get("telegram_message_id")
+              if remote_id and local_id and str(remote_id) != str(local_id):
+                  print(f"UYARI: {key} için farklı mesaj kimlikleri bulundu; uzak kayıt korundu.")
+                  combined["telegram_message_id"] = remote_id
+                  combined["telegram_message_text"] = remote_item.get("telegram_message_text", combined.get("telegram_message_text", ""))
+              elif remote_id and not local_id:
+                  combined["telegram_message_id"] = remote_id
+                  combined["telegram_message_text"] = remote_item.get("telegram_message_text", combined.get("telegram_message_text", ""))
+
+              remote_settled = bool(remote_item.get("settled"))
+              local_settled = bool(local_item.get("settled"))
+              if remote_settled and local_settled and remote_item.get("result") != local_item.get("result"):
+                  print(f"UYARI: {key} için çelişen sonuç; doğrulama için beklemeye alındı.")
+                  combined["settled"] = False
+                  for field in settlement_fields:
+                      combined.pop(field, None)
+              elif remote_settled or local_settled:
+                  settled_item = local_item if local_settled else remote_item
+                  for field in settlement_fields:
+                      if field in settled_item:
+                          combined[field] = settled_item[field]
+                      else:
+                          combined.pop(field, None)
+                  if remote_settled and local_settled:
+                      combined["result_posted"] = bool(remote_item.get("result_posted") or local_item.get("result_posted"))
+                      combined["result_edit_unavailable"] = bool(remote_item.get("result_edit_unavailable") or local_item.get("result_edit_unavailable"))
+                      if combined["result_posted"]:
+                          combined.pop("result_edit_error", None)
+
+              sent[key] = combined
+
+          cutoff = datetime.now(timezone.utc) - timedelta(days=14)
+          kept = {}
+          for key, item in sent.items():
+              if not isinstance(item, dict):
+                  continue
+              try:
+                  created = datetime.fromisoformat(str(item.get("created_at") or "").replace("Z", "+00:00"))
+                  if created.tzinfo is None:
+                      created = created.replace(tzinfo=timezone.utc)
+                  if created < cutoff:
+                      continue
+              except Exception:
+                  pass
+              kept[key] = item
+
+          merged["sent"] = kept
+          if str(remote.get("last_run") or "") > str(local.get("last_run") or ""):
+              merged["last_run"] = remote.get("last_run")
+              if "last_counts" in remote:
+                  merged["last_counts"] = remote["last_counts"]
+          merged["last_live_report_at"] = max(
+              str(local.get("last_live_report_at") or ""),
+              str(remote.get("last_live_report_at") or "")
+          ) or None
+
+          with open(output_path, "w", encoding="utf-8") as f:
+              json.dump(merged, f, ensure_ascii=False, indent=2)
+          PY
+            else
+              cp "$LOCAL_STATE" "$MERGED_STATE"
+            fi
+
+            git reset --hard origin/main
+            cp "$MERGED_STATE" aialysis_state.json
+            git add aialysis_state.json
+            if git diff --cached --quiet; then
+              echo "Gönderim geçmişi zaten güncel."
+              exit 0
+            fi
+            git commit -m "Update aiALYSIS Telegram delivery state"
+            if git push origin HEAD:main; then
+              echo "Gönderim geçmişi birleştirilerek kaydedildi."
+              exit 0
+            fi
+            echo "Dal eşzamanlı güncellendi; tekrar deneniyor ($attempt/5)."
+            cp aialysis_state.json "$LOCAL_STATE"
+          done
+
+          echo "Gönderim geçmişi 5 denemede kaydedilemedi."
+          exit 1
