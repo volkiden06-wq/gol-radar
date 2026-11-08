@@ -484,13 +484,13 @@ def send_live_performance_report(state):
     decided = won + lost
     rate = (won / decided * 100) if decided else 0.0
     report = (
-        "📊 aiALYSIS CANLI MAÇ PERFORMANS RAPORU\\n"
-        f"📅 {now.strftime('%d.%m.%Y')}\\n\\n"
-        f"🎯 Toplam tahmin: {total}\\n"
-        f"✅ Kazanan: {won}\\n"
-        f"❌ Kaybeden: {lost}\\n"
-        f"⏳ Bekleyen: {pending}\\n"
-        f"📈 Başarı oranı: %{rate:.1f}\\n\\n"
+        "📊 aiALYSIS CANLI MAÇ PERFORMANS RAPORU\n"
+        f"📅 {now.strftime('%d.%m.%Y')}\n\n"
+        f"🎯 Toplam tahmin: {total}\n"
+        f"✅ Kazanan: {won}\n"
+        f"❌ Kaybeden: {lost}\n"
+        f"⏳ Bekleyen: {pending}\n"
+        f"📈 Başarı oranı: %{rate:.1f}\n\n"
         "ℹ️ Başarı oranı yalnızca sonuçlanan tahminler üzerinden hesaplanır."
     )
     telegram_send(report)
