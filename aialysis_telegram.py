@@ -214,17 +214,12 @@ def make_message(source, rows, match):
         o = odds(row)
         odds_line = f" | Oran {o:.2f}" if o is not None else ""
         markets.append(f"• {market_text(row)} | Güven %{g}{odds_line}")
-    link_id = first.get("mac_id") or first.get("fixture_id")
-    slug = re.sub(r"[^a-z0-9]+", "-", f"{home}-vs-{away}".lower()).strip("-")
-    link = f"https://aialysis.live/mac/{slug}-{link_id}" if link_id else "https://aialysis.live/aialysis"
     return (
-        f"🤖 aiALYSIS | {source} TAHMİNLERİ\\n"
-        f"⚽ {home} - {away}\\n"
-        + (f"🏆 {league}\\n" if league else "")
-        + f"{time_line}\\n"
-        + "\\n".join(markets)
-        + f"\\n🔎 {link}\\n"
-        "ℹ️ İstatistiksel tahmindir; sonuç veya bahis garantisi değildir."
+        f"⚽ {home} - {away}\n"
+        + (f"🏆 {league}\n" if league else "")
+        + f"{time_line}\n"
+        + "\n".join(markets)
+        + "\nℹ️ İstatistiksel tahmindir; sonuç veya bahis garantisi değildir."
     )
 
 
