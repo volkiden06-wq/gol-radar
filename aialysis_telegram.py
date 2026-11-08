@@ -149,8 +149,25 @@ def telegram_send(text):
         data = r.json()
         if not data.get("ok"):
             raise RuntimeError(f"Telegram gönderim hatası: {str(data)[:250]}")
-        return
+        return (data.get("result") or {}).get("message_id")
     raise RuntimeError("Telegram hız sınırı aşıldı; mesaj sonraki taramada yeniden denenecek.")
+
+def telegram_edit(message_id, text):
+    url = f"https://api.telegram.org/bot{BOT_TOKEN}/editMessageText"
+    r = requests.post(url, json={
+        "chat_id": CHAT_ID,
+        "message_id": message_id,
+        "text": text,
+        "disable_web_page_preview": True,
+    }, timeout=30)
+    r.raise_for_status()
+    data = r.json()
+    if not data.get("ok"):
+        # Telegram returns "message is not modified" when text is identical.
+        if "message is not modified" in str(data).casefold():
+            return
+        raise RuntimeError(f"Telegram mesaj düzenleme hatası: {str(data)[:250]}")
+
 
 
 def load_state():
@@ -376,10 +393,23 @@ def settle_sent_predictions(state):
                 item['settled'] = True
                 item['result'] = result
                 item['settled_at'] = datetime.now(timezone.utc).isoformat()
-                telegram_send(f"{'✅' if result == 'KAZANDI' else '❌'} {result}\\n⚽ {item.get('home', 'Maç')}\\n🎯 {item.get('kategori', 'Gol')} {item.get('cizgi') or ''} {side_text(item.get('ust_alt'))}")
+                # Update the original prediction post; never send a separate result post.
+                message_id = item.get('telegram_message_id')
+                if message_id:
+                    related = [
+                        x for x in state.get('sent', {}).values()
+                        if isinstance(x, dict)
+                        and x.get('telegram_message_id') == message_id
+                        and x.get('settled')
+                    ]
+                    result_lines = [
+                        f"{'✅' if x.get('result') == 'KAZANDI' else '❌'} {x.get('result')} — {x.get('kategori', 'Gol')} {x.get('cizgi') or ''} {side_text(x.get('ust_alt'))}".strip()
+                        for x in related
+                    ]
+                    base_text = item.get('telegram_message_text') or ''
+                    telegram_edit(message_id, base_text + "\\n\\n" + "\\n".join(result_lines))
                 settled_count += 1
                 save_state(state)
-                time.sleep(4.0)
     return settled_count
 
 def main():
@@ -424,7 +454,8 @@ def main():
     prediction_count = 0
     for (source, match_id), group in queue[:MAX_SEND_PER_RUN]:
         rows = [x[1] for x in group["rows"]]
-        telegram_send(make_message(source, rows, group["match"]))
+        message_text = make_message(source, rows, group["match"])
+        telegram_message_id = telegram_send(message_text)
         stamp = datetime.now(timezone.utc).isoformat()
         for key, row in group["rows"]:
             state["sent"][key] = {
@@ -437,6 +468,8 @@ def main():
                 "ust_alt": row.get("ust_alt"),
                 "yontem": row.get("yontem"),
                 "settled": False,
+                "telegram_message_id": telegram_message_id,
+                "telegram_message_text": message_text,
             }
         sent_now += 1
         prediction_count += len(rows)
