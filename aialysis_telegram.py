@@ -160,13 +160,17 @@ def telegram_edit(message_id, text):
         "text": text,
         "disable_web_page_preview": True,
     }, timeout=30)
-    r.raise_for_status()
-    data = r.json()
+    try:
+        data = r.json()
+    except ValueError:
+        data = {"ok": False, "description": r.text[:250]}
     if not data.get("ok"):
-        # Telegram returns "message is not modified" when text is identical.
+        # Telegram can return HTTP 400 for an unchanged message.
         if "message is not modified" in str(data).casefold():
-            return
+            return True
         raise RuntimeError(f"Telegram mesaj düzenleme hatası: {str(data)[:250]}")
+    r.raise_for_status()
+    return True
 
 
 
@@ -426,25 +430,53 @@ def settle_sent_predictions(state):
                 item['settled'] = True
                 item['result'] = result
                 item['settled_at'] = datetime.now(timezone.utc).isoformat()
-                # Update the original prediction post; never send a separate result post.
-                message_id = item.get('telegram_message_id')
-                if message_id:
-                    related = [
-                        x for x in state.get('sent', {}).values()
-                        if isinstance(x, dict)
-                        and x.get('telegram_message_id') == message_id
-                        and x.get('settled')
-                    ]
-                    result_lines = [
-                        f"{'✅' if x.get('result') == 'KAZANDI' else '❌'} {x.get('result')} — {x.get('kategori', 'Gol')} {x.get('cizgi') or ''} {side_text(x.get('ust_alt'))}".strip()
-                        for x in related
-                    ]
-                    base_text = item.get('telegram_message_text') or ''
-                    telegram_edit(message_id, base_text + "\n\n" + "\n".join(result_lines))
                 settled_count += 1
                 save_state(state)
+                save_state(state)
+    flush_result_message_edits(state)
     return settled_count
 
+
+
+def flush_result_message_edits(state):
+    # Retry failed Telegram edits without interrupting the next match scan.
+    grouped = {}
+    for item in state.get("sent", {}).values():
+        if not isinstance(item, dict) or not item.get("settled"):
+            continue
+        message_id = item.get("telegram_message_id")
+        if not message_id or item.get("result_posted"):
+            continue
+        grouped.setdefault(str(message_id), []).append(item)
+
+    for message_id, items in grouped.items():
+        base_text = next((x.get("telegram_message_text") for x in items if x.get("telegram_message_text")), "")
+        if not base_text:
+            continue
+        # Include every settled live/pre-match market that belongs to this post.
+        related = [
+            x for x in state.get("sent", {}).values()
+            if isinstance(x, dict) and str(x.get("telegram_message_id")) == message_id
+            and x.get("settled") and x.get("result")
+        ]
+        lines = []
+        seen = set()
+        for x in related:
+            line = f"{'✅' if x.get('result') == 'KAZANDI' else '❌'} {x.get('result')} — {x.get('kategori', 'Gol')} {x.get('cizgi') or ''} {side_text(x.get('ust_alt'))}".strip()
+            if line not in seen:
+                seen.add(line)
+                lines.append(line)
+        try:
+            telegram_edit(int(message_id), base_text + "\\n\\n" + "\\n".join(lines))
+            for x in related:
+                x["result_posted"] = True
+                x.pop("result_edit_error", None)
+            save_state(state)
+        except Exception as exc:
+            for x in related:
+                x["result_edit_error"] = str(exc)[:250]
+            print(f"Telegram sonuç düzenleme ertelendi (mesaj {message_id}): {exc}")
+            save_state(state)
 
 def send_live_performance_report(state):
     # Daily live-only totals; the report is posted once every three hours.
