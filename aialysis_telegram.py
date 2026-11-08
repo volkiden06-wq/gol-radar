@@ -16,7 +16,7 @@ from pathlib import Path
 import requests
 
 BASE = "https://fohmlwoewjupceznwmdr.supabase.co"
-ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZvaG1sd29ld2p1Y2V6bndtZHIiLCJyb2xlIjoiYW5vbiIsImlhdCI6MTc3Mzk0MTgyNiwiZXhwIjoyMDg5NTE3ODI2fQ.Ye-85hcsrLeORp-ThZCxssrc92WOm4ZI-B3mvTmwju4"
+ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZvaG1sd29ld2p1cGNlem53bWRyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM5NDE4MjYsImV4cCI6MjA4OTUxNzgyNn0.Ye-85hcsrLeORp-ThZCxssrc92WOm4ZI-B3mvTmwju4"
 STATE_PATH = Path("aialysis_state.json")
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "").strip()
