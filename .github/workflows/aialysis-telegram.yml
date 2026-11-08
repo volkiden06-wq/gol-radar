@@ -15,7 +15,7 @@ permissions:
 
 concurrency:
   group: aialysis-telegram
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   forward:
