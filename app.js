@@ -72,4 +72,4 @@ $('clear').addEventListener('click',()=>{if(confirm('Sinyal geçmişi temizlensi
 $('notify').addEventListener('click',async()=>{if(!('Notification'in window)){alert('Bu tarayıcı bildirimleri desteklemiyor.');return}if(Notification.permission!=='granted'){const p=await Notification.requestPermission();notifyOn=p==='granted'}else notifyOn=!notifyOn;if(notifyOn){try{const AC=window.AudioContext||window.webkitAudioContext;if(AC){audioCtx=audioCtx||new AC();if(audioCtx.state==='suspended')await audioCtx.resume()}if('speechSynthesis'in window){const u=new SpeechSynthesisUtterance('GOL RADAR sesli bildirimleri açıldı.');u.lang='tr-TR';speechSynthesis.speak(u)}}catch{}}localStorage.setItem('gr_notify',notifyOn?'1':'0');$('notify').textContent=notifyOn?'✓ Sesli + yazılı açık':'🔔 Sesli + yazılı uyarı';});
 $('notify').textContent=notifyOn?'✓ Sesli + yazılı açık':'🔔 Sesli + yazılı uyarı';
 if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
-renderHistory();refresh();setInterval(()=>refresh(),120000);
+renderHistory();refresh();setInterval(()=>refresh(),60000);
