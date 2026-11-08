@@ -637,7 +637,9 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": null,
-      "settled": false
+      "settled": true,
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T20:28:22.252955+00:00"
     },
     "CANLI:94367248:i̇y toplam gol|2.5|alt|": {
       "created_at": "2026-11-08T19:42:52.126905+00:00",
@@ -841,9 +843,11 @@
       "cizgi": 2.5,
       "ust_alt": "ÜST",
       "yontem": null,
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 237,
-      "telegram_message_text": "⚽ Provincial Ovalle - S. Morning\n🏆 Segunda Division\n⏱ 56' | Skor 2-1\n• Toplam Gol 2.5 ÜST | Güven %69 | Oran 1.40\nℹ️ Tahminler analiz üzerine verilmektedir."
+      "telegram_message_text": "⚽ Provincial Ovalle - S. Morning\n🏆 Segunda Division\n⏱ 56' | Skor 2-1\n• Toplam Gol 2.5 ÜST | Güven %69 | Oran 1.40\nℹ️ Tahminler analiz üzerine verilmektedir.",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T20:28:22.254052+00:00"
     },
     "CANLI:97370385:toplam gol|2.5|üst|": {
       "created_at": "2026-11-08T20:15:16.363956+00:00",
@@ -867,9 +871,11 @@
       "cizgi": 3.5,
       "ust_alt": "ALT",
       "yontem": null,
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 239,
-      "telegram_message_text": "⚽ Hoffenheim - Schalke\n🏆 Bundesliga\n⏱ 92' | Skor 2-1\n• Toplam Gol 3.5 ALT | Güven %69 | Oran 1.57\nℹ️ Tahminler analiz üzerine verilmektedir."
+      "telegram_message_text": "⚽ Hoffenheim - Schalke\n🏆 Bundesliga\n⏱ 92' | Skor 2-1\n• Toplam Gol 3.5 ALT | Güven %69 | Oran 1.57\nℹ️ Tahminler analiz üzerine verilmektedir.",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T20:28:22.639493+00:00"
     },
     "CANLI:94367248:toplam gol|4.5|alt|": {
       "created_at": "2026-11-08T20:19:22.410768+00:00",
@@ -893,9 +899,11 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 241,
-      "telegram_message_text": "⚽ Macara - U. Catolica\n🏆 Liga Pro\n🗓 08.11 16:15\n• İY Toplam Gol 1.5 ALT | Güven %68 | Oran 1.40\nℹ️ Tahminler analiz üzerine verilmektedir."
+      "telegram_message_text": "⚽ Macara - U. Catolica\n🏆 Liga Pro\n🗓 08.11 16:15\n• İY Toplam Gol 1.5 ALT | Güven %68 | Oran 1.40\nℹ️ Tahminler analiz üzerine verilmektedir.",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-08T20:28:22.976366+00:00"
     },
     "MAÇ ÖNÜ:94384016:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-02T00:44:50.776+00:00",
@@ -909,15 +917,93 @@
       "settled": false,
       "telegram_message_id": 242,
       "telegram_message_text": "⚽ FC Botosani - Otelul\n🏆 Liga I\n🗓 09.11 18:00\n• İY Toplam Gol 1.5 ALT | Güven %67 | Oran 1.41\nℹ️ Tahminler analiz üzerine verilmektedir."
+    },
+    "CANLI:94367595:i̇y toplam gol|2.5|alt|": {
+      "created_at": "2026-11-08T20:25:11.434816+00:00",
+      "source": "CANLI",
+      "match_id": "94367595",
+      "home": "Fiorentina - Juventus",
+      "kategori": "İY Toplam Gol",
+      "cizgi": 2.5,
+      "ust_alt": "ALT",
+      "yontem": null,
+      "settled": false,
+      "telegram_message_id": 243,
+      "telegram_message_text": "⚽ Fiorentina - Juventus\n🏆 Serie A\n⏱ 39' | Skor 1-1\n• İY Toplam Gol 2.5 ALT | Güven %67 | Oran 1.38\nℹ️ Tahminler analiz üzerine verilmektedir."
+    },
+    "CANLI:94466533:i̇y toplam gol|0.5|alt|": {
+      "created_at": "2026-11-08T20:27:38.576364+00:00",
+      "source": "CANLI",
+      "match_id": "94466533",
+      "home": "Juventud Antoniana - Cipolletti",
+      "kategori": "İY Toplam Gol",
+      "cizgi": 0.5,
+      "ust_alt": "ALT",
+      "yontem": null,
+      "settled": false,
+      "telegram_message_id": 244,
+      "telegram_message_text": "⚽ Juventud Antoniana - Cipolletti\n🏆 Argentino A\n⏱ 27' | Skor 0-0\n• İY Toplam Gol 0.5 ALT | Güven %67 | Oran 1.50\nℹ️ Tahminler analiz üzerine verilmektedir."
+    },
+    "CANLI:94371293:toplam gol|3.5|alt|": {
+      "created_at": "2026-11-08T20:28:06.764855+00:00",
+      "source": "CANLI",
+      "match_id": "94371293",
+      "home": "Lech Poznan - Zaglebie",
+      "kategori": "Toplam Gol",
+      "cizgi": 3.5,
+      "ust_alt": "ALT",
+      "yontem": null,
+      "settled": false,
+      "telegram_message_id": 245,
+      "telegram_message_text": "⚽ Lech Poznan - Zaglebie\n🏆 Ekstraklasa\n⏱ 47' | Skor 0-1\n• Toplam Gol 3.5 ALT | Güven %69 | Oran 1.36\nℹ️ Tahminler analiz üzerine verilmektedir."
+    },
+    "MAÇ ÖNÜ:94458147:i̇y toplam gol|1.5|alt|piyasa_v1": {
+      "created_at": "2026-11-02T01:55:06.395+00:00",
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94458147",
+      "home": "Leones del Norte - Guayaquil City",
+      "kategori": "İY Toplam Gol",
+      "cizgi": 1.5,
+      "ust_alt": "ALT",
+      "yontem": "piyasa_v1",
+      "settled": false,
+      "telegram_message_id": 246,
+      "telegram_message_text": "⚽ Leones del Norte - Guayaquil City\n🏆 Liga Pro\n🗓 07.11 21:30\n• İY Toplam Gol 1.5 ALT | Güven %68 | Oran 1.40\nℹ️ Tahminler analiz üzerine verilmektedir."
+    },
+    "MAÇ ÖNÜ:94458148:i̇y toplam gol|1.5|alt|piyasa_v1": {
+      "created_at": "2026-11-02T01:55:10.044+00:00",
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94458148",
+      "home": "Libertad - Emelec",
+      "kategori": "İY Toplam Gol",
+      "cizgi": 1.5,
+      "ust_alt": "ALT",
+      "yontem": "piyasa_v1",
+      "settled": false,
+      "telegram_message_id": 247,
+      "telegram_message_text": "⚽ Libertad - Emelec\n🏆 Liga Pro\n🗓 07.11 19:00\n• İY Toplam Gol 1.5 ALT | Güven %69 | Oran 1.36\n• Toplam Gol 1.5 ÜST | Güven %69 | Oran 1.36\nℹ️ Tahminler analiz üzerine verilmektedir."
+    },
+    "MAÇ ÖNÜ:94458148:toplam gol|1.5|üst|piyasa_v1": {
+      "created_at": "2026-11-02T01:55:10.044+00:00",
+      "source": "MAÇ ÖNÜ",
+      "match_id": "94458148",
+      "home": "Libertad - Emelec",
+      "kategori": "Toplam Gol",
+      "cizgi": 1.5,
+      "ust_alt": "ÜST",
+      "yontem": "piyasa_v1",
+      "settled": false,
+      "telegram_message_id": 247,
+      "telegram_message_text": "⚽ Libertad - Emelec\n🏆 Liga Pro\n🗓 07.11 19:00\n• İY Toplam Gol 1.5 ALT | Güven %69 | Oran 1.36\n• Toplam Gol 1.5 ÜST | Güven %69 | Oran 1.36\nℹ️ Tahminler analiz üzerine verilmektedir."
     }
   },
-  "last_run": "2026-11-08T20:21:21.035339+00:00",
+  "last_run": "2026-11-08T20:28:46.277489+00:00",
   "last_counts": {
     "live": 8,
     "prematch": 79,
-    "sent_messages": 9,
-    "sent_predictions": 9,
-    "queued_matches": 9,
-    "settled_predictions": 3
+    "sent_messages": 5,
+    "sent_predictions": 6,
+    "queued_matches": 5,
+    "settled_predictions": 4
   }
 }
