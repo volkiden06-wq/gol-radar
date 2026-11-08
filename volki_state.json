@@ -224,7 +224,14 @@
       "goals": [
         1,
         0
-      ]
+      ],
+      "result": "BAŞARISIZ",
+      "final_goals": [
+        1,
+        0
+      ],
+      "result_basis": "pressure_team",
+      "result_checked_at": "2026-11-08T11:33:43.240103+00:00"
     },
     "1490610": {
       "minute": 83,
@@ -235,7 +242,14 @@
       "goals": [
         1,
         1
-      ]
+      ],
+      "result": "BAŞARILI",
+      "final_goals": [
+        3,
+        1
+      ],
+      "result_basis": "pressure_team",
+      "result_checked_at": "2026-11-08T11:33:43.902998+00:00"
     },
     "1490611": {
       "minute": 83,
@@ -246,7 +260,14 @@
       "goals": [
         0,
         2
-      ]
+      ],
+      "result": "BAŞARISIZ",
+      "final_goals": [
+        0,
+        2
+      ],
+      "result_basis": "pressure_team",
+      "result_checked_at": "2026-11-08T11:33:44.601568+00:00"
     },
     "1490612": {
       "minute": 83,
@@ -257,7 +278,14 @@
       "goals": [
         0,
         1
-      ]
+      ],
+      "result": "BAŞARISIZ",
+      "final_goals": [
+        0,
+        1
+      ],
+      "result_basis": "pressure_team",
+      "result_checked_at": "2026-11-08T11:33:46.070988+00:00"
     },
     "1490613": {
       "minute": 84,
@@ -496,7 +524,14 @@
       "goals": [
         1,
         0
-      ]
+      ],
+      "result": "BAŞARISIZ",
+      "final_goals": [
+        1,
+        0
+      ],
+      "result_basis": "pressure_team",
+      "result_checked_at": "2026-11-08T11:33:43.240103+00:00"
     },
     "1490610": {
       "minute": 83,
@@ -507,7 +542,14 @@
       "goals": [
         1,
         1
-      ]
+      ],
+      "result": "BAŞARILI",
+      "final_goals": [
+        3,
+        1
+      ],
+      "result_basis": "pressure_team",
+      "result_checked_at": "2026-11-08T11:33:43.902998+00:00"
     },
     "1490611": {
       "minute": 83,
@@ -518,7 +560,14 @@
       "goals": [
         0,
         2
-      ]
+      ],
+      "result": "BAŞARISIZ",
+      "final_goals": [
+        0,
+        2
+      ],
+      "result_basis": "pressure_team",
+      "result_checked_at": "2026-11-08T11:33:44.601568+00:00"
     },
     "1490612": {
       "minute": 83,
@@ -529,7 +578,14 @@
       "goals": [
         0,
         1
-      ]
+      ],
+      "result": "BAŞARISIZ",
+      "final_goals": [
+        0,
+        1
+      ],
+      "result_basis": "pressure_team",
+      "result_checked_at": "2026-11-08T11:33:46.070988+00:00"
     },
     "1490613": {
       "minute": 84,
@@ -544,9 +600,11 @@
     }
   },
   "date": "2026-11-08",
-  "stats_today": 4,
-  "cursor": 7,
+  "stats_today": 8,
+  "cursor": 11,
   "telegram_test_sent": true,
-  "api_calls_today": 14,
-  "no_stats_until": {}
+  "api_calls_today": 23,
+  "no_stats_until": {
+    "1516178": "2026-11-08T14:33:46.913758+00:00"
+  }
 }
