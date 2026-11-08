@@ -302,15 +302,44 @@ def collect_prematch():
 
 
 def normalize_result(value):
-    s = str(value or '').strip().casefold()
-    if s in {'kazandi', 'kazandı', 'won', 'win', 'basarili', 'başarılı', 'dogru', 'doğru'}:
+    # aiALYSIS may label finalized markets in Turkish or English.
+    raw = str(value or '').strip().casefold()
+    s = raw.replace('ı', 'i').replace('İ', 'i').replace('ş', 's').replace('ğ', 'g').replace('ü', 'u').replace('ö', 'o').replace('ç', 'c')
+    s = re.sub(r'[^a-z0-9]+', ' ', s).strip()
+    win = {
+        'kazandi', 'won', 'win', 'basarili', 'dogru', 'tuttu', 'geldi',
+        'isabet', 'olumlu', 'true', 'success', 'successful', '1'
+    }
+    lose = {
+        'kaybetti', 'lost', 'lose', 'basarisiz', 'yanlis', 'tutmadi',
+        'gelmedi', 'isabet degil', 'olumsuz', 'false', 'failed', '0'
+    }
+    if s in win:
         return 'KAZANDI'
-    if s in {'kaybetti', 'lost', 'lose', 'basarisiz', 'başarısız', 'yanlis', 'yanlış'}:
+    if s in lose:
         return 'KAYBETTİ'
     return None
 
 
 def settle_sent_predictions(state):
+    # Backfill metadata for messages sent before result tracking was added.
+    for key, item in state.get('sent', {}).items():
+        if not isinstance(item, dict) or item.get('match_id'):
+            continue
+        try:
+            source, match_id, market = key.split(':', 2)
+            parts = market.split('|')
+            item.update({
+                'source': source,
+                'match_id': match_id,
+                'kategori': parts[0] if len(parts) > 0 else '',
+                'cizgi': parts[1] if len(parts) > 1 else '',
+                'ust_alt': parts[2] if len(parts) > 2 else '',
+                'yontem': parts[3] if len(parts) > 3 else None,
+                'settled': False,
+            })
+        except Exception:
+            continue
     pending = [(key, item) for key, item in state.get('sent', {}).items()
                if isinstance(item, dict) and not item.get('settled') and item.get('match_id')]
     ids = sorted({str(item['match_id']) for _, item in pending if str(item['match_id']).isdigit()})
