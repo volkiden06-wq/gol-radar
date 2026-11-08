@@ -452,6 +452,12 @@ def settle_sent_predictions(state):
                 settled_count += 1
                 save_state(state)
     flush_result_message_edits(state)
+    still_pending = sum(1 for item in state.get('sent', {}).values()
+                       if isinstance(item, dict) and not item.get('settled') and item.get('match_id'))
+    settled_without_message = sum(1 for item in state.get('sent', {}).values()
+                                  if isinstance(item, dict) and item.get('settled')
+                                  and not item.get('telegram_message_id'))
+    print(f"Sonuç kontrolü | yeni sonuçlanan: {settled_count} | sonuç bekleyen: {still_pending} | mesaj kimliği olmayan eski sonuç: {settled_without_message}")
     return settled_count
 
 
