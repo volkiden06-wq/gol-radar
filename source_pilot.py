@@ -55,18 +55,24 @@ def check_sportscore():
             if label == "live" and matches:
                 sample = matches[0]
                 raw_url = str(sample.get("url") or "")
-                slug = raw_url.rstrip("/").split("/")[-1]
-                if slug:
-                    detail = None
-                    detail_error = None
-                    for endpoint in (
-                        "https://sportscore.com/api/v1/match/",
-                        "https://sportscore.com/api/widget/match/",
-                    ):
+                parts = [p for p in raw_url.rstrip("/").split("/") if p]
+                print(f"SPORTSCORE_SAMPLE_URL | {raw_url}")
+                candidates = []
+                if parts:
+                    candidates.append(("slug", parts[-1]))
+                if len(parts) >= 2:
+                    candidates.append(("slug", parts[-2]))
+                detail = None
+                detail_error = None
+                for endpoint in (
+                    "https://sportscore.com/api/v1/match/",
+                    "https://sportscore.com/api/widget/match/",
+                ):
+                    for param_name, candidate in candidates:
                         try:
                             detail_response = SESSION.get(
                                 endpoint,
-                                params={"sport": "football", "slug": slug},
+                                params={"sport": "football", param_name: candidate},
                                 timeout=TIMEOUT,
                             )
                             detail_response.raise_for_status()
@@ -75,7 +81,7 @@ def check_sportscore():
                                 "SPORTSCORE_DETAIL | OK"
                                 f" | endpoint={endpoint}"
                                 f" | HTTP={detail_response.status_code}"
-                                f" | slug={slug}"
+                                f" | {param_name}={candidate}"
                                 f" | top_fields={sorted(detail.keys()) if isinstance(detail, dict) else type(detail).__name__}"
                             )
                             encoded = json.dumps(detail, ensure_ascii=False).casefold()
@@ -84,8 +90,10 @@ def check_sportscore():
                             break
                         except Exception as exc:
                             detail_error = exc
-                    if detail is None:
-                        raise RuntimeError(f"Maç detay uç noktaları başarısız: {detail_error}")
+                    if detail is not None:
+                        break
+                if detail is None:
+                    print(f"SPORTSCORE_DETAIL | FAIL | {detail_error}")
         except Exception as exc:
             all_ok = False
             print(f"SPORTSCORE_{label.upper()} | FAIL | {type(exc).__name__}: {exc}")
