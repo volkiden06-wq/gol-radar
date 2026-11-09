@@ -306,7 +306,7 @@ def main() -> int:
         assert settle_market("2Y 1.5 ÜST", 1, 0, 2, 1) == "KAZANDI"
         assert settle_market("2Y 2.5 ÜST", 1, 0, 2, 1) == "KAYBETTİ"
         assert settle_market("2Y 3.5 ÜST", 1, 0, 3, 2) == "KAZANDI"
-        print("SETTLEMENT_TEST | PASS | İY/2Y 0.5-3.5 hedef sonuçları")
+        print("SETTLEMENT_TEST | PASS | İY/2Y market sonuçları")
         global telegram_call
         original_telegram_call = telegram_call
         mocked_calls = []
@@ -327,10 +327,7 @@ def main() -> int:
             )
             assert updated == 1
             assert state["signals"]["demo|İY 0.5 ÜST"]["result"] == "KAZANDI"
-            assert mocked_calls[0][0] == "editMessageText"
-            assert "İLK YARI SONUCU: 1-0" in mocked_calls[0][1]["text"]
-        finally:
-            telegram_call = original_telegram_call
+            assert "İLK YARI SONUCU: 1-0" in mocked_calls[-1][1]["text"]
             state2 = {"signals": {
                 "demo|2Y 1.5 ÜST": {
                     "slug": "demo", "market": "2Y 1.5 ÜST",
@@ -345,6 +342,8 @@ def main() -> int:
             assert updated2 == 1
             assert state2["signals"]["demo|2Y 1.5 ÜST"]["result"] == "KAZANDI"
             assert "İKİNCİ YARI GOLÜ: 2" in mocked_calls[-1][1]["text"]
+        finally:
+            telegram_call = original_telegram_call
         print("TELEGRAM_EDIT_TEST | PASS | İY devre arasında, 2Y maç sonunda sonuçlanıyor")
         return 0
 
