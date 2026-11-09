@@ -95,13 +95,45 @@ def check_forebet():
         return False
 
 
+def check_api_football():
+    import os
+    key = os.getenv('API_FOOTBALL_KEY', '').strip()
+    if not key:
+        print('API_FOOTBALL | SKIP | GitHub Secret API_FOOTBALL_KEY tanımlı değil.')
+        return False
+    headers = {'x-apisports-key': key}
+    try:
+        response = SESSION.get('https://v3.football.api-sports.io/fixtures', headers=headers, params={'live': 'all'}, timeout=TIMEOUT)
+        response.raise_for_status()
+        payload = response.json()
+        if payload.get('errors'):
+            raise ValueError(str(payload['errors']))
+        fixtures = payload.get('response') or []
+        print(f"API_FOOTBALL | OK | HTTP={response.status_code} | canlı_maç={len(fixtures)} | kalan_istek={response.headers.get('x-ratelimit-requests-remaining', 'bilinmiyor')}")
+        if fixtures:
+            fixture_id = (fixtures[0].get('fixture') or {}).get('id')
+            sr = SESSION.get('https://v3.football.api-sports.io/fixtures/statistics', headers=headers, params={'fixture': fixture_id}, timeout=TIMEOUT)
+            sr.raise_for_status()
+            sp = sr.json()
+            if sp.get('errors'):
+                raise ValueError(str(sp['errors']))
+            teams = sp.get('response') or []
+            fields = sorted({str(item.get('type')) for team in teams if isinstance(team, dict) for item in team.get('statistics', []) if isinstance(item, dict)})
+            print(f'API_FOOTBALL_STATS | HTTP={sr.status_code} | fixture={fixture_id} | teams={len(teams)} | stat_fields={fields}')
+        return True
+    except Exception as exc:
+        print(f'API_FOOTBALL | FAIL | {type(exc).__name__}: {exc}')
+        return False
+
 def main():
     print("GOL-RADAR İKİ KAYNAK PİLOTU | DRY RUN | TELEGRAM GÖNDERİMİ KAPALI")
     sportscore_ok = check_sportscore()
+    api_football_ok = check_api_football()
     forebet_ok = check_forebet()
     print(
         "PILOT_SUMMARY"
         f" | sportscore={'OK' if sportscore_ok else 'FAIL'}"
+        f" | api_football={'OK' if api_football_ok else 'FAIL/SKIP'}"
         f" | forebet={'OK' if forebet_ok else 'FAIL'}"
         " | telegram=DISABLED"
         " | legacy_bot=UNCHANGED"
