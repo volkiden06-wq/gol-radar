@@ -315,6 +315,9 @@ def main() -> int:
     if not chat_id or not token:
         raise RuntimeError("TELEGRAM_BOT_TOKEN veya TELEGRAM_CHAT_ID GitHub Secret eksik")
 
+    bot = telegram_call("getMe", {})
+    chat = telegram_call("getChat", {"chat_id": chat_id})
+    print(f"TELEGRAM_READY | bot=@{bot.get('username', 'unknown')} | hedef={chat.get('title') or chat.get('username') or chat.get('first_name') or 'sohbet'}")
     print("GOL RADAR SPORTScore ANALİZ | TELEGRAM SİNYALİ + İLK YARI SONUÇ DÜZENLEME")
     state = load_state()
     rows = live_fixtures()
@@ -324,15 +327,19 @@ def main() -> int:
         return 0
 
     by_slug = {fixture_slug(row): row for row in rows if fixture_slug(row)}
-    pending_slugs = []
+    pending_fixtures = {}
     for record in state.get("signals", {}).values():
         if isinstance(record, dict) and not record.get("result"):
             slug = record.get("slug")
-            if slug and slug in by_slug and slug not in pending_slugs:
-                pending_slugs.append(slug)
-
-    selected = [by_slug[slug] for slug in pending_slugs[:MAX_DETAILS_PER_RUN]]
-    selected_slugs = {fixture_slug(row) for row in selected}
+            if slug and slug not in pending_fixtures:
+                pending_fixtures[slug] = by_slug.get(slug) or {
+                    "url": record.get("url", ""),
+                    "home": record.get("home", "?"),
+                    "away": record.get("away", "?"),
+                }
+    pending_slugs = list(pending_fixtures)
+    selected = [pending_fixtures[slug] for slug in pending_slugs[:MAX_DETAILS_PER_RUN]]
+    selected_slugs = {fixture_slug(row) for row in selected if fixture_slug(row)}
     remaining_slots = max(0, MAX_DETAILS_PER_RUN - len(selected))
     new_rows = [row for row in rows if fixture_slug(row) and fixture_slug(row) not in selected_slugs]
     if new_rows and remaining_slots:
@@ -373,6 +380,7 @@ def main() -> int:
                     raise RuntimeError("Telegram yanıtında message_id bulunamadı")
                 state["signals"][key] = {
                     "slug": slug,
+                    "url": str(fixture.get("url") or ""),
                     "market": signal["market"],
                     "home": signal["home"],
                     "away": signal["away"],
