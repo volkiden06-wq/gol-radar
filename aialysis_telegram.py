@@ -317,14 +317,27 @@ def collect_live():
         rows.extend(get_json("tahmin_sonuclari", {
             "mac_id": "in.(" + ",".join(map(str, batch)) + ")",
             "user_id": "is.null",
-            "kaynak": "eq.canli",
-            "sonuc": "eq.BEKLIYOR",
+            # Do not hard-code a single source label: the site's live page may
+            # publish the same system analysis under another source value.
             "select": "mac_id,kategori,cizgi,ust_alt,guc,guc_gosterim,oran,created_at,yontem,sonuc,kaynak,ev_sahibi,deplasman,lig",
             "order": "created_at.desc",
             "limit": 1000,
         }))
-    filtered = latest_per_market(rows)
-    print(f"CANLI kaynak kontrolü | aktif maç: {len(active)} | uygun dakika/durum: {len(eligible)} | ham tahmin: {len(rows)} | site filtresinden geçen: {len(filtered)}")
+    pending = []
+    source_counts = {}
+    result_counts = {}
+    for row in rows:
+        source_label = str(row.get("kaynak") or "(boş)").strip().casefold()
+        result_label = str(row.get("sonuc") or "(boş)").strip().casefold()
+        source_counts[source_label] = source_counts.get(source_label, 0) + 1
+        result_counts[result_label] = result_counts.get(result_label, 0) + 1
+        # These are public/system rows (user_id is null from the query).
+        # Ignore already settled records, but accept missing/pending result labels.
+        if result_label not in {"(boş)", "bekliyor", "pending", "waiting"}:
+            continue
+        pending.append(row)
+    filtered = latest_per_market(pending)
+    print(f"CANLI kaynak kontrolü | aktif maç: {len(active)} | uygun dakika/durum: {len(eligible)} | ham sistem tahmini: {len(rows)} | bekleyen: {len(pending)} | gönderime uygun: {len(filtered)} | kaynaklar: {source_counts} | sonuçlar: {result_counts}")
     return filtered
 
 def collect_prematch():
