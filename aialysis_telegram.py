@@ -481,9 +481,9 @@ def settle_sent_predictions(state):
                     and k[3] == mk[3] and (not mk[4] or k[4] == mk[4])
                 ]
                 result = candidates[0] if candidates and len(set(candidates)) == 1 else None
-            # Trust an early win as soon as the market result says KAZANDI.
-            # Never publish KAYBETTİ until the match is officially finished.
-            if result == 'KAYBETTİ' and fixture_status.get(mid) not in final_statuses:
+            # Publish both wins and losses only after the fixture is officially finished.
+            # This keeps the channel's result labels consistent with the user's request.
+            if fixture_status.get(mid) not in final_statuses:
                 result = None
             if result:
                 item['settled'] = True
