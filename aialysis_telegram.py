@@ -328,7 +328,6 @@ def collect_live():
 
 def collect_prematch():
     now = datetime.now(timezone.utc)
-    end = now + timedelta(hours=UPCOMING_HOURS)
     rows = pages("mac_oncu_analizler", {
         "mac_tarihi": f"gte.{now.isoformat()}",
         "order": "mac_tarihi.asc",
@@ -343,8 +342,6 @@ def collect_prematch():
             dt = datetime.fromisoformat(str(kickoff).replace("Z", "+00:00"))
         except Exception:
             continue
-        if dt > end:
-            continue
         analysis = match.get("analiz") or {}
         if analysis.get("veri_yok"):
             continue
@@ -354,9 +351,7 @@ def collect_prematch():
             raw_recommendations += len(recommendations)
         if not isinstance(recommendations, list):
             continue
-        # The aiALYSIS pre-match screen displays every recommendation that
-        # has a category and a line (or a package selection), subject to its
-        # own confidence and odds gate. Keep all qualifying recommendations.
+        # Forward every recommendation actually published by aiALYSIS.
         prepared = []
         for rec in recommendations:
             if not isinstance(rec, dict) or not rec.get("kategori"):
