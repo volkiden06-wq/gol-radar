@@ -155,11 +155,11 @@ def self_test() -> bool:
         "status": "live", "status_text": "1st Half", "live_minute": 27,
         "home_score": 1, "away_score": 0, "home": "Test A", "away": "Test B",
         "stats": [
-            {"label": "Shots on Target", "home": 3, "away": 1},
-            {"label": "Shots off Target", "home": 5, "away": 4},
-            {"label": "Attacks", "home": 52, "away": 43},
-            {"label": "Dangerous Attacks", "home": 32, "away": 28},
-            {"label": "Corner Kicks", "home": 3, "away": 2},
+            {"label": "Shots on Target", "home": 3, "away": 2},
+            {"label": "Shots off Target", "home": 10, "away": 10},
+            {"label": "Attacks", "home": 80, "away": 70},
+            {"label": "Dangerous Attacks", "home": 45, "away": 40},
+            {"label": "Corner Kicks", "home": 5, "away": 4},
         ],
     }
     first = evaluate(strong)
