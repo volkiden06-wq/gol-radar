@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: sportscore-signal-pilot
@@ -31,5 +31,22 @@ jobs:
         run: pip install requests
       - name: Kendi testlerini çalıştır
         run: python sportscore_signal_engine.py --self-test
-      - name: Canlı maçları analiz et (Telegram kapalı)
+      - name: Canlı maçları analiz et ve Telegram sinyallerini yönet
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python sportscore_signal_engine.py
+      - name: Sinyal ve sonuç geçmişini kaydet
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sportscore_state.json
+          if git diff --cached --quiet; then
+            echo "Sinyal geçmişinde değişiklik yok."
+            exit 0
+          fi
+          git commit -m "Update SportScore signal and halftime result state"
+          git pull --rebase origin main
+          git push origin HEAD:main
