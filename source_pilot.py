@@ -20,31 +20,42 @@ SESSION.headers.update({"User-Agent": UA, "Accept": "text/html,application/json"
 
 
 def check_sportscore():
-    url = "https://sportscore.com/api/widget/matches/"
-    try:
-        response = SESSION.get(url, params={"sport": "football", "limit": 50}, timeout=TIMEOUT)
-        response.raise_for_status()
-        payload = response.json()
-        matches = payload.get("matches") if isinstance(payload, dict) else None
-        if not isinstance(matches, list):
-            raise ValueError("API yanıtında matches listesi bulunamadı")
-        live = [
-            m for m in matches
-            if isinstance(m, dict)
-            and str(m.get("status") or "").casefold() in {"live", "1h", "2h", "ht", "in_play"}
-        ]
-        print(
-            "SPORTSCORE | OK"
-            f" | HTTP={response.status_code}"
-            f" | maç={len(matches)}"
-            f" | canlı_durumlu={len(live)}"
-            f" | örnek_alanlar={sorted(matches[0].keys()) if matches else []}"
-        )
-        return True
-    except Exception as exc:
-        print(f"SPORTSCORE | FAIL | {type(exc).__name__}: {exc}")
-        return False
-
+    base = "https://sportscore.com/api/v1/fixtures/"
+    checks = [
+        ("live", {"sport": "football", "status": "live", "limit": 100}),
+        ("today", {"sport": "football", "limit": 100}),
+    ]
+    all_ok = True
+    for label, params in checks:
+        try:
+            response = SESSION.get(base, params=params, timeout=TIMEOUT)
+            response.raise_for_status()
+            payload = response.json()
+            if isinstance(payload, dict):
+                matches = payload.get("matches") or payload.get("fixtures") or payload.get("data") or []
+            elif isinstance(payload, list):
+                matches = payload
+            else:
+                matches = []
+            if not isinstance(matches, list):
+                raise ValueError("API yanıtında maç listesi bulunamadı")
+            statuses = {}
+            for match in matches:
+                if not isinstance(match, dict):
+                    continue
+                status = str(match.get("status") or match.get("status_text") or "unknown").strip()
+                statuses[status] = statuses.get(status, 0) + 1
+            print(
+                f"SPORTSCORE_{label.upper()} | OK"
+                f" | HTTP={response.status_code}"
+                f" | maç={len(matches)}"
+                f" | durumlar={statuses}"
+                f" | örnek_alanlar={sorted(matches[0].keys()) if matches and isinstance(matches[0], dict) else []}"
+            )
+        except Exception as exc:
+            all_ok = False
+            print(f"SPORTSCORE_{label.upper()} | FAIL | {type(exc).__name__}: {exc}")
+    return all_ok
 
 def check_forebet():
     robots_url = "https://www.forebet.com/robots.txt"
