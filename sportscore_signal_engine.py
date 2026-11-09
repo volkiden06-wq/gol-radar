@@ -185,47 +185,214 @@ def self_test() -> bool:
     return True
 
 
+def telegram_call(method: str, payload: dict) -> dict:
+    token = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
+    if not token:
+        raise RuntimeError("TELEGRAM_BOT_TOKEN GitHub Secret bulunamadı")
+    response = requests.post(
+        f"https://api.telegram.org/bot{token}/{method}",
+        json=payload,
+        timeout=25,
+    )
+    response.raise_for_status()
+    data = response.json()
+    if not data.get("ok"):
+        raise RuntimeError(f"Telegram {method}: {data.get('description', 'bilinmeyen hata')}")
+    return data.get("result") or {}
+
+
+def settle_market(market: str, home_ht: int, away_ht: int) -> str:
+    total = home_ht + away_ht
+    if market == "İY 0.5 ÜST":
+        return "KAZANDI" if total >= 1 else "KAYBETTİ"
+    if market == "İY 1.5 ÜST":
+        return "KAZANDI" if total >= 2 else "KAYBETTİ"
+    raise ValueError(f"Bilinmeyen market: {market}")
+
+
+def load_state() -> dict:
+    path = "sportscore_state.json"
+    try:
+        with open(path, encoding="utf-8") as handle:
+            data = json.load(handle)
+        return data if isinstance(data, dict) else {"signals": {}}
+    except (OSError, ValueError):
+        return {"signals": {}}
+
+
+def save_state(state: dict) -> None:
+    with open("sportscore_state.json", "w", encoding="utf-8") as handle:
+        json.dump(state, handle, ensure_ascii=False, indent=2)
+
+
+def is_half_time(match: dict) -> bool:
+    status = str(match.get("status") or "").strip().casefold()
+    status_text = str(match.get("status_text") or "").strip().casefold()
+    return status in {"ht", "half time"} or status_text in {"ht", "half time", "halftime"}
+
+
+def is_finished(match: dict) -> bool:
+    status = str(match.get("status") or "").strip().casefold()
+    status_text = str(match.get("status_text") or "").strip().casefold()
+    return status in {"ft", "finished", "ended"} or status_text in {"ft", "finished", "ended", "full time"}
+
+
+def process_result(match: dict, slug: str, state: dict) -> int:
+    changed = 0
+    home_ht = match.get("home_ht_score")
+    away_ht = match.get("away_ht_score")
+    if is_half_time(match):
+        if home_ht is None:
+            home_ht = match.get("home_score")
+        if away_ht is None:
+            away_ht = match.get("away_score")
+    if home_ht is None or away_ht is None:
+        return 0
+    home_ht, away_ht = as_int(home_ht, -1), as_int(away_ht, -1)
+    if home_ht < 0 or away_ht < 0:
+        return 0
+    if not (is_half_time(match) or is_finished(match)):
+        return 0
+
+    signals = state.setdefault("signals", {})
+    for key, record in list(signals.items()):
+        if not isinstance(record, dict) or record.get("slug") != slug or record.get("result"):
+            continue
+        result = settle_market(record.get("market", ""), home_ht, away_ht)
+        text = (
+            str(record.get("message_text") or "")
+            + f"\n\n🏁 İLK YARI SONUCU: {home_ht}-{away_ht}"
+            + f"\n{'✅' if result == 'KAZANDI' else '❌'} {record.get('market')} — {result}"
+        )
+        try:
+            telegram_call("editMessageText", {
+                "chat_id": os.getenv("TELEGRAM_CHAT_ID", "").strip(),
+                "message_id": record["message_id"],
+                "text": text,
+                "disable_web_page_preview": True,
+            })
+            record["result"] = result
+            record["half_time_score"] = [home_ht, away_ht]
+            record["result_text"] = text
+            changed += 1
+            print(f"RESULT_EDITED | {record.get('market')} | {slug} | {home_ht}-{away_ht} | {result}")
+        except Exception as exc:
+            print(f"RESULT_EDIT_ERROR | {record.get('market')} | {slug} | {exc}")
+    return changed
+
+
+def build_signal_text(signal: dict, detail: dict) -> str:
+    competition = detail.get("competition") or ""
+    lines = [
+        "⚽ GOL RADAR | CANLI İLK YARI SİNYALİ",
+        f"{signal['home']} - {signal['away']}",
+    ]
+    if competition:
+        lines.append(f"🏆 {competition}")
+    lines.extend([
+        f"⏱ {signal['minute']}' | Anlık skor: {signal['current_score']}",
+        f"🎯 {signal['market']}",
+        f"📊 Analiz puanı: {signal['score']}/100",
+        f"📈 İsabetli şut: {signal['metrics']['sot']} | Toplam şut: {signal['metrics']['shots']}",
+        f"⚠️ Tehlikeli atak: {signal['metrics']['dangerous']} | Korner: {signal['metrics']['corners']}",
+        "ℹ️ İstatistiksel analizdir; gol garantisi veya bahis tavsiyesi değildir.",
+    ])
+    return "\n".join(lines)
+
+
 def main() -> int:
     if "--self-test" in sys.argv:
         self_test()
+        assert settle_market("İY 0.5 ÜST", 1, 0) == "KAZANDI"
+        assert settle_market("İY 0.5 ÜST", 0, 0) == "KAYBETTİ"
+        assert settle_market("İY 1.5 ÜST", 1, 1) == "KAZANDI"
+        assert settle_market("İY 1.5 ÜST", 1, 0) == "KAYBETTİ"
+        print("SETTLEMENT_TEST | PASS | İY 0.5/1.5 ilk yarı sonuçları")
         return 0
-    print("GOL RADAR SPORTScore ANALİZ | DRY RUN | TELEGRAM GÖNDERİMİ KAPALI")
+
+    chat_id = os.getenv("TELEGRAM_CHAT_ID", "").strip()
+    token = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
+    if not chat_id or not token:
+        raise RuntimeError("TELEGRAM_BOT_TOKEN veya TELEGRAM_CHAT_ID GitHub Secret eksik")
+
+    print("GOL RADAR SPORTScore ANALİZ | TELEGRAM SİNYALİ + İLK YARI SONUÇ DÜZENLEME")
+    state = load_state()
     rows = live_fixtures()
     print(f"SPORTSCORE_LIVE | maç={len(rows)}")
     if not rows:
         print("CANLI_MAÇ_YOK")
         return 0
-    # Rotate through live matches over successive 5-minute runs to respect the free API allowance.
-    slot = int(time.time() // 300)
-    start = (slot * MAX_DETAILS_PER_RUN) % len(rows)
-    selected = [rows[(start + i) % len(rows)] for i in range(min(MAX_DETAILS_PER_RUN, len(rows)))]
+
+    by_slug = {fixture_slug(row): row for row in rows if fixture_slug(row)}
+    pending_slugs = []
+    for record in state.get("signals", {}).values():
+        if isinstance(record, dict) and not record.get("result"):
+            slug = record.get("slug")
+            if slug and slug in by_slug and slug not in pending_slugs:
+                pending_slugs.append(slug)
+
+    selected = [by_slug[slug] for slug in pending_slugs[:MAX_DETAILS_PER_RUN]]
+    selected_slugs = {fixture_slug(row) for row in selected}
+    remaining_slots = max(0, MAX_DETAILS_PER_RUN - len(selected))
+    new_rows = [row for row in rows if fixture_slug(row) and fixture_slug(row) not in selected_slugs]
+    if new_rows and remaining_slots:
+        slot = int(time.time() // 300)
+        start = (slot * remaining_slots) % len(new_rows)
+        selected.extend(new_rows[(start + i) % len(new_rows)] for i in range(min(remaining_slots, len(new_rows))))
+
     checked = 0
-    candidate_count = 0
+    sent = 0
+    edited = 0
+    candidates = 0
     for fixture in selected:
+        slug = fixture_slug(fixture)
         try:
             detail = match_detail(fixture)
             checked += 1
-            signals = evaluate(detail)
+            edited += process_result(detail, slug, state)
             home = detail.get("home") or fixture.get("home") or "?"
             away = detail.get("away") or fixture.get("away") or "?"
             minute = detail.get("live_minute", "?")
             score = f"{detail.get('home_score', 0)}-{detail.get('away_score', 0)}"
             print(f"MATCH | {home} - {away} | {minute}' | period={detail.get('status_text', detail.get('status', '?'))} | {score} | stats={stat_totals(detail)}")
-            if checked == 1:
-                print(f"SPORTSCORE_SCHEMA | match_keys={sorted(detail.keys())} | score_fields={{k: detail.get(k) for k in detail if 'score' in k.casefold() or 'goal' in k.casefold()}}")
-                print(f"SPORTSCORE_FIXTURE_KEYS | {sorted(fixture.keys())}")
-            for signal in signals:
-                candidate_count += 1
-                print(
-                    f"CANDIDATE | {signal['market']} | {signal['home']} - {signal['away']}"
-                    f" | {signal['minute']}' | skor={signal['current_score']}"
-                    f" | puan={signal['score']}/100 | metrik={signal['metrics']}"
-                )
+
+            for signal in evaluate(detail):
+                candidates += 1
+                key = f"{slug}|{signal['market']}"
+                if key in state.setdefault("signals", {}):
+                    print(f"DUPLICATE_SKIPPED | {key}")
+                    continue
+                message_text = build_signal_text(signal, detail)
+                result = telegram_call("sendMessage", {
+                    "chat_id": chat_id,
+                    "text": message_text,
+                    "disable_web_page_preview": True,
+                })
+                message_id = result.get("message_id")
+                if not message_id:
+                    raise RuntimeError("Telegram yanıtında message_id bulunamadı")
+                state["signals"][key] = {
+                    "slug": slug,
+                    "market": signal["market"],
+                    "home": signal["home"],
+                    "away": signal["away"],
+                    "minute": signal["minute"],
+                    "signal_score": signal["score"],
+                    "signal_match_score": signal["current_score"],
+                    "message_id": message_id,
+                    "message_text": message_text,
+                    "sent_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+                    "result": None,
+                }
+                save_state(state)
+                sent += 1
+                print(f"TELEGRAM_SENT | {signal['market']} | {home} - {away} | message_id={message_id}")
         except Exception as exc:
             print(f"MATCH_ERROR | {fixture.get('url', '?')} | {type(exc).__name__}: {exc}")
-    print(f"RUN_SUMMARY | canlı={len(rows)} | detay_kontrol={checked} | aday={candidate_count} | telegram=DISABLED")
-    return 0
 
+    save_state(state)
+    print(f"RUN_SUMMARY | canlı={len(rows)} | detay_kontrol={checked} | aday={candidates} | gönderilen={sent} | sonuç_düzenlenen={edited}")
+    return 0
 
 if __name__ == "__main__":
     sys.exit(main())
