@@ -322,7 +322,9 @@ def collect_live():
             "order": "created_at.desc",
             "limit": 1000,
         }))
-    return latest_per_market(rows)
+    filtered = latest_per_market(rows)
+    print(f"CANLI kaynak kontrolü | aktif maç: {len(active)} | uygun dakika/durum: {len(eligible)} | ham tahmin: {len(rows)} | site filtresinden geçen: {len(filtered)}")
+    return filtered
 
 def collect_prematch():
     now = datetime.now(timezone.utc)
@@ -333,6 +335,8 @@ def collect_prematch():
         "select": "fixture_id,mac_tarihi,ev_takim_adi,dep_takim_adi,lig_adi,analiz,created_at",
     }, max_pages=10)
     result = []
+    raw_recommendations = 0
+    matches_with_recommendations = 0
     for match in rows:
         kickoff = match.get("mac_tarihi")
         try:
@@ -345,6 +349,9 @@ def collect_prematch():
         if analysis.get("veri_yok"):
             continue
         recommendations = analysis.get("oneriler") or []
+        if isinstance(recommendations, list) and recommendations:
+            matches_with_recommendations += 1
+            raw_recommendations += len(recommendations)
         if not isinstance(recommendations, list):
             continue
         # The aiALYSIS pre-match screen displays every recommendation that
@@ -370,6 +377,7 @@ def collect_prematch():
         priority = {str(x.get("kategori", "")).casefold() for x in prepared if x.get("yontem") == "piyasa_v1"}
         prepared = [x for x in prepared if x.get("yontem") == "piyasa_v1" or str(x.get("kategori", "")).casefold() not in priority]
         result.extend(x for x in prepared if passes_site_filter(x))
+    print(f"MAÇ ÖNÜ kaynak kontrolü | yaklaşan maç: {len(rows)} | öneri bulunan maç: {matches_with_recommendations} | ham öneri: {raw_recommendations} | site filtresinden geçen: {len(result)}")
     return result, rows
 
 
@@ -614,10 +622,12 @@ def main():
     matches = fixture_map(ids)
 
     grouped = {}
+    already_sent = 0
     for source, rows in (("CANLI", live), ("MAÇ ÖNÜ", prematch)):
         for row in rows:
             key = prediction_key(source, row)
             if key in state["sent"]:
+                already_sent += 1
                 continue
             match_id = row.get("mac_id") or row.get("fixture_id")
             group_key = (source, str(match_id))
@@ -628,6 +638,7 @@ def main():
                 grouped[group_key] = {"match": match, "rows": []}
             grouped[group_key]["rows"].append((key, row))
 
+    print(f"Yinelenen kayıt kontrolü | daha önce gönderilmiş tahmin: {already_sent} | yeni maç grubu: {len(grouped)}")
     live_queue = sorted(
         ((k, v) for k, v in grouped.items() if k[0] == "CANLI"),
         key=lambda item: str(item[1]["rows"][0][1].get("created_at") or "")
