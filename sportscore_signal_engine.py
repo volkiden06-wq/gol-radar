@@ -32,7 +32,7 @@ def fetch_json(url: str, params: dict | None = None) -> Any:
 
 
 def live_fixtures() -> list[dict]:
-    payload = fetch_json(BASE + "/api/v1/fixtures/", {"sport": "football", "status": "live", "limit": 100, "src": "gol-radar"})
+    payload = fetch_json(BASE + "/api/v1/fixtures/", {"sport": "football", "status": "live", "limit": 500, "src": "gol-radar"})
     if isinstance(payload, dict):
         rows = payload.get("matches") or payload.get("fixtures") or payload.get("data") or []
     elif isinstance(payload, list):
@@ -201,7 +201,7 @@ def settle_market(market: str, home_ht: int, away_ht: int, home_ft: int | None =
         if home_ft is None or away_ft is None:
             raise ValueError("İkinci yarı sonucu için maç sonu skoru gerekli")
         goals = home_ft + away_ft - home_ht - away_ht
-    target = int(market.split()[1].split(".")[0])
+    target = int(float(market.split()[1]) + 0.5)
     return "KAZANDI" if goals >= target else "KAYBETTİ"
 
 def load_state() -> dict:
@@ -300,7 +300,13 @@ def main() -> int:
         assert settle_market("İY 0.5 ÜST", 0, 0) == "KAYBETTİ"
         assert settle_market("İY 1.5 ÜST", 1, 1) == "KAZANDI"
         assert settle_market("İY 1.5 ÜST", 1, 0) == "KAYBETTİ"
-        print("SETTLEMENT_TEST | PASS | İY 0.5/1.5 ilk yarı sonuçları")
+        assert settle_market("İY 2.5 ÜST", 2, 1) == "KAZANDI"
+        assert settle_market("İY 2.5 ÜST", 1, 1) == "KAYBETTİ"
+        assert settle_market("2Y 0.5 ÜST", 1, 0, 1, 0) == "KAYBETTİ"
+        assert settle_market("2Y 1.5 ÜST", 1, 0, 2, 1) == "KAZANDI"
+        assert settle_market("2Y 2.5 ÜST", 1, 0, 2, 1) == "KAYBETTİ"
+        assert settle_market("2Y 3.5 ÜST", 1, 0, 3, 2) == "KAZANDI"
+        print("SETTLEMENT_TEST | PASS | İY/2Y 0.5-3.5 hedef sonuçları")
         global telegram_call
         original_telegram_call = telegram_call
         mocked_calls = []
@@ -325,7 +331,21 @@ def main() -> int:
             assert "İLK YARI SONUCU: 1-0" in mocked_calls[0][1]["text"]
         finally:
             telegram_call = original_telegram_call
-        print("TELEGRAM_EDIT_TEST | PASS | ilk yarı sonucu eski Telegram mesajına ekleniyor")
+            state2 = {"signals": {
+                "demo|2Y 1.5 ÜST": {
+                    "slug": "demo", "market": "2Y 1.5 ÜST",
+                    "message_id": 124, "message_text": "İkinci yarı sinyali", "result": None,
+                }
+            }}
+            updated2 = process_result(
+                {"status_text": "Finished", "home_score": 2, "away_score": 1,
+                 "home_ht_score": 1, "away_ht_score": 0},
+                "demo", state2
+            )
+            assert updated2 == 1
+            assert state2["signals"]["demo|2Y 1.5 ÜST"]["result"] == "KAZANDI"
+            assert "İKİNCİ YARI GOLÜ: 2" in mocked_calls[-1][1]["text"]
+        print("TELEGRAM_EDIT_TEST | PASS | İY devre arasında, 2Y maç sonunda sonuçlanıyor")
         return 0
 
     chat_id = os.getenv("TELEGRAM_CHAT_ID", "").strip()
