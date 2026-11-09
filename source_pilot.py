@@ -52,6 +52,27 @@ def check_sportscore():
                 f" | durumlar={statuses}"
                 f" | örnek_alanlar={sorted(matches[0].keys()) if matches and isinstance(matches[0], dict) else []}"
             )
+            if label == "live" and matches:
+                sample = matches[0]
+                raw_url = str(sample.get("url") or "")
+                slug = raw_url.rstrip("/").split("/")[-1]
+                if slug:
+                    detail_response = SESSION.get(
+                        "https://sportscore.com/api/v1/match/",
+                        params={"sport": "football", "slug": slug},
+                        timeout=TIMEOUT,
+                    )
+                    detail_response.raise_for_status()
+                    detail = detail_response.json()
+                    print(
+                        "SPORTSCORE_DETAIL | OK"
+                        f" | HTTP={detail_response.status_code}"
+                        f" | slug={slug}"
+                        f" | top_fields={sorted(detail.keys()) if isinstance(detail, dict) else type(detail).__name__}"
+                    )
+                    encoded = json.dumps(detail, ensure_ascii=False).casefold()
+                    stat_terms = ["shots", "dangerous", "possession", "corner", "timeline", "events", "statistics"]
+                    print(f"SPORTSCORE_DETAIL_FIELDS | { {term: (term in encoded) for term in stat_terms} }")
         except Exception as exc:
             all_ok = False
             print(f"SPORTSCORE_{label.upper()} | FAIL | {type(exc).__name__}: {exc}")
