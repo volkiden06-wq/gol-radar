@@ -92,9 +92,15 @@ def stat_totals(match: dict) -> dict:
 
 
 def evaluate(match: dict) -> list[dict]:
-    status = str(match.get("status") or match.get("status_text") or "").strip().casefold()
+    status = str(match.get("status") or "").strip().casefold()
+    status_text = str(match.get("status_text") or "").strip().casefold()
+    period_text = status + " " + status_text
     minute = as_int(match.get("live_minute"), -1)
     if minute < 0 or status in {"finished", "ft", "half time", "ht", "ended"}:
+        return []
+    if any(token in period_text for token in ("2nd half", "second half", "2nd period", "second period", "extra time", "penalties")):
+        return []
+    if status_text in {"ht", "half time", "halftime", "finished", "ft"}:
         return []
     home_goals = as_int(match.get("home_score"))
     away_goals = as_int(match.get("away_score"))
@@ -164,6 +170,8 @@ def self_test() -> bool:
     assert not any(x["market"] == "İY 0.5 ÜST" for x in evaluate(already_scored))
     half_time = dict(strong, status="HT", live_minute=45)
     assert not evaluate(half_time)
+    second_half = dict(strong, status="live", status_text="2nd Half", live_minute=27)
+    assert not evaluate(second_half)
     quiet = dict(strong, stats=[])
     assert not evaluate(quiet)
     print("SELF_TEST | PASS | İY 0.5/1.5 eşikleri, skor filtresi, devre filtresi ve eksik veri kontrolü")
@@ -195,7 +203,7 @@ def main() -> int:
             away = detail.get("away") or fixture.get("away") or "?"
             minute = detail.get("live_minute", "?")
             score = f"{detail.get('home_score', 0)}-{detail.get('away_score', 0)}"
-            print(f"MATCH | {home} - {away} | {minute}' | {score} | stats={stat_totals(detail)}")
+            print(f"MATCH | {home} - {away} | {minute}' | period={detail.get('status_text', detail.get('status', '?'))} | {score} | stats={stat_totals(detail)}")
             for signal in signals:
                 candidate_count += 1
                 print(
