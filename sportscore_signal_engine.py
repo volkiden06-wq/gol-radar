@@ -12,7 +12,7 @@ import requests
 BASE = "https://sportscore.com"
 UA = "GolRadarSignalPilot/1.0 (+https://github.com/volkiden06-wq/gol-radar)"
 TIMEOUT = 18
-MAX_DETAILS_PER_RUN = 2  # 1 fixtures + 2 details per 5-min run stays near free-tier daily limits.
+MAX_DETAILS_PER_RUN = 5  # 1 fixture list + 5 details per 5-min run; approx. 1,728 requests/day.
 MIN_SCORE_05 = 62
 MIN_SCORE_15 = 76
 SESSION = requests.Session()
@@ -33,7 +33,7 @@ def fetch_json(url: str, params: dict | None = None) -> Any:
 
 
 def live_fixtures() -> list[dict]:
-    payload = fetch_json(BASE + "/api/v1/fixtures/", {"sport": "football", "status": "live", "limit": 100})
+    payload = fetch_json(BASE + "/api/v1/fixtures/", {"sport": "football", "status": "live", "limit": 100, "src": "gol-radar"})
     if isinstance(payload, dict):
         rows = payload.get("matches") or payload.get("fixtures") or payload.get("data") or []
     elif isinstance(payload, list):
@@ -53,7 +53,7 @@ def match_detail(row: dict) -> dict:
     slug = fixture_slug(row)
     if not slug:
         raise ValueError("Maç URL'sinden slug alınamadı")
-    payload = fetch_json(BASE + "/api/v1/match/", {"sport": "football", "slug": slug})
+    payload = fetch_json(BASE + "/api/v1/match/", {"sport": "football", "slug": slug, "src": "gol-radar"})
     if not isinstance(payload, dict) or not isinstance(payload.get("match"), dict):
         raise ValueError("SportScore maç detay yanıtı beklenen yapıda değil")
     return payload["match"]
