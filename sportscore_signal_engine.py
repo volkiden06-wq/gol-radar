@@ -150,7 +150,7 @@ def self_test() -> bool:
         "status": "live", "live_minute": 27, "home_score": 0, "away_score": 0,
         "home": "Test A", "away": "Test B",
         "stats": [
-            {"label": "Shots on Target", "home": 2, "away": 1},
+            {"label": "Shots on Target", "home": 3, "away": 1},
             {"label": "Shots off Target", "home": 5, "away": 4},
             {"label": "Attacks", "home": 52, "away": 43},
             {"label": "Dangerous Attacks", "home": 32, "away": 28},
