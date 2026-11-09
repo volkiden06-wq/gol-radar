@@ -103,7 +103,7 @@ def latest_per_market(rows):
         if not category:
             continue
         key = (str(row.get("mac_id") or row.get("fixture_id") or ""),
-               match_text(category))
+               match_text(category), line_text(row.get("cizgi")))
         if key in seen:
             continue
         seen.add(key)
