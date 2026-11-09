@@ -19,7 +19,7 @@ concurrency:
 jobs:
   analyze:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 15
     steps:
       - name: Depoyu al
         uses: actions/checkout@v4
@@ -47,6 +47,6 @@ jobs:
             echo "Sinyal geçmişinde değişiklik yok."
             exit 0
           fi
-          git commit -m "Update SportScore signal and halftime result state"
+          git commit -m "Update GOL RADAR signals and result state"
           git pull --rebase origin main
           git push origin HEAD:main
