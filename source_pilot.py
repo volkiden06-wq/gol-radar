@@ -86,7 +86,9 @@ def check_sportscore():
                             )
                             encoded = json.dumps(detail, ensure_ascii=False).casefold()
                             stat_terms = ["shots", "dangerous", "possession", "corner", "timeline", "events", "statistics"]
+                            match_obj = detail.get("match", {}) if isinstance(detail, dict) else {}
                             print(f"SPORTSCORE_DETAIL_FIELDS | { {term: (term in encoded) for term in stat_terms} }")
+                            print(f"SPORTSCORE_MATCH_KEYS | {sorted(match_obj.keys()) if isinstance(match_obj, dict) else type(match_obj).__name__}")
                             break
                         except Exception as exc:
                             detail_error = exc
