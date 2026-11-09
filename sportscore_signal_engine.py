@@ -342,10 +342,19 @@ def main() -> int:
     selected_slugs = {fixture_slug(row) for row in selected if fixture_slug(row)}
     remaining_slots = max(0, MAX_DETAILS_PER_RUN - len(selected))
     new_rows = [row for row in rows if fixture_slug(row) and fixture_slug(row) not in selected_slugs]
-    if new_rows and remaining_slots:
+    # This engine only evaluates first-half markets. Spend detail requests on
+    # explicit first-half fixtures first; retain other fixtures as a fallback
+    # only when the feed has no first-half candidates.
+    first_half_rows = [
+        row for row in new_rows
+        if any(marker in str(row.get("status_text") or "").casefold()
+               for marker in ("1st half", "first half"))
+    ]
+    scan_rows = first_half_rows or new_rows
+    if scan_rows and remaining_slots:
         slot = int(time.time() // 300)
-        start = (slot * remaining_slots) % len(new_rows)
-        selected.extend(new_rows[(start + i) % len(new_rows)] for i in range(min(remaining_slots, len(new_rows))))
+        start = (slot * remaining_slots) % len(scan_rows)
+        selected.extend(scan_rows[(start + i) % len(scan_rows)] for i in range(min(remaining_slots, len(scan_rows))))
 
     checked = 0
     sent = 0
