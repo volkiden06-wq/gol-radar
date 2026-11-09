@@ -211,6 +211,9 @@ def main() -> int:
             minute = detail.get("live_minute", "?")
             score = f"{detail.get('home_score', 0)}-{detail.get('away_score', 0)}"
             print(f"MATCH | {home} - {away} | {minute}' | period={detail.get('status_text', detail.get('status', '?'))} | {score} | stats={stat_totals(detail)}")
+            if checked == 1:
+                print(f"SPORTSCORE_SCHEMA | match_keys={sorted(detail.keys())} | score_fields={{k: detail.get(k) for k in detail if 'score' in k.casefold() or 'goal' in k.casefold()}}")
+                print(f"SPORTSCORE_FIXTURE_KEYS | {sorted(fixture.keys())}")
             for signal in signals:
                 candidate_count += 1
                 print(
