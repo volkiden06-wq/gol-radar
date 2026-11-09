@@ -503,22 +503,33 @@ def settle_sent_predictions(state):
 
 
 def flush_result_message_edits(state):
-    # Publish every finalized result. Prefer editing the original signal post;
-    # if that post was deleted or cannot be edited, send a standalone result post.
+    # Results must stay attached to the original live-signal post.
+    # Never publish a separate result message.
     grouped = {}
     for key, item in state.get("sent", {}).items():
         if not isinstance(item, dict) or not item.get("settled") or not item.get("result"):
             continue
-        if item.get("result_posted") and not item.get("result_edit_unavailable"):
+        if item.get("result_posted"):
             continue
         message_id = item.get("telegram_message_id")
-        group_key = str(message_id) if message_id else "missing:" + key
-        grouped.setdefault(group_key, []).append(item)
+        if not message_id:
+            item["result_edit_error"] = "Orijinal Telegram mesaj kimliği bulunamadı; sonuç mesaja eklenemiyor."
+            continue
+        grouped.setdefault(str(message_id), []).append(item)
 
-    for group_key, items in grouped.items():
-        message_id = items[0].get("telegram_message_id")
+    for message_id, items in grouped.items():
         base_text = next((x.get("telegram_message_text") for x in items if x.get("telegram_message_text")), "")
-        related = items
+        if not base_text:
+            for x in items:
+                x["result_edit_error"] = "Orijinal mesaj metni bulunamadı; sonuç mesaja eklenemiyor."
+            save_state(state)
+            continue
+
+        related = [
+            x for x in state.get("sent", {}).values()
+            if isinstance(x, dict) and str(x.get("telegram_message_id")) == message_id
+            and x.get("settled") and x.get("result")
+        ]
         lines = []
         seen = set()
         for x in related:
@@ -526,37 +537,24 @@ def flush_result_message_edits(state):
             if line not in seen:
                 seen.add(line)
                 lines.append(line)
+
         if not lines:
             continue
         result_block = "🏁 MAÇ SONUÇLARI\n" + "\n".join(lines)
-        if message_id and base_text:
-            try:
-                telegram_edit(int(message_id), base_text + "\n\n" + result_block)
-                for x in related:
-                    x["result_posted"] = True
-                    x["result_edit_unavailable"] = False
-                    x.pop("result_edit_error", None)
-                save_state(state)
-                continue
-            except Exception as exc:
-                print(f"Telegram eski mesaj düzenlenemedi (mesaj {message_id}); sonuç ayrı mesaj olarak gönderilecek: {exc}")
-
-        # A missing/deleted original message must never cause a result to be
-        # silently discarded. Send a new channel post instead.
-        match_label = next((x.get("home") for x in related if x.get("home")), "Canlı maç")
-        result_message = f"⚽ {match_label}\n\n{result_block}"
         try:
-            telegram_send(result_message)
+            telegram_edit(int(message_id), base_text + "\n\n" + result_block)
             for x in related:
                 x["result_posted"] = True
-                x["result_edit_unavailable"] = False
                 x.pop("result_edit_error", None)
             save_state(state)
         except Exception as exc:
+            # Keep it pending and retry on the next scheduled scan.
+            # If the original post was deleted, Telegram cannot append to it;
+            # do not violate the user's requirement by sending a new post.
             for x in related:
                 x["result_posted"] = False
                 x["result_edit_error"] = str(exc)[:250]
-            print(f"Telegram maç sonucu gönderilemedi; sonraki taramada tekrar denenecek: {exc}")
+            print(f"Sonuç orijinal Telegram mesajına eklenemedi; ayrı mesaj gönderilmeyecek, tekrar denenecek (mesaj {message_id}): {exc}")
             save_state(state)
 
 def send_live_performance_report(state):
