@@ -1,0 +1,35 @@
+name: SportScore Live Signal Pilot (Dry Run)
+
+on:
+  push:
+    paths:
+      - "sportscore_signal_engine.py"
+      - ".github/workflows/sportscore-signal-pilot.yml"
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sportscore-signal-pilot
+  cancel-in-progress: false
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Depoyu al
+        uses: actions/checkout@v4
+      - name: Python kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Bağımlılıkları kur
+        run: pip install requests
+      - name: Kendi testlerini çalıştır
+        run: python sportscore_signal_engine.py --self-test
+      - name: Canlı maçları analiz et (Telegram kapalı)
+        run: python sportscore_signal_engine.py
