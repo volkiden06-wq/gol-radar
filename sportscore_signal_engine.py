@@ -13,7 +13,7 @@ BASE = "https://sportscore.com"
 UA = "GolRadarSignalPilot/1.0 (+https://github.com/volkiden06-wq/gol-radar)"
 TIMEOUT = 18
 # No artificial 5/10-match cap: scan every live fixture returned by the feed.
-MIN_MARKET_SCORE = {"0.5": 45, "1.5": 58, "2.5": 70, "3.5": 80}
+MIN_MARKET_SCORE = {"0.5": 45, "1.5": 58, "2.5": 70, "3.5": 80, "4.5": 88, "5.5": 94}
 SESSION = requests.Session()
 SESSION.headers.update({"User-Agent": UA, "Accept": "application/json"})
 
@@ -114,22 +114,19 @@ def evaluate(match: dict) -> list[dict]:
     total_goals = home_goals + away_goals
     if period == "2Y":
         hh, ah = as_int(match.get("home_ht_score"), -1), as_int(match.get("away_ht_score"), -1)
-        if hh < 0 or ah < 0:
+        if hh < 0 or ah < 0 or not 50 <= minute <= 88:
             return []
-        period_goals = total_goals - hh - ah
-        markets = [
-            ("2Y 0.5 ÜST", 1, 50, 88, "0.5"),
-            ("2Y 1.5 ÜST", 2, 50, 85, "1.5"),
-            ("2Y 2.5 ÜST", 3, 50, 80, "2.5"),
-            ("2Y 3.5 ÜST", 4, 50, 75, "3.5"),
-        ]
+        period_goals = max(0, total_goals - hh - ah)
+        markets = []
+        for n in range(1, 7):
+            line = f"{n - 0.5:.1f}"
+            markets.append((f"2Y {line} ÜST", n, period_goals, line))
+            markets.append((f"MS {line} ÜST", n, total_goals, line))
     else:
         period_goals = total_goals
-        markets = [
-            ("İY 0.5 ÜST", 1, 8, 43, "0.5"),
-            ("İY 1.5 ÜST", 2, 8, 40, "1.5"),
-            ("İY 2.5 ÜST", 3, 8, 35, "2.5"),
-        ]
+        if not 8 <= minute <= 43:
+            return []
+        markets = [(f"İY {n - 0.5:.1f} ÜST", n, period_goals, f"{n - 0.5:.1f}") for n in range(1, 7)]
     metrics = stat_totals(match)
     sot, shots = metrics["sot"], metrics["shots"]
     dangerous, attacks, corners = metrics["dangerous"], metrics["attacks"], metrics["corners"]
@@ -138,16 +135,17 @@ def evaluate(match: dict) -> list[dict]:
     pressure = round(min(100, pressure))
     home, away = str(match.get("home") or "Ev sahibi"), str(match.get("away") or "Deplasman")
     candidates = []
-    for market, target, min_minute, max_minute, band in markets:
-        if not min_minute <= minute <= max_minute or period_goals >= target:
+    for market, target, goals_in_scope, band in markets:
+        if goals_in_scope >= target:
             continue
-        score = pressure + min(12, period_goals * 4)
-        threshold = MIN_MARKET_SCORE[band] + (4 if target >= 3 and period_goals == 0 else 0)
-        if sot >= (1 if target == 1 else 2) and (dangerous >= 15 or shots >= 4) and score >= threshold:
+        score = pressure + min(12, goals_in_scope * 4)
+        threshold = MIN_MARKET_SCORE[band] + (4 if target >= 4 and goals_in_scope == 0 else 0)
+        if sot >= (1 if target <= 1 else 2) and (dangerous >= 15 or shots >= 4) and score >= threshold:
             candidates.append({
                 "market": market, "period": period, "target": target,
-                "period_goals": period_goals, "score": min(100, score),
-                "minute": minute, "current_score": f"{home_goals}-{away_goals}",
+                "period_goals": period_goals, "scope_goals": goals_in_scope,
+                "score": min(100, score), "minute": minute,
+                "current_score": f"{home_goals}-{away_goals}",
                 "metrics": metrics, "home": home, "away": away,
             })
     return candidates
@@ -167,11 +165,15 @@ def self_test() -> bool:
     first = evaluate(strong)
     assert any(x["market"] == "İY 1.5 ÜST" for x in first), first
     assert any(x["market"] == "İY 2.5 ÜST" for x in first), first
+    assert any(x["market"] == "İY 5.5 ÜST" for x in first), first
     second = dict(strong, status_text="2nd Half", live_minute=67,
                   home_score=2, away_score=1, home_ht_score=1, away_ht_score=0)
     second_candidates = evaluate(second)
     assert any(x["market"] == "2Y 2.5 ÜST" for x in second_candidates), second_candidates
     assert any(x["market"] == "2Y 3.5 ÜST" for x in second_candidates), second_candidates
+    assert any(x["market"] == "MS 1.5 ÜST" for x in second_candidates), second_candidates
+    assert any(x["market"] == "MS 2.5 ÜST" for x in second_candidates), second_candidates
+    assert any(x["market"] == "MS 5.5 ÜST" for x in second_candidates), second_candidates
     assert not evaluate(dict(second, home_ht_score=None))
     assert not evaluate(dict(strong, status_text="Half time"))
     assert not evaluate(dict(strong, status_text="", status="live"))
@@ -199,8 +201,11 @@ def settle_market(market: str, home_ht: int, away_ht: int, home_ft: int | None =
         goals = home_ht + away_ht
     else:
         if home_ft is None or away_ft is None:
-            raise ValueError("İkinci yarı sonucu için maç sonu skoru gerekli")
-        goals = home_ft + away_ft - home_ht - away_ht
+            raise ValueError("Maç sonu skoru gerekli")
+        if market.startswith("2Y "):
+            goals = home_ft + away_ft - home_ht - away_ht
+        else:
+            goals = home_ft + away_ft
     target = int(float(market.split()[1]) + 0.5)
     return "KAZANDI" if goals >= target else "KAYBETTİ"
 
@@ -260,8 +265,10 @@ def process_result(match: dict, slug: str, state: dict) -> int:
             continue
         if first:
             result_line = f"🏁 İLK YARI SONUCU: {hh}-{ah}"
-        else:
+        elif market.startswith("2Y "):
             result_line = f"🏁 MAÇ SONU: {hf}-{af} | İKİNCİ YARI GOLÜ: {hf+af-hh-ah}"
+        else:
+            result_line = f"🏁 MAÇ SONU: {hf}-{af} | TOPLAM GOL: {hf+af}"
         updated_text = str(record.get("message_text") or "") + f"\n\n{result_line}\n{'✅' if result == 'KAZANDI' else '❌'} {market} — {result}"
         try:
             telegram_call("editMessageText", {
@@ -280,15 +287,16 @@ def process_result(match: dict, slug: str, state: dict) -> int:
 
 def build_signal_text(signal: dict, detail: dict) -> str:
     competition = detail.get("competition") or ""
-    label = "İLK YARI" if signal["period"] == "İY" else "İKİNCİ YARI"
-    lines = [f"⚽ GOL RADAR | CANLI {label} SİNYALİ", f"{signal['home']} - {signal['away']}"]
+    label = "İLK YARI GOL BEKLENTİSİ" if signal["period"] == "İY" else "İKİNCİ YARI GOL BEKLENTİSİ"
+    lines = [f"⚽ GOL RADAR | CANLI {label}", f"{signal['home']} - {signal['away']}"]
     if competition: lines.append(f"🏆 {competition}")
     lines.extend([
         f"⏱ {signal['minute']}' | Anlık skor: {signal['current_score']}",
-        f"🎯 {signal['market']} | Bu yarıdaki gol: {signal['period_goals']}",
-        f"📊 Analiz puanı: {signal['score']}/100",
+        f"🎯 {signal['market']}",
+        f"📊 Gol analiz puanı: {signal['score']}/100",
         f"📈 İsabetli şut: {signal['metrics']['sot']} | Toplam şut: {signal['metrics']['shots']}",
         f"⚠️ Tehlikeli atak: {signal['metrics']['dangerous']} | Korner: {signal['metrics']['corners']}",
+        "⏳ Marketin sonucu ilgili devre/maç sonunda açıklanır.",
         "ℹ️ İstatistiksel analizdir; gol garantisi veya bahis tavsiyesi değildir.",
     ])
     return "\n".join(lines)
@@ -306,6 +314,9 @@ def main() -> int:
         assert settle_market("2Y 1.5 ÜST", 1, 0, 2, 1) == "KAZANDI"
         assert settle_market("2Y 2.5 ÜST", 1, 0, 2, 1) == "KAYBETTİ"
         assert settle_market("2Y 3.5 ÜST", 1, 0, 3, 2) == "KAZANDI"
+        assert settle_market("MS 1.5 ÜST", 1, 0, 2, 1) == "KAZANDI"
+        assert settle_market("MS 2.5 ÜST", 1, 0, 2, 1) == "KAZANDI"
+        assert settle_market("MS 3.5 ÜST", 1, 0, 2, 1) == "KAYBETTİ"
         print("SETTLEMENT_TEST | PASS | İY/2Y market sonuçları")
         global telegram_call
         original_telegram_call = telegram_call
