@@ -1,4 +1,4 @@
-name: SportScore Live Signal Pilot (Dry Run)
+name: GOL RADAR Live Telegram Signals
 
 on:
   push:
