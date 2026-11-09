@@ -249,7 +249,8 @@ def prediction_key(source, row):
         side_text(row.get("ust_alt")).casefold(),
         str(row.get("yontem") or ""),
     ])
-    return f"{source}:{row.get('mac_id', row.get('fixture_id'))}:{market}"
+    published_at = str(row.get("created_at") or "")
+    return f"{source}:{row.get('mac_id', row.get('fixture_id'))}:{market}:{published_at}"
 
 
 def make_message(source, rows, match):
