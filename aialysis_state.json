@@ -1307,9 +1307,13 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 252,
-      "telegram_message_text": "⚽ Sabadell - Real Sociedad B\n🏆 Segunda\n🗓 09.11 19:30\n• İY Toplam Gol 1.5 ALT | Güven %69 | Oran 1.40\nℹ️ Tahminler analiz üzerine verilmektedir."
+      "telegram_message_text": "⚽ Sabadell - Real Sociedad B\n🏆 Segunda\n🗓 09.11 19:30\n• İY Toplam Gol 1.5 ALT | Güven %69 | Oran 1.40\nℹ️ Tahminler analiz üzerine verilmektedir.",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-09T21:38:42.838452+00:00",
+      "result_posted": false,
+      "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}"
     },
     "MAÇ ÖNÜ:94423963:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-03T13:35:24.654+00:00",
@@ -1388,9 +1392,13 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 263,
-      "telegram_message_text": "⚽ Pineto - Vis Pesaro\n🏆 Serie C - Group A\n🗓 09.11 19:30\n• İY Toplam Gol 1.5 ALT | Güven %71 | Oran 1.36\nℹ️ Tahminler analiz üzerine verilmektedir."
+      "telegram_message_text": "⚽ Pineto - Vis Pesaro\n🏆 Serie C - Group A\n🗓 09.11 19:30\n• İY Toplam Gol 1.5 ALT | Güven %71 | Oran 1.36\nℹ️ Tahminler analiz üzerine verilmektedir.",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-09T21:38:42.840178+00:00",
+      "result_posted": false,
+      "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}"
     },
     "MAÇ ÖNÜ:94458151:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-06T08:35:34.152+00:00",
@@ -1457,9 +1465,13 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 275,
-      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>FC Botosani - Otelul</b>\n🏆 Liga I\n🗓 09.11 18:00\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.46</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>FC Botosani - Otelul</b>\n🏆 Liga I\n🗓 09.11 18:00\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.46</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-09T21:38:42.841688+00:00",
+      "result_posted": false,
+      "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}"
     },
     "MAÇ ÖNÜ:94367246:maç sonucu||ev kazanır|piyasa_v1": {
       "created_at": "2026-11-03T06:45:25.499+00:00",
@@ -1496,9 +1508,13 @@
       "cizgi": 3.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 277,
-      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Hvidovre IF - Aarhus Fremad</b>\n🏆 1st Division\n🗓 09.11 18:00\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 3.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.44</b>\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.44</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Hvidovre IF - Aarhus Fremad</b>\n🏆 1st Division\n🗓 09.11 18:00\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 3.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.44</b>\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.44</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-09T21:38:42.843149+00:00",
+      "result_posted": false,
+      "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}"
     },
     "MAÇ ÖNÜ:94370240:deplasman gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-04T16:45:35.647+00:00",
@@ -1509,9 +1525,13 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 277,
-      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Hvidovre IF - Aarhus Fremad</b>\n🏆 1st Division\n🗓 09.11 18:00\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 3.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.44</b>\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.44</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Hvidovre IF - Aarhus Fremad</b>\n🏆 1st Division\n🗓 09.11 18:00\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 3.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.44</b>\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.44</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-09T21:38:42.844517+00:00",
+      "result_posted": false,
+      "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}"
     },
     "MAÇ ÖNÜ:94370240:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-04T16:45:35.647+00:00",
@@ -1522,9 +1542,13 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 277,
-      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Hvidovre IF - Aarhus Fremad</b>\n🏆 1st Division\n🗓 09.11 18:00\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 3.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.44</b>\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.44</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Hvidovre IF - Aarhus Fremad</b>\n🏆 1st Division\n🗓 09.11 18:00\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 3.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.44</b>\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.44</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-09T21:38:42.847851+00:00",
+      "result_posted": false,
+      "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}"
     },
     "MAÇ ÖNÜ:94395139:toplam gol|3.5|alt|piyasa_v1": {
       "created_at": "2026-11-04T16:55:11.455+00:00",
@@ -1613,9 +1637,13 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 280,
-      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Altamura - Cavese</b>\n🏆 Serie C - Group A\n🗓 09.11 19:30\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.40</b>\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 0.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Altamura - Cavese</b>\n🏆 Serie C - Group A\n🗓 09.11 19:30\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.40</b>\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 0.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-09T21:38:42.849307+00:00",
+      "result_posted": false,
+      "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}"
     },
     "MAÇ ÖNÜ:94431339:toplam gol|1.5|üst|piyasa_v1": {
       "created_at": "2026-11-04T19:18:23.767+00:00",
@@ -1626,9 +1654,13 @@
       "cizgi": 1.5,
       "ust_alt": "ÜST",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 280,
-      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Altamura - Cavese</b>\n🏆 Serie C - Group A\n🗓 09.11 19:30\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.40</b>\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 0.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Altamura - Cavese</b>\n🏆 Serie C - Group A\n🗓 09.11 19:30\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.40</b>\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 0.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-09T21:38:42.850697+00:00",
+      "result_posted": false,
+      "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}"
     },
     "MAÇ ÖNÜ:94431339:i̇y toplam gol|0.5|üst|piyasa_v1": {
       "created_at": "2026-11-04T19:18:23.767+00:00",
@@ -1639,9 +1671,13 @@
       "cizgi": 0.5,
       "ust_alt": "ÜST",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 280,
-      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Altamura - Cavese</b>\n🏆 Serie C - Group A\n🗓 09.11 19:30\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.40</b>\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 0.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Altamura - Cavese</b>\n🏆 Serie C - Group A\n🗓 09.11 19:30\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.40</b>\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 0.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-09T21:38:42.852112+00:00",
+      "result_posted": false,
+      "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}"
     },
     "MAÇ ÖNÜ:94431343:ev sahibi gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-04T19:18:26.733+00:00",
@@ -1652,9 +1688,13 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 281,
-      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Foggia - Barletta</b>\n🏆 Serie C - Group A\n🗓 09.11 19:30\n━━━━━━━━━━━━━━\n🎯 <b>Ev Sahibi Gol 1.5 ALT</b>  |  Güven <b>%62</b>  |  Oran <b>1.53</b>\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 0.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Foggia - Barletta</b>\n🏆 Serie C - Group A\n🗓 09.11 19:30\n━━━━━━━━━━━━━━\n🎯 <b>Ev Sahibi Gol 1.5 ALT</b>  |  Güven <b>%62</b>  |  Oran <b>1.53</b>\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 0.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-09T21:38:42.853531+00:00",
+      "result_posted": false,
+      "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}"
     },
     "MAÇ ÖNÜ:94431343:toplam gol|1.5|üst|piyasa_v1": {
       "created_at": "2026-11-04T19:18:26.733+00:00",
@@ -1665,9 +1705,13 @@
       "cizgi": 1.5,
       "ust_alt": "ÜST",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 281,
-      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Foggia - Barletta</b>\n🏆 Serie C - Group A\n🗓 09.11 19:30\n━━━━━━━━━━━━━━\n🎯 <b>Ev Sahibi Gol 1.5 ALT</b>  |  Güven <b>%62</b>  |  Oran <b>1.53</b>\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 0.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Foggia - Barletta</b>\n🏆 Serie C - Group A\n🗓 09.11 19:30\n━━━━━━━━━━━━━━\n🎯 <b>Ev Sahibi Gol 1.5 ALT</b>  |  Güven <b>%62</b>  |  Oran <b>1.53</b>\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 0.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-09T21:38:42.854922+00:00",
+      "result_posted": false,
+      "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}"
     },
     "MAÇ ÖNÜ:94431343:i̇y toplam gol|0.5|üst|piyasa_v1": {
       "created_at": "2026-11-04T19:18:26.733+00:00",
@@ -1678,9 +1722,13 @@
       "cizgi": 0.5,
       "ust_alt": "ÜST",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 281,
-      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Foggia - Barletta</b>\n🏆 Serie C - Group A\n🗓 09.11 19:30\n━━━━━━━━━━━━━━\n🎯 <b>Ev Sahibi Gol 1.5 ALT</b>  |  Güven <b>%62</b>  |  Oran <b>1.53</b>\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 0.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Foggia - Barletta</b>\n🏆 Serie C - Group A\n🗓 09.11 19:30\n━━━━━━━━━━━━━━\n🎯 <b>Ev Sahibi Gol 1.5 ALT</b>  |  Güven <b>%62</b>  |  Oran <b>1.53</b>\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 0.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-09T21:38:42.856303+00:00",
+      "result_posted": false,
+      "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}"
     },
     "MAÇ ÖNÜ:94431346:deplasman gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-04T19:18:29.206+00:00",
@@ -1842,9 +1890,13 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 288,
-      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>FC Botosani - Otelul</b>\n🏆 Liga I\n🗓 09.11 18:00\n━━━━━━━━━━━━━━\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.41</b>\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.46</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>FC Botosani - Otelul</b>\n🏆 Liga I\n🗓 09.11 18:00\n━━━━━━━━━━━━━━\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.41</b>\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.46</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-09T21:38:42.857731+00:00",
+      "result_posted": false,
+      "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}"
     },
     "MAÇ ÖNÜ:94388589:i̇y toplam gol|1.5|alt|piyasa_v1:2026-11-02T18:05:08.389+00:00": {
       "created_at": "2026-11-02T18:05:08.389+00:00",
@@ -1855,9 +1907,13 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 289,
-      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Sabadell - Real Sociedad B</b>\n🏆 Segunda\n🗓 09.11 19:30\n━━━━━━━━━━━━━━\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%69</b>  |  Oran <b>1.40</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Sabadell - Real Sociedad B</b>\n🏆 Segunda\n🗓 09.11 19:30\n━━━━━━━━━━━━━━\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%69</b>  |  Oran <b>1.40</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-09T21:38:42.859100+00:00",
+      "result_posted": false,
+      "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}"
     },
     "MAÇ ÖNÜ:94367246:maç sonucu||ev kazanır|piyasa_v1:2026-11-03T06:45:25.499+00:00": {
       "created_at": "2026-11-03T06:45:25.499+00:00",
@@ -1933,9 +1989,13 @@
       "cizgi": 3.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 292,
-      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Hvidovre IF - Aarhus Fremad</b>\n🏆 1st Division\n🗓 09.11 18:00\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 3.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.44</b>\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.44</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Hvidovre IF - Aarhus Fremad</b>\n🏆 1st Division\n🗓 09.11 18:00\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 3.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.44</b>\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.44</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-09T21:38:42.860469+00:00",
+      "result_posted": false,
+      "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}"
     },
     "MAÇ ÖNÜ:94370240:deplasman gol|1.5|alt|piyasa_v1:2026-11-04T16:45:35.647+00:00": {
       "created_at": "2026-11-04T16:45:35.647+00:00",
@@ -1946,9 +2006,13 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 292,
-      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Hvidovre IF - Aarhus Fremad</b>\n🏆 1st Division\n🗓 09.11 18:00\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 3.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.44</b>\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.44</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Hvidovre IF - Aarhus Fremad</b>\n🏆 1st Division\n🗓 09.11 18:00\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 3.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.44</b>\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.44</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-09T21:38:42.861837+00:00",
+      "result_posted": false,
+      "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}"
     },
     "MAÇ ÖNÜ:94370240:i̇y toplam gol|1.5|alt|piyasa_v1:2026-11-04T16:45:35.647+00:00": {
       "created_at": "2026-11-04T16:45:35.647+00:00",
@@ -1959,9 +2023,13 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 292,
-      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Hvidovre IF - Aarhus Fremad</b>\n🏆 1st Division\n🗓 09.11 18:00\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 3.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.44</b>\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.44</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Hvidovre IF - Aarhus Fremad</b>\n🏆 1st Division\n🗓 09.11 18:00\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 3.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.44</b>\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.44</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-09T21:38:42.863256+00:00",
+      "result_posted": false,
+      "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}"
     },
     "MAÇ ÖNÜ:94395139:toplam gol|3.5|alt|piyasa_v1:2026-11-04T16:55:11.455+00:00": {
       "created_at": "2026-11-04T16:55:11.455+00:00",
@@ -2050,9 +2118,13 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 295,
-      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Pineto - Vis Pesaro</b>\n🏆 Serie C - Group A\n🗓 09.11 19:30\n━━━━━━━━━━━━━━\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%71</b>  |  Oran <b>1.36</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Pineto - Vis Pesaro</b>\n🏆 Serie C - Group A\n🗓 09.11 19:30\n━━━━━━━━━━━━━━\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%71</b>  |  Oran <b>1.36</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-09T21:38:42.864648+00:00",
+      "result_posted": false,
+      "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}"
     },
     "MAÇ ÖNÜ:94431339:deplasman gol|1.5|alt|piyasa_v1:2026-11-04T19:18:23.767+00:00": {
       "created_at": "2026-11-04T19:18:23.767+00:00",
@@ -2063,9 +2135,13 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 296,
-      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Altamura - Cavese</b>\n🏆 Serie C - Group A\n🗓 09.11 19:30\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.40</b>\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 0.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Altamura - Cavese</b>\n🏆 Serie C - Group A\n🗓 09.11 19:30\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.40</b>\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 0.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-09T21:38:42.866017+00:00",
+      "result_posted": false,
+      "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}"
     },
     "MAÇ ÖNÜ:94431339:toplam gol|1.5|üst|piyasa_v1:2026-11-04T19:18:23.767+00:00": {
       "created_at": "2026-11-04T19:18:23.767+00:00",
@@ -2076,9 +2152,13 @@
       "cizgi": 1.5,
       "ust_alt": "ÜST",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 296,
-      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Altamura - Cavese</b>\n🏆 Serie C - Group A\n🗓 09.11 19:30\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.40</b>\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 0.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Altamura - Cavese</b>\n🏆 Serie C - Group A\n🗓 09.11 19:30\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.40</b>\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 0.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-09T21:38:42.867373+00:00",
+      "result_posted": false,
+      "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}"
     },
     "MAÇ ÖNÜ:94431339:i̇y toplam gol|0.5|üst|piyasa_v1:2026-11-04T19:18:23.767+00:00": {
       "created_at": "2026-11-04T19:18:23.767+00:00",
@@ -2089,9 +2169,13 @@
       "cizgi": 0.5,
       "ust_alt": "ÜST",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 296,
-      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Altamura - Cavese</b>\n🏆 Serie C - Group A\n🗓 09.11 19:30\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.40</b>\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 0.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Altamura - Cavese</b>\n🏆 Serie C - Group A\n🗓 09.11 19:30\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.40</b>\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 0.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-09T21:38:42.868757+00:00",
+      "result_posted": false,
+      "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}"
     },
     "MAÇ ÖNÜ:94431343:ev sahibi gol|1.5|alt|piyasa_v1:2026-11-04T19:18:26.733+00:00": {
       "created_at": "2026-11-04T19:18:26.733+00:00",
@@ -2102,9 +2186,13 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 297,
-      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Foggia - Barletta</b>\n🏆 Serie C - Group A\n🗓 09.11 19:30\n━━━━━━━━━━━━━━\n🎯 <b>Ev Sahibi Gol 1.5 ALT</b>  |  Güven <b>%62</b>  |  Oran <b>1.53</b>\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 0.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Foggia - Barletta</b>\n🏆 Serie C - Group A\n🗓 09.11 19:30\n━━━━━━━━━━━━━━\n🎯 <b>Ev Sahibi Gol 1.5 ALT</b>  |  Güven <b>%62</b>  |  Oran <b>1.53</b>\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 0.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-09T21:38:42.870167+00:00",
+      "result_posted": false,
+      "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}"
     },
     "MAÇ ÖNÜ:94431343:toplam gol|1.5|üst|piyasa_v1:2026-11-04T19:18:26.733+00:00": {
       "created_at": "2026-11-04T19:18:26.733+00:00",
@@ -2115,9 +2203,13 @@
       "cizgi": 1.5,
       "ust_alt": "ÜST",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 297,
-      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Foggia - Barletta</b>\n🏆 Serie C - Group A\n🗓 09.11 19:30\n━━━━━━━━━━━━━━\n🎯 <b>Ev Sahibi Gol 1.5 ALT</b>  |  Güven <b>%62</b>  |  Oran <b>1.53</b>\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 0.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Foggia - Barletta</b>\n🏆 Serie C - Group A\n🗓 09.11 19:30\n━━━━━━━━━━━━━━\n🎯 <b>Ev Sahibi Gol 1.5 ALT</b>  |  Güven <b>%62</b>  |  Oran <b>1.53</b>\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 0.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-09T21:38:42.871523+00:00",
+      "result_posted": false,
+      "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}"
     },
     "MAÇ ÖNÜ:94431343:i̇y toplam gol|0.5|üst|piyasa_v1:2026-11-04T19:18:26.733+00:00": {
       "created_at": "2026-11-04T19:18:26.733+00:00",
@@ -2128,9 +2220,13 @@
       "cizgi": 0.5,
       "ust_alt": "ÜST",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 297,
-      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Foggia - Barletta</b>\n🏆 Serie C - Group A\n🗓 09.11 19:30\n━━━━━━━━━━━━━━\n🎯 <b>Ev Sahibi Gol 1.5 ALT</b>  |  Güven <b>%62</b>  |  Oran <b>1.53</b>\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 0.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Foggia - Barletta</b>\n🏆 Serie C - Group A\n🗓 09.11 19:30\n━━━━━━━━━━━━━━\n🎯 <b>Ev Sahibi Gol 1.5 ALT</b>  |  Güven <b>%62</b>  |  Oran <b>1.53</b>\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 0.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-09T21:38:42.872880+00:00",
+      "result_posted": false,
+      "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}"
     },
     "MAÇ ÖNÜ:94431346:deplasman gol|1.5|alt|piyasa_v1:2026-11-04T19:18:29.206+00:00": {
       "created_at": "2026-11-04T19:18:29.206+00:00",
@@ -2180,9 +2276,12 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 300,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>FC Botosani - Otelul</b>\n🏆 Liga I\n⏱ 45' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.46</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>FC Botosani - Otelul</b>\n🏆 Liga I\n⏱ 45' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.46</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-09T21:38:42.874246+00:00",
+      "result_posted": true
     },
     "CANLI:94370240:deplasman gol|1.5|alt|piyasa_v1:2026-11-04T16:45:35.731736+00:00": {
       "created_at": "2026-11-04T16:45:35.731736+00:00",
@@ -2193,9 +2292,12 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 301,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Hvidovre IF - Aarhus Fremad</b>\n🏆 1st Division\n⏱ 45' | Skor 2-0\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.44</b>\n🎯 <b>Toplam Gol 3.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Hvidovre IF - Aarhus Fremad</b>\n🏆 1st Division\n⏱ 45' | Skor 2-0\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.44</b>\n🎯 <b>Toplam Gol 3.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-09T21:38:42.875597+00:00",
+      "result_posted": true
     },
     "CANLI:94370240:toplam gol|3.5|alt|piyasa_v1:2026-11-04T16:45:35.712172+00:00": {
       "created_at": "2026-11-04T16:45:35.712172+00:00",
@@ -2206,9 +2308,12 @@
       "cizgi": 3.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 301,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Hvidovre IF - Aarhus Fremad</b>\n🏆 1st Division\n⏱ 45' | Skor 2-0\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.44</b>\n🎯 <b>Toplam Gol 3.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Hvidovre IF - Aarhus Fremad</b>\n🏆 1st Division\n⏱ 45' | Skor 2-0\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.44</b>\n🎯 <b>Toplam Gol 3.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-09T21:38:42.876948+00:00",
+      "result_posted": true
     },
     "CANLI:94313972:toplam gol|2.5|üst|piyasa_v1:2026-11-06T03:00:09.154567+00:00": {
       "created_at": "2026-11-06T03:00:09.154567+00:00",
@@ -2219,9 +2324,12 @@
       "cizgi": 2.5,
       "ust_alt": "ÜST",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 302,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Kristiansund - Valerenga</b>\n🏆 Eliteserien\n⏱ 45' | Skor 1-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ÜST</b>  |  Güven <b>%67</b>  |  Oran <b>1.40</b>\n🎯 <b>2Y Toplam Gol 2.5 ALT</b>  |  Güven <b>%72</b>  |  Oran <b>1.36</b>\n🎯 <b>Deplasman Gol 2.5 ALT</b>  |  Güven <b>%73</b>  |  Oran <b>1.36</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Kristiansund - Valerenga</b>\n🏆 Eliteserien\n⏱ 45' | Skor 1-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ÜST</b>  |  Güven <b>%67</b>  |  Oran <b>1.40</b>\n🎯 <b>2Y Toplam Gol 2.5 ALT</b>  |  Güven <b>%72</b>  |  Oran <b>1.36</b>\n🎯 <b>Deplasman Gol 2.5 ALT</b>  |  Güven <b>%73</b>  |  Oran <b>1.36</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-09T21:38:42.878336+00:00",
+      "result_posted": true
     },
     "CANLI:94313972:2y toplam gol|2.5|alt|piyasa_v1:2026-11-06T03:00:09.116606+00:00": {
       "created_at": "2026-11-06T03:00:09.116606+00:00",
@@ -2232,9 +2340,12 @@
       "cizgi": 2.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 302,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Kristiansund - Valerenga</b>\n🏆 Eliteserien\n⏱ 45' | Skor 1-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ÜST</b>  |  Güven <b>%67</b>  |  Oran <b>1.40</b>\n🎯 <b>2Y Toplam Gol 2.5 ALT</b>  |  Güven <b>%72</b>  |  Oran <b>1.36</b>\n🎯 <b>Deplasman Gol 2.5 ALT</b>  |  Güven <b>%73</b>  |  Oran <b>1.36</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Kristiansund - Valerenga</b>\n🏆 Eliteserien\n⏱ 45' | Skor 1-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ÜST</b>  |  Güven <b>%67</b>  |  Oran <b>1.40</b>\n🎯 <b>2Y Toplam Gol 2.5 ALT</b>  |  Güven <b>%72</b>  |  Oran <b>1.36</b>\n🎯 <b>Deplasman Gol 2.5 ALT</b>  |  Güven <b>%73</b>  |  Oran <b>1.36</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-09T21:38:42.879756+00:00",
+      "result_posted": true
     },
     "CANLI:94313972:deplasman gol|2.5|alt|piyasa_v1:2026-11-06T03:00:09.082496+00:00": {
       "created_at": "2026-11-06T03:00:09.082496+00:00",
@@ -2245,19 +2356,191 @@
       "cizgi": 2.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 302,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Kristiansund - Valerenga</b>\n🏆 Eliteserien\n⏱ 45' | Skor 1-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ÜST</b>  |  Güven <b>%67</b>  |  Oran <b>1.40</b>\n🎯 <b>2Y Toplam Gol 2.5 ALT</b>  |  Güven <b>%72</b>  |  Oran <b>1.36</b>\n🎯 <b>Deplasman Gol 2.5 ALT</b>  |  Güven <b>%73</b>  |  Oran <b>1.36</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Kristiansund - Valerenga</b>\n🏆 Eliteserien\n⏱ 45' | Skor 1-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ÜST</b>  |  Güven <b>%67</b>  |  Oran <b>1.40</b>\n🎯 <b>2Y Toplam Gol 2.5 ALT</b>  |  Güven <b>%72</b>  |  Oran <b>1.36</b>\n🎯 <b>Deplasman Gol 2.5 ALT</b>  |  Güven <b>%73</b>  |  Oran <b>1.36</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-09T21:38:42.881118+00:00",
+      "result_posted": true
+    },
+    "CANLI:94458151:toplam gol|1.5|üst|piyasa_v1:2026-11-06T08:35:34.209828+00:00": {
+      "created_at": "2026-11-06T08:35:34.209828+00:00",
+      "source": "CANLI",
+      "match_id": "94458151",
+      "home": "Tecnico U. - Manta",
+      "kategori": "Toplam Gol",
+      "cizgi": 1.5,
+      "ust_alt": "ÜST",
+      "yontem": "piyasa_v1",
+      "settled": false,
+      "telegram_message_id": 382,
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Tecnico U. - Manta</b>\n🏆 Liga Pro\n⏱ 46' | Skor 1-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+    },
+    "CANLI:94417388:toplam gol|2.5|üst|piyasa_v1:2026-11-08T13:05:03.092088+00:00": {
+      "created_at": "2026-11-08T13:05:03.092088+00:00",
+      "source": "CANLI",
+      "match_id": "94417388",
+      "home": "Redditch - Peterborough Sports",
+      "kategori": "Toplam Gol",
+      "cizgi": 2.5,
+      "ust_alt": "ÜST",
+      "yontem": "piyasa_v1",
+      "settled": false,
+      "telegram_message_id": 383,
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Redditch - Peterborough Sports</b>\n🏆 Non League Premier\n⏱ 90' | Skor 0-1\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ÜST</b>  |  Güven <b>%62</b>  |  Oran <b>1.50</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+    },
+    "CANLI:97371108:toplam gol|1.5|üst|piyasa_v1:2026-11-08T13:54:56.22951+00:00": {
+      "created_at": "2026-11-08T13:54:56.22951+00:00",
+      "source": "CANLI",
+      "match_id": "97371108",
+      "home": "Ind. Yumbo - U. Magdalena",
+      "kategori": "Toplam Gol",
+      "cizgi": 1.5,
+      "ust_alt": "ÜST",
+      "yontem": "piyasa_v1",
+      "settled": false,
+      "telegram_message_id": 384,
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Ind. Yumbo - U. Magdalena</b>\n🏆 Primera B\n⏱ 51' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%66</b>  |  Oran <b>1.39</b>\n🎯 <b>Ev Sahibi Gol 0.5 ÜST</b>  |  Güven <b>%71</b>  |  Oran <b>1.35</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+    },
+    "CANLI:97371108:ev sahibi gol|0.5|üst|piyasa_v1:2026-11-08T13:54:56.211803+00:00": {
+      "created_at": "2026-11-08T13:54:56.211803+00:00",
+      "source": "CANLI",
+      "match_id": "97371108",
+      "home": "Ind. Yumbo - U. Magdalena",
+      "kategori": "Ev Sahibi Gol",
+      "cizgi": 0.5,
+      "ust_alt": "ÜST",
+      "yontem": "piyasa_v1",
+      "settled": false,
+      "telegram_message_id": 384,
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Ind. Yumbo - U. Magdalena</b>\n🏆 Primera B\n⏱ 51' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%66</b>  |  Oran <b>1.39</b>\n🎯 <b>Ev Sahibi Gol 0.5 ÜST</b>  |  Güven <b>%71</b>  |  Oran <b>1.35</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+    },
+    "CANLI:94466581:i̇y toplam gol|1.5|alt|piyasa_v1:2026-11-09T00:15:05.827492+00:00": {
+      "created_at": "2026-11-09T00:15:05.827492+00:00",
+      "source": "CANLI",
+      "match_id": "94466581",
+      "home": "Santa Cruz RJ - Serra Macaense",
+      "kategori": "İY Toplam Gol",
+      "cizgi": 1.5,
+      "ust_alt": "ALT",
+      "yontem": "piyasa_v1",
+      "settled": false,
+      "telegram_message_id": 385,
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Santa Cruz RJ - Serra Macaense</b>\n🏆 Carioca 1\n⏱ 6' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%64</b>  |  Oran <b>1.48</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+    },
+    "CANLI:94466581:deplasman gol|1.5|alt|piyasa_v1:2026-11-09T00:15:05.804262+00:00": {
+      "created_at": "2026-11-09T00:15:05.804262+00:00",
+      "source": "CANLI",
+      "match_id": "94466581",
+      "home": "Santa Cruz RJ - Serra Macaense",
+      "kategori": "Deplasman Gol",
+      "cizgi": 1.5,
+      "ust_alt": "ALT",
+      "yontem": "piyasa_v1",
+      "settled": false,
+      "telegram_message_id": 385,
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Santa Cruz RJ - Serra Macaense</b>\n🏆 Carioca 1\n⏱ 6' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%64</b>  |  Oran <b>1.48</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+    },
+    "CANLI:94393901:toplam korner|8.5|üst|:2026-11-09T21:18:11.834626+00:00": {
+      "created_at": "2026-11-09T21:18:11.834626+00:00",
+      "source": "CANLI",
+      "match_id": "94393901",
+      "home": "Dep. La Coruna W - Valencia W",
+      "kategori": "Toplam Korner",
+      "cizgi": 8.5,
+      "ust_alt": "ÜST",
+      "yontem": null,
+      "settled": false,
+      "telegram_message_id": 386,
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Dep. La Coruna W - Valencia W</b>\n🏆 Superliga Women\n⏱ 76' | Skor 0-2\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Korner 8.5 ÜST</b>  |  Güven <b>%68</b>  |  Oran <b>1.36</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+    },
+    "CANLI:94451341:toplam gol|3.5|üst|:2026-11-09T21:19:07.628457+00:00": {
+      "created_at": "2026-11-09T21:19:07.628457+00:00",
+      "source": "CANLI",
+      "match_id": "94451341",
+      "home": "San Lorenzo - Rubio Nu",
+      "kategori": "Toplam Gol",
+      "cizgi": 3.5,
+      "ust_alt": "ÜST",
+      "yontem": null,
+      "settled": false,
+      "telegram_message_id": 387,
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>San Lorenzo - Rubio Nu</b>\n🏆 Primera Division\n⏱ 81' | Skor 2-1\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 3.5 ÜST</b>  |  Güven <b>%68</b>  |  Oran <b>1.35</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+    },
+    "CANLI:94431346:toplam gol|2.5|alt|:2026-11-09T21:25:10.148225+00:00": {
+      "created_at": "2026-11-09T21:25:10.148225+00:00",
+      "source": "CANLI",
+      "match_id": "94431346",
+      "home": "Picerno - Bari",
+      "kategori": "Toplam Gol",
+      "cizgi": 2.5,
+      "ust_alt": "ALT",
+      "yontem": null,
+      "settled": false,
+      "telegram_message_id": 388,
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Picerno - Bari</b>\n🏆 Serie C - Group A\n⏱ 94' | Skor 1-1\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.57</b>\n🎯 <b>Toplam Korner 9.5 ÜST</b>  |  Güven <b>%68</b>  |  Oran <b>1.36</b>\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%63</b>  |  Oran <b>1.53</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+    },
+    "CANLI:94431346:toplam korner|9.5|üst|:2026-11-09T21:02:12.682466+00:00": {
+      "created_at": "2026-11-09T21:02:12.682466+00:00",
+      "source": "CANLI",
+      "match_id": "94431346",
+      "home": "Picerno - Bari",
+      "kategori": "Toplam Korner",
+      "cizgi": 9.5,
+      "ust_alt": "ÜST",
+      "yontem": null,
+      "settled": false,
+      "telegram_message_id": 388,
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Picerno - Bari</b>\n🏆 Serie C - Group A\n⏱ 94' | Skor 1-1\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.57</b>\n🎯 <b>Toplam Korner 9.5 ÜST</b>  |  Güven <b>%68</b>  |  Oran <b>1.36</b>\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%63</b>  |  Oran <b>1.53</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+    },
+    "CANLI:94431346:deplasman gol|1.5|alt|piyasa_v1:2026-11-04T19:18:29.243105+00:00": {
+      "created_at": "2026-11-04T19:18:29.243105+00:00",
+      "source": "CANLI",
+      "match_id": "94431346",
+      "home": "Picerno - Bari",
+      "kategori": "Deplasman Gol",
+      "cizgi": 1.5,
+      "ust_alt": "ALT",
+      "yontem": "piyasa_v1",
+      "settled": false,
+      "telegram_message_id": 388,
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Picerno - Bari</b>\n🏆 Serie C - Group A\n⏱ 94' | Skor 1-1\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.57</b>\n🎯 <b>Toplam Korner 9.5 ÜST</b>  |  Güven <b>%68</b>  |  Oran <b>1.36</b>\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%63</b>  |  Oran <b>1.53</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+    },
+    "CANLI:94395139:toplam korner|7.5|üst|:2026-11-09T21:31:40.354311+00:00": {
+      "created_at": "2026-11-09T21:31:40.354311+00:00",
+      "source": "CANLI",
+      "match_id": "94395139",
+      "home": "Torreense - Leiria",
+      "kategori": "Toplam Korner",
+      "cizgi": 7.5,
+      "ust_alt": "ÜST",
+      "yontem": null,
+      "settled": false,
+      "telegram_message_id": 389,
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Torreense - Leiria</b>\n🏆 Division2\n⏱ 68' | Skor 1-2\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Korner 7.5 ÜST</b>  |  Güven <b>%63</b>  |  Oran <b>1.40</b>\n🎯 <b>Toplam Gol 3.5 ALT</b>  |  Güven <b>%69</b>  |  Oran <b>1.40</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+    },
+    "CANLI:94395139:toplam gol|3.5|alt|piyasa_v1:2026-11-04T16:55:11.489705+00:00": {
+      "created_at": "2026-11-04T16:55:11.489705+00:00",
+      "source": "CANLI",
+      "match_id": "94395139",
+      "home": "Torreense - Leiria",
+      "kategori": "Toplam Gol",
+      "cizgi": 3.5,
+      "ust_alt": "ALT",
+      "yontem": "piyasa_v1",
+      "settled": false,
+      "telegram_message_id": 389,
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Torreense - Leiria</b>\n🏆 Division2\n⏱ 68' | Skor 1-2\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Korner 7.5 ÜST</b>  |  Güven <b>%63</b>  |  Oran <b>1.40</b>\n🎯 <b>Toplam Gol 3.5 ALT</b>  |  Güven <b>%69</b>  |  Oran <b>1.40</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
     }
   },
-  "last_run": "2026-11-09T18:59:44.945603+00:00",
+  "last_run": "2026-11-09T21:39:25.215328+00:00",
   "last_counts": {
-    "live": 6,
+    "live": 13,
     "prematch": 0,
-    "sent_messages": 0,
-    "sent_predictions": 0,
-    "queued_matches": 0,
-    "settled_predictions": 0
+    "sent_messages": 8,
+    "sent_predictions": 13,
+    "queued_matches": 8,
+    "settled_predictions": 30
   },
-  "last_live_report_at": "2026-11-09T16:02:45.179187+00:00"
+  "last_live_report_at": "2026-11-09T21:38:48.891601+00:00"
 }
