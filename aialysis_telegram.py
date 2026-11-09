@@ -610,45 +610,35 @@ def main():
     state = load_state()
     settled_count = settle_sent_predictions(state)
     send_live_performance_report(state)
+
+    # LIVE ONLY: never collect, queue, or send pre-match fixtures.
     live = collect_live()
-    prematch, prematch_matches = collect_prematch()
-    ids = [x.get("mac_id") for x in live] + [x.get("fixture_id") for x in prematch_matches]
+    ids = [x.get("mac_id") for x in live]
     matches = fixture_map(ids)
 
     grouped = {}
     already_sent = 0
-    for source, rows in (("CANLI", live), ("MAÇ ÖNÜ", prematch)):
-        for row in rows:
-            key = prediction_key(source, row)
-            if key in state["sent"]:
-                already_sent += 1
-                continue
-            match_id = row.get("mac_id") or row.get("fixture_id")
-            group_key = (source, str(match_id))
-            if group_key not in grouped:
-                match = matches.get(int(match_id)) if match_id and str(match_id).isdigit() else None
-                if source == "MAÇ ÖNÜ" and match is None:
-                    match = row
-                grouped[group_key] = {"match": match, "rows": []}
-            grouped[group_key]["rows"].append((key, row))
+    for row in live:
+        key = prediction_key("CANLI", row)
+        if key in state["sent"]:
+            already_sent += 1
+            continue
+        match_id = row.get("mac_id") or row.get("fixture_id")
+        group_key = ("CANLI", str(match_id))
+        if group_key not in grouped:
+            match = matches.get(int(match_id)) if match_id and str(match_id).isdigit() else None
+            grouped[group_key] = {"match": match, "rows": []}
+        grouped[group_key]["rows"].append((key, row))
 
-    print(f"Yinelenen kayıt kontrolü | daha önce gönderilmiş tahmin: {already_sent} | yeni maç grubu: {len(grouped)}")
+    print(f"CANLI tekrar kontrolü | daha önce gönderilmiş analiz: {already_sent} | yeni canlı maç grubu: {len(grouped)}")
     live_queue = sorted(
-        ((k, v) for k, v in grouped.items() if k[0] == "CANLI"),
+        grouped.items(),
         key=lambda item: str(item[1]["rows"][0][1].get("created_at") or "")
     )
-    prematch_queue = sorted(
-        ((k, v) for k, v in grouped.items() if k[0] == "MAÇ ÖNÜ"),
-        key=lambda item: str(item[1]["rows"][0][1].get("created_at") or "")
-    )
-    # Live signals always have priority. Pre-match messages are deliberately
-    # limited so they cannot crowd out live match alerts.
     queue = live_queue[:MAX_SEND_PER_RUN]
-    remaining_slots = max(0, MAX_SEND_PER_RUN - len(queue))
-    queue.extend(prematch_queue[:min(MAX_PREMATCH_SEND_PER_RUN, remaining_slots)])
     sent_now = 0
     prediction_count = 0
-    for (source, match_id), group in queue[:MAX_SEND_PER_RUN]:
+    for (source, match_id), group in queue:
         rows = [x[1] for x in group["rows"]]
         message_text = make_message(source, rows, group["match"])
         telegram_message_id = telegram_send(message_text)
@@ -670,21 +660,18 @@ def main():
         sent_now += 1
         prediction_count += len(rows)
         save_state(state)
-        # Stay well below Telegram's per-chat/channel message rate.
         time.sleep(4.0)
+
     state["last_run"] = datetime.now(timezone.utc).isoformat()
     state["last_counts"] = {
-        "live": len(live), "prematch": len(prematch),
+        "live": len(live), "prematch": 0,
         "sent_messages": sent_now, "sent_predictions": prediction_count,
         "queued_matches": len(queue), "settled_predictions": settled_count,
     }
     save_state(state)
-    print(f"aiALYSIS | canlı tahmin: {len(live)} | maç önü tahmin: {len(prematch)} | gönderilen maç mesajı: {sent_now} | gönderilen tahmin: {prediction_count} | kuyruk maç: {len(queue)}")
-    print(f"Öncelik: canlı maçlar | maç önü üst sınırı: {MAX_PREMATCH_SEND_PER_RUN} mesaj/çalışma")
+    print(f"aiALYSIS CANLI-ONLY | canlı analiz: {len(live)} | gönderilen maç mesajı: {sent_now} | gönderilen analiz: {prediction_count} | kuyruk maç: {len(queue)}")
     if len(live_queue) > MAX_SEND_PER_RUN:
         print(f"Kalan {len(live_queue)-MAX_SEND_PER_RUN} canlı maç sonraki taramalarda gönderilecek.")
-    elif len(prematch_queue) > MAX_PREMATCH_SEND_PER_RUN:
-        print(f"Kalan {len(prematch_queue)-MAX_PREMATCH_SEND_PER_RUN} maç önü maçı sonraki taramalarda değerlendirilecek.")
 
 
 if __name__ == "__main__":
