@@ -564,7 +564,9 @@
       "cizgi": "1.5",
       "ust_alt": "alt",
       "yontem": "piyasa_v1",
-      "settled": false
+      "settled": true,
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-09T02:01:53.509239+00:00"
     },
     "MAÇ ÖNÜ:94372416:toplam gol|3.5|alt|piyasa_v1": {
       "created_at": "2026-11-05T10:45:17.281+00:00",
@@ -1323,7 +1325,8 @@
       "telegram_message_text": "⚽ Goias - Ponte Preta\n🏆 Serie B\n🗓 08.11 22:15\n• Toplam Gol 2.5 ÜST | Güven %67 | Oran 1.40\nℹ️ Tahminler analiz üzerine verilmektedir.",
       "result": "KAYBETTİ",
       "settled_at": "2026-11-09T01:52:32.236240+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94339247:i̇y toplam gol|1.5|alt|piyasa_v1": {
       "created_at": "2026-11-03T22:05:05.178+00:00",
@@ -1408,14 +1411,14 @@
       "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Metallurg Bekabad - Aral</b>\n🏆 Pro Liga\n🗓 09.11 09:00\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 3.5 ALT</b>  |  Güven <b>%70</b>  |  Oran <b>1.36</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
     }
   },
-  "last_run": "2026-11-09T01:52:44.708399+00:00",
+  "last_run": "2026-11-09T02:01:54.372728+00:00",
   "last_counts": {
     "live": 0,
     "prematch": 9,
-    "sent_messages": 2,
-    "sent_predictions": 2,
-    "queued_matches": 2,
-    "settled_predictions": 2
+    "sent_messages": 0,
+    "sent_predictions": 0,
+    "queued_matches": 0,
+    "settled_predictions": 1
   },
   "last_live_report_at": "2026-11-09T01:52:33.139919+00:00"
 }
