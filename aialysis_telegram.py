@@ -344,11 +344,20 @@ def collect_live():
         row for row in latest
         if str(row.get("sonuc") or "(boş)").strip().casefold() in pending_labels
     ]
+    market_counts = {}
+    for row in latest:
+        label = market_text(row)
+        market_counts[label] = market_counts.get(label, 0) + 1
+    pending_market_counts = {}
+    for row in filtered:
+        label = market_text(row)
+        pending_market_counts[label] = pending_market_counts.get(label, 0) + 1
     print(
         f"CANLI kaynak kontrolü | aktif maç: {len(active)} | uygun dakika/durum: {len(eligible)} "
         f"| ham sistem tahmini: {len(rows)} | son sürüm analiz: {len(latest)} "
         f"| bekleyen son sürüm: {len(filtered)} | kaynaklar: {source_counts} | sonuçlar: {result_counts}"
     )
+    print(f"CANLI piyasa dağılımı | tüm son analizler: {market_counts} | gönderilebilir: {pending_market_counts}")
     return filtered
 
 def collect_prematch():
