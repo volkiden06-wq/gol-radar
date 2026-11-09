@@ -158,7 +158,7 @@ def evaluate(match: dict) -> list[dict]:
 
 def self_test() -> bool:
     strong = {
-        "status": "live", "live_minute": 27, "home_score": 0, "away_score": 0,
+        "status": "live", "status_text": "1st Half", "live_minute": 27, "home_score": 0, "away_score": 0,
         "home": "Test A", "away": "Test B",
         "stats": [
             {"label": "Shots on Target", "home": 3, "away": 1},
