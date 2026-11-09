@@ -11,6 +11,8 @@ import os
 import re
 import sys
 import time
+import unicodedata
+from decimal import Decimal, InvalidOperation
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -121,6 +123,22 @@ def side_text(value):
     if "ALT" in s or "UNDER" in s:
         return "ALT"
     return str(value or "")
+
+
+def match_text(value):
+    # Normalize Turkish dotted/dotless characters and Unicode accents before
+    # comparing market labels returned by different aiALYSIS data paths.
+    raw = unicodedata.normalize("NFKD", str(value or "").casefold())
+    return "".join(ch for ch in raw if not unicodedata.combining(ch)).strip()
+
+
+def line_text(value):
+    # Treat equivalent numeric lines (for example 1.5 and 1.50) as identical.
+    raw = str(value or "").strip().replace(",", ".")
+    try:
+        return format(Decimal(raw).normalize(), "f")
+    except (InvalidOperation, ValueError):
+        return raw
 
 
 def market_text(row):
@@ -427,16 +445,16 @@ def settle_sent_predictions(state):
         for row in rows:
             result = normalize_result(row.get('sonuc'))
             if result:
-                k = (str(row.get('mac_id')), str(row.get('kategori') or '').casefold(),
-                     str(row.get('cizgi') or ''), side_text(row.get('ust_alt')).casefold(),
-                     str(row.get('yontem') or ''))
+                k = (str(row.get('mac_id')), match_text(row.get('kategori')),
+                     line_text(row.get('cizgi')), match_text(side_text(row.get('ust_alt'))),
+                     match_text(row.get('yontem')))
                 by_market[k] = result
         for _, item in pending:
             mid = str(item.get('match_id'))
             if mid not in batch:
                 continue
-            mk = (mid, str(item.get('kategori') or '').casefold(), str(item.get('cizgi') or ''),
-                  side_text(item.get('ust_alt')).casefold(), str(item.get('yontem') or ''))
+            mk = (mid, match_text(item.get('kategori')), line_text(item.get('cizgi')),
+                  match_text(side_text(item.get('ust_alt'))), match_text(item.get('yontem')))
             result = by_market.get(mk)
             if not result:
                 # If the method label differs or is absent, allow a fallback
