@@ -6,7 +6,7 @@ on:
       - ".github/workflows/aialysis-telegram-scheduled.yml"
   schedule:
     # Offset from the top of the hour to reduce GitHub scheduler congestion.
-    - cron: "3,8,13,18,23,28,33,38,43,48,53,58 * * * *"
+    - cron: "3-58/5 * * * *"
   workflow_dispatch:
 
 permissions:
