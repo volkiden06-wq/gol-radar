@@ -170,8 +170,8 @@ def self_test() -> bool:
     second = dict(strong, status_text="2nd Half", live_minute=67,
                   home_score=2, away_score=1, home_ht_score=1, away_ht_score=0)
     second_candidates = evaluate(second)
-    assert any(x["market"] == "2Y 1.5 ÜST" for x in second_candidates), second_candidates
     assert any(x["market"] == "2Y 2.5 ÜST" for x in second_candidates), second_candidates
+    assert any(x["market"] == "2Y 3.5 ÜST" for x in second_candidates), second_candidates
     assert not evaluate(dict(second, home_ht_score=None))
     assert not evaluate(dict(strong, status_text="Half time"))
     assert not evaluate(dict(strong, status_text="", status="live"))
