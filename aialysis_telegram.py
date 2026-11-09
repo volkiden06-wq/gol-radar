@@ -285,24 +285,28 @@ def make_message(source, rows, match):
 def collect_live():
     active = get_json("maclar", {
         "select": "fixture_id,durum,elapsed",
-        "durum": "in.(1H,HT,2H,ET,P,LIVE,BT,SUSP,INT)",
+        "durum": "in.(1H,HT,2H,LIVE,BT)",
         "limit": 1000,
     })
-    # Only send signals from the normal 0-90 minute window.
-    # Ignore stoppage time (90+) and extra-time periods.
+    # Include every regulation-time live fixture returned by the site.
+    # A missing elapsed value must not suppress an otherwise active match;
+    # stoppage time is valid, while extra time and penalties are excluded.
     eligible = []
     for match in active:
         status = str(match.get("durum") or "").strip().upper()
         raw_elapsed = match.get("elapsed")
+        if status in {"ET", "P", "SUSP", "INT"}:
+            continue
+        if raw_elapsed in (None, ""):
+            eligible.append(match)
+            continue
         try:
             minute = int(float(str(raw_elapsed).replace("'", "").strip()))
         except (ValueError, TypeError):
+            eligible.append(match)
             continue
-        if status in {"ET", "P"} or minute > 90:
-            continue
-        if minute < 0 or minute > 90:
-            continue
-        eligible.append(match)
+        if 0 <= minute <= 120:
+            eligible.append(match)
     ids = [int(x["fixture_id"]) for x in eligible if x.get("fixture_id")]
     rows = []
     for i in range(0, len(ids), 150):
