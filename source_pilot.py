@@ -89,6 +89,10 @@ def check_sportscore():
                             match_obj = detail.get("match", {}) if isinstance(detail, dict) else {}
                             print(f"SPORTSCORE_DETAIL_FIELDS | { {term: (term in encoded) for term in stat_terms} }")
                             print(f"SPORTSCORE_MATCH_KEYS | {sorted(match_obj.keys()) if isinstance(match_obj, dict) else type(match_obj).__name__}")
+                            stats_obj = match_obj.get("stats", {}) if isinstance(match_obj, dict) else {}
+                            incidents_obj = match_obj.get("incidents", []) if isinstance(match_obj, dict) else []
+                            print(f"SPORTSCORE_STATS_SHAPE | {stats_obj if isinstance(stats_obj, (dict, list, str, int, float, type(None))) else type(stats_obj).__name__}")
+                            print(f"SPORTSCORE_INCIDENTS | count={len(incidents_obj) if isinstance(incidents_obj, list) else 'n/a'} | sample={incidents_obj[:2] if isinstance(incidents_obj, list) else str(incidents_obj)[:300]}")
                             break
                         except Exception as exc:
                             detail_error = exc
