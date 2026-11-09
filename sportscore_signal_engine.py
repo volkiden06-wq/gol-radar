@@ -308,6 +308,31 @@ def main() -> int:
         assert settle_market("İY 1.5 ÜST", 1, 1) == "KAZANDI"
         assert settle_market("İY 1.5 ÜST", 1, 0) == "KAYBETTİ"
         print("SETTLEMENT_TEST | PASS | İY 0.5/1.5 ilk yarı sonuçları")
+        global telegram_call
+        original_telegram_call = telegram_call
+        mocked_calls = []
+        def fake_telegram_call(method, payload):
+            mocked_calls.append((method, payload))
+            return {"message_id": 999}
+        telegram_call = fake_telegram_call
+        try:
+            state = {"signals": {
+                "demo|İY 0.5 ÜST": {
+                    "slug": "demo", "market": "İY 0.5 ÜST",
+                    "message_id": 123, "message_text": "Örnek sinyal", "result": None,
+                }
+            }}
+            updated = process_result(
+                {"status_text": "Half time", "home_score": 1, "away_score": 0},
+                "demo", state
+            )
+            assert updated == 1
+            assert state["signals"]["demo|İY 0.5 ÜST"]["result"] == "KAZANDI"
+            assert mocked_calls[0][0] == "editMessageText"
+            assert "İLK YARI SONUCU: 1-0" in mocked_calls[0][1]["text"]
+        finally:
+            telegram_call = original_telegram_call
+        print("TELEGRAM_EDIT_TEST | PASS | ilk yarı sonucu eski Telegram mesajına ekleniyor")
         return 0
 
     chat_id = os.getenv("TELEGRAM_CHAT_ID", "").strip()
