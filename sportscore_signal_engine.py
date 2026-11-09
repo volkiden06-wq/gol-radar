@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""SportScore live-stat signal engine pilot. Dry-run only; never sends Telegram."""
+"""SportScore live-stat signal engine pilot. Telegram delivery enabled."""
 import json
 import os
 import re
@@ -12,9 +12,9 @@ import requests
 BASE = "https://sportscore.com"
 UA = "GolRadarSignalPilot/1.0 (+https://github.com/volkiden06-wq/gol-radar)"
 TIMEOUT = 18
-MAX_DETAILS_PER_RUN = 5  # 1 fixture list + 5 details per 5-min run; approx. 1,728 requests/day.
-MIN_SCORE_05 = 62
-MIN_SCORE_15 = 76
+MAX_DETAILS_PER_RUN = 10  # Scan all live fixtures each 5-minute cycle.
+MIN_SCORE_05 = 45
+MIN_SCORE_15 = 60
 SESSION = requests.Session()
 SESSION.headers.update({"User-Agent": UA, "Accept": "application/json"})
 
@@ -127,9 +127,9 @@ def evaluate(match: dict) -> list[dict]:
     candidates = []
 
     # First-half Over 0.5: only before half-time and while score is 0-0.
-    if 12 <= minute <= 39 and goals == 0:
-        score = pressure + (5 if 20 <= minute <= 34 else 0)
-        if sot >= 2 and (dangerous >= 25 or shots >= 7) and score >= MIN_SCORE_05:
+    if 10 <= minute <= 40 and goals == 0:
+        score = pressure + (5 if 18 <= minute <= 34 else 0)
+        if sot >= 1 and (dangerous >= 18 or shots >= 5) and score >= MIN_SCORE_05:
             candidates.append({
                 "market": "İY 0.5 ÜST",
                 "score": min(100, score),
@@ -141,9 +141,9 @@ def evaluate(match: dict) -> list[dict]:
             })
 
     # First-half Over 1.5: higher threshold; do not signal once market is already won.
-    if 10 <= minute <= 34 and goals <= 1:
+    if 10 <= minute <= 35 and goals <= 1:
         score = pressure + (8 if goals == 1 else 0)
-        if sot >= 4 and shots >= 11 and dangerous >= 50 and score >= MIN_SCORE_15:
+        if sot >= 3 and shots >= 8 and dangerous >= 35 and score >= MIN_SCORE_15:
             candidates.append({
                 "market": "İY 1.5 ÜST",
                 "score": min(100, score),
@@ -375,7 +375,9 @@ def main() -> int:
         if any(marker in str(row.get("status_text") or "").casefold()
                for marker in ("1st half", "first half"))
     ]
-    scan_rows = first_half_rows or new_rows
+    # Prioritize first-half fixtures, then fill remaining slots with other live fixtures.
+    # evaluate() checks the detail endpoint period and rejects non-first-half matches.
+    scan_rows = first_half_rows + [row for row in new_rows if row not in first_half_rows]
     if scan_rows and remaining_slots:
         slot = int(time.time() // 300)
         start = (slot * remaining_slots) % len(scan_rows)
