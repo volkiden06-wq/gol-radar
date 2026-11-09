@@ -102,6 +102,11 @@ def evaluate(match: dict) -> list[dict]:
         return []
     if status_text in {"ht", "half time", "halftime", "finished", "ft"}:
         return []
+    # Do not infer first-half status from minute alone. Require an explicit
+    # first-half marker from the source to prevent second-half false positives.
+    first_half_markers = ("1st half", "first half", "1h", "1st period", "first period")
+    if not any(marker in period_text for marker in first_half_markers):
+        return []
     home_goals = as_int(match.get("home_score"))
     away_goals = as_int(match.get("away_score"))
     goals = home_goals + away_goals
@@ -172,6 +177,8 @@ def self_test() -> bool:
     assert not evaluate(half_time)
     second_half = dict(strong, status="live", status_text="2nd Half", live_minute=27)
     assert not evaluate(second_half)
+    unknown_period = dict(strong, status="live", status_text="", live_minute=27)
+    assert not evaluate(unknown_period)
     quiet = dict(strong, stats=[])
     assert not evaluate(quiet)
     print("SELF_TEST | PASS | İY 0.5/1.5 eşikleri, skor filtresi, devre filtresi ve eksik veri kontrolü")
