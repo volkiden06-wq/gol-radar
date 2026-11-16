@@ -224,48 +224,6 @@
       "result_posted": true,
       "result_edit_unavailable": false
     },
-    "MAÇ ÖNÜ:94312224:toplam gol|3.5|alt|piyasa_v1": {
-      "created_at": "2026-11-02T00:15:07.128+00:00",
-      "source": "MAÇ ÖNÜ",
-      "match_id": "94312224",
-      "kategori": "toplam gol",
-      "cizgi": "3.5",
-      "ust_alt": "alt",
-      "yontem": "piyasa_v1",
-      "settled": true,
-      "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:04:53.640437+00:00",
-      "result_posted": true,
-      "result_edit_unavailable": false
-    },
-    "MAÇ ÖNÜ:94312227:2y toplam gol|0.5|üst|piyasa_v1": {
-      "created_at": "2026-11-02T00:15:09.705+00:00",
-      "source": "MAÇ ÖNÜ",
-      "match_id": "94312227",
-      "kategori": "2y toplam gol",
-      "cizgi": "0.5",
-      "ust_alt": "üst",
-      "yontem": "piyasa_v1",
-      "settled": true,
-      "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:04:58.096250+00:00",
-      "result_posted": true,
-      "result_edit_unavailable": false
-    },
-    "MAÇ ÖNÜ:94458144:toplam gol|3.5|alt|piyasa_v1": {
-      "created_at": "2026-11-02T00:25:00.299+00:00",
-      "source": "MAÇ ÖNÜ",
-      "match_id": "94458144",
-      "kategori": "toplam gol",
-      "cizgi": "3.5",
-      "ust_alt": "alt",
-      "yontem": "piyasa_v1",
-      "settled": true,
-      "result": "KAYBETTİ",
-      "settled_at": "2026-11-08T20:05:02.539870+00:00",
-      "result_posted": true,
-      "result_edit_unavailable": false
-    },
     "MAÇ ÖNÜ:94312217:ev sahibi gol|0.5|üst|piyasa_v1": {
       "created_at": "2026-11-02T01:44:57.52+00:00",
       "source": "MAÇ ÖNÜ",
@@ -727,102 +685,6 @@
       "result_posted": true,
       "result_edit_unavailable": false
     },
-    "MAÇ ÖNÜ:94312214:i̇y toplam gol|1.5|alt|piyasa_v1": {
-      "created_at": "2026-11-02T00:15:01.184+00:00",
-      "source": "MAÇ ÖNÜ",
-      "match_id": "94312214",
-      "home": "Aldosivi - River Plate",
-      "kategori": "İY Toplam Gol",
-      "cizgi": 1.5,
-      "ust_alt": "ALT",
-      "yontem": "piyasa_v1",
-      "settled": true,
-      "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:06:58.696975+00:00",
-      "result_posted": true,
-      "result_edit_unavailable": false
-    },
-    "MAÇ ÖNÜ:94312224:i̇y toplam gol|1.5|alt|piyasa_v1": {
-      "created_at": "2026-11-02T00:15:07.128+00:00",
-      "source": "MAÇ ÖNÜ",
-      "match_id": "94312224",
-      "home": "Rosario Central - Estudiantes Rio Cuarto",
-      "kategori": "İY Toplam Gol",
-      "cizgi": 1.5,
-      "ust_alt": "ALT",
-      "yontem": "piyasa_v1",
-      "settled": true,
-      "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:06:58.698206+00:00",
-      "result_posted": true,
-      "result_edit_unavailable": false
-    },
-    "MAÇ ÖNÜ:94312224:ev sahibi gol|1.5|üst|piyasa_v1": {
-      "created_at": "2026-11-02T00:15:07.128+00:00",
-      "source": "MAÇ ÖNÜ",
-      "match_id": "94312224",
-      "home": "Rosario Central - Estudiantes Rio Cuarto",
-      "kategori": "Ev Sahibi Gol",
-      "cizgi": 1.5,
-      "ust_alt": "ÜST",
-      "yontem": "piyasa_v1",
-      "settled": true,
-      "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:06:58.699347+00:00",
-      "result_posted": true,
-      "result_edit_unavailable": false
-    },
-    "MAÇ ÖNÜ:94458144:i̇y toplam gol|1.5|alt|piyasa_v1": {
-      "created_at": "2026-11-02T00:25:00.299+00:00",
-      "source": "MAÇ ÖNÜ",
-      "match_id": "94458144",
-      "home": "Aucas - Ind. del Valle",
-      "kategori": "İY Toplam Gol",
-      "cizgi": 1.5,
-      "ust_alt": "ALT",
-      "yontem": "piyasa_v1",
-      "settled": true,
-      "telegram_message_id": 232,
-      "telegram_message_text": "⚽ Aucas - Ind. del Valle\n🏆 Liga Pro\n🗓 08.11 18:45\n• İY Toplam Gol 1.5 ALT | Güven %69 | Oran 1.36\n• Ev Sahibi Gol 1.5 ALT | Güven %68 | Oran 1.36\nℹ️ Tahminler analiz üzerine verilmektedir.",
-      "result": "KAYBETTİ",
-      "settled_at": "2026-11-08T21:23:04.272258+00:00",
-      "result_edit_unavailable": true,
-      "result_posted": true
-    },
-    "MAÇ ÖNÜ:94458144:ev sahibi gol|1.5|alt|piyasa_v1": {
-      "created_at": "2026-11-02T00:25:00.299+00:00",
-      "source": "MAÇ ÖNÜ",
-      "match_id": "94458144",
-      "home": "Aucas - Ind. del Valle",
-      "kategori": "Ev Sahibi Gol",
-      "cizgi": 1.5,
-      "ust_alt": "ALT",
-      "yontem": "piyasa_v1",
-      "settled": true,
-      "telegram_message_id": 232,
-      "telegram_message_text": "⚽ Aucas - Ind. del Valle\n🏆 Liga Pro\n🗓 08.11 18:45\n• İY Toplam Gol 1.5 ALT | Güven %69 | Oran 1.36\n• Ev Sahibi Gol 1.5 ALT | Güven %68 | Oran 1.36\nℹ️ Tahminler analiz üzerine verilmektedir.",
-      "result": "KAYBETTİ",
-      "settled_at": "2026-11-08T21:23:04.273908+00:00",
-      "result_edit_unavailable": true,
-      "result_posted": true
-    },
-    "MAÇ ÖNÜ:94458145:i̇y toplam gol|1.5|alt|piyasa_v1": {
-      "created_at": "2026-11-02T00:25:03.309+00:00",
-      "source": "MAÇ ÖNÜ",
-      "match_id": "94458145",
-      "home": "Barcelona SC - LDU Quito",
-      "kategori": "İY Toplam Gol",
-      "cizgi": 1.5,
-      "ust_alt": "ALT",
-      "yontem": "piyasa_v1",
-      "settled": true,
-      "telegram_message_id": 233,
-      "telegram_message_text": "⚽ Barcelona SC - LDU Quito\n🏆 Liga Pro\n🗓 08.11 21:30\n• İY Toplam Gol 1.5 ALT | Güven %69 | Oran 1.35\nℹ️ Tahminler analiz üzerine verilmektedir.",
-      "result": "KAYBETTİ",
-      "settled_at": "2026-11-09T01:52:32.234636+00:00",
-      "result_edit_unavailable": true,
-      "result_posted": true
-    },
     "CANLI:94442564:toplam gol|2.5|alt|": {
       "created_at": "2026-11-08T20:07:28.745576+00:00",
       "source": "CANLI",
@@ -941,40 +803,6 @@
       "settled_at": "2026-11-08T21:23:04.282093+00:00",
       "result_posted": true,
       "result_edit_unavailable": false
-    },
-    "MAÇ ÖNÜ:94458149:i̇y toplam gol|1.5|alt|piyasa_v1": {
-      "created_at": "2026-11-02T00:25:05.838+00:00",
-      "source": "MAÇ ÖNÜ",
-      "match_id": "94458149",
-      "home": "Macara - U. Catolica",
-      "kategori": "İY Toplam Gol",
-      "cizgi": 1.5,
-      "ust_alt": "ALT",
-      "yontem": "piyasa_v1",
-      "settled": true,
-      "telegram_message_id": 241,
-      "telegram_message_text": "⚽ Macara - U. Catolica\n🏆 Liga Pro\n🗓 08.11 16:15\n• İY Toplam Gol 1.5 ALT | Güven %68 | Oran 1.40\nℹ️ Tahminler analiz üzerine verilmektedir.",
-      "result": "KAZANDI",
-      "settled_at": "2026-11-08T20:28:22.976366+00:00",
-      "result_posted": true,
-      "result_edit_unavailable": false
-    },
-    "MAÇ ÖNÜ:94384016:i̇y toplam gol|1.5|alt|piyasa_v1": {
-      "created_at": "2026-11-02T00:44:50.776+00:00",
-      "source": "MAÇ ÖNÜ",
-      "match_id": "94384016",
-      "home": "FC Botosani - Otelul",
-      "kategori": "İY Toplam Gol",
-      "cizgi": 1.5,
-      "ust_alt": "ALT",
-      "yontem": "piyasa_v1",
-      "settled": true,
-      "telegram_message_id": 242,
-      "telegram_message_text": "⚽ FC Botosani - Otelul\n🏆 Liga I\n🗓 09.11 18:00\n• İY Toplam Gol 1.5 ALT | Güven %67 | Oran 1.41\nℹ️ Tahminler analiz üzerine verilmektedir.",
-      "result": "KAZANDI",
-      "settled_at": "2026-11-09T18:53:08.994369+00:00",
-      "result_edit_unavailable": true,
-      "result_posted": true
     },
     "CANLI:94367595:i̇y toplam gol|2.5|alt|": {
       "created_at": "2026-11-08T20:25:11.434816+00:00",
@@ -1321,24 +1149,6 @@
       "settled_at": "2026-11-09T16:02:44.308704+00:00",
       "result_edit_unavailable": true,
       "result_posted": true
-    },
-    "MAÇ ÖNÜ:94384016:deplasman gol|1.5|alt|piyasa_v1": {
-      "created_at": "2026-11-02T00:44:50.776+00:00",
-      "source": "MAÇ ÖNÜ",
-      "match_id": "94384016",
-      "home": "FC Botosani - Otelul",
-      "kategori": "Deplasman Gol",
-      "cizgi": 1.5,
-      "ust_alt": "ALT",
-      "yontem": "piyasa_v1",
-      "settled": true,
-      "telegram_message_id": 275,
-      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>FC Botosani - Otelul</b>\n🏆 Liga I\n🗓 09.11 18:00\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.46</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
-      "result": "KAZANDI",
-      "settled_at": "2026-11-09T21:38:42.841688+00:00",
-      "result_posted": false,
-      "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}",
-      "result_edit_unavailable": false
     },
     "MAÇ ÖNÜ:94367246:maç sonucu||ev kazanır|piyasa_v1": {
       "created_at": "2026-11-03T06:45:25.499+00:00",
@@ -1825,41 +1635,6 @@
       "result_edit_unavailable": true,
       "result_posted": true
     },
-    "MAÇ ÖNÜ:94384016:i̇y toplam gol|1.5|alt|piyasa_v1:2026-11-02T00:44:50.776+00:00": {
-      "created_at": "2026-11-02T00:44:50.776+00:00",
-      "source": "MAÇ ÖNÜ",
-      "match_id": "94384016",
-      "home": "FC Botosani - Otelul",
-      "kategori": "İY Toplam Gol",
-      "cizgi": 1.5,
-      "ust_alt": "ALT",
-      "yontem": "piyasa_v1",
-      "settled": true,
-      "telegram_message_id": 288,
-      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>FC Botosani - Otelul</b>\n🏆 Liga I\n🗓 09.11 18:00\n━━━━━━━━━━━━━━\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.41</b>\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.46</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
-      "result": "KAZANDI",
-      "settled_at": "2026-11-09T18:53:08.998976+00:00",
-      "result_edit_unavailable": true,
-      "result_posted": true
-    },
-    "MAÇ ÖNÜ:94384016:deplasman gol|1.5|alt|piyasa_v1:2026-11-02T00:44:50.776+00:00": {
-      "created_at": "2026-11-02T00:44:50.776+00:00",
-      "source": "MAÇ ÖNÜ",
-      "match_id": "94384016",
-      "home": "FC Botosani - Otelul",
-      "kategori": "Deplasman Gol",
-      "cizgi": 1.5,
-      "ust_alt": "ALT",
-      "yontem": "piyasa_v1",
-      "settled": true,
-      "telegram_message_id": 288,
-      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>FC Botosani - Otelul</b>\n🏆 Liga I\n🗓 09.11 18:00\n━━━━━━━━━━━━━━\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.41</b>\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.46</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
-      "result": "KAZANDI",
-      "settled_at": "2026-11-09T21:38:42.857731+00:00",
-      "result_posted": false,
-      "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}",
-      "result_edit_unavailable": false
-    },
     "MAÇ ÖNÜ:94388589:i̇y toplam gol|1.5|alt|piyasa_v1:2026-11-02T18:05:08.389+00:00": {
       "created_at": "2026-11-02T18:05:08.389+00:00",
       "source": "MAÇ ÖNÜ",
@@ -2298,23 +2073,6 @@
       "settled_at": "2026-11-10T07:12:08.373510+00:00",
       "result_posted": false,
       "result_edit_error": "Telegram mesaj düzenleme hatası: {'ok': False, 'error_code': 400, 'description': 'Bad Request: message to edit not found'}",
-      "result_edit_unavailable": false
-    },
-    "CANLI:94384016:deplasman gol|1.5|alt|piyasa_v1:2026-11-02T00:44:50.834309+00:00": {
-      "created_at": "2026-11-02T00:44:50.834309+00:00",
-      "source": "CANLI",
-      "match_id": "94384016",
-      "home": "FC Botosani - Otelul",
-      "kategori": "Deplasman Gol",
-      "cizgi": 1.5,
-      "ust_alt": "ALT",
-      "yontem": "piyasa_v1",
-      "settled": true,
-      "telegram_message_id": 300,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>FC Botosani - Otelul</b>\n🏆 Liga I\n⏱ 45' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.46</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
-      "result": "KAZANDI",
-      "settled_at": "2026-11-09T21:38:42.874246+00:00",
-      "result_posted": true,
       "result_edit_unavailable": false
     },
     "CANLI:94370240:deplasman gol|1.5|alt|piyasa_v1:2026-11-04T16:45:35.731736+00:00": {
@@ -7186,7 +6944,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Granada CF - Las Palmas</b>\n🏆 Segunda\n⏱ 55' | Skor 1-0\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 0.5 ÜST</b>  |  Güven <b>%65</b>  |  Oran <b>1.43</b>\n🎯 <b>Toplam Gol 3.5 ALT</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAZANDI",
       "settled_at": "2026-11-15T21:11:05.429132+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94388594:toplam gol|3.5|alt|piyasa_v1:2026-11-08T16:35:10.400459+00:00": {
       "created_at": "2026-11-08T16:35:10.400459+00:00",
@@ -7202,7 +6961,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Granada CF - Las Palmas</b>\n🏆 Segunda\n⏱ 55' | Skor 1-0\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 0.5 ÜST</b>  |  Güven <b>%65</b>  |  Oran <b>1.43</b>\n🎯 <b>Toplam Gol 3.5 ALT</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAZANDI",
       "settled_at": "2026-11-15T21:11:05.436262+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94395145:deplasman gol|1.5|alt|piyasa_v1:2026-11-09T14:15:01.325007+00:00": {
       "created_at": "2026-11-09T14:15:01.325007+00:00",
@@ -7218,7 +6978,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Penafiel - Lusitania FC</b>\n🏆 Division2\n⏱ 45' | Skor 1-0\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%70</b>  |  Oran <b>1.36</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAYBETTİ",
       "settled_at": "2026-11-15T21:11:05.442589+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94390216:i̇y toplam gol|1.5|alt|piyasa_v1:2026-11-10T13:36:27.916743+00:00": {
       "created_at": "2026-11-10T13:36:27.916743+00:00",
@@ -7234,7 +6995,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Castellonense - Orihuela</b>\n🏆 Segunda Rfef\n⏱ 42' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%64</b>  |  Oran <b>1.46</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAZANDI",
       "settled_at": "2026-11-15T21:11:05.448807+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94390223:i̇y toplam gol|1.5|alt|piyasa_v1:2026-11-10T13:36:30.397551+00:00": {
       "created_at": "2026-11-10T13:36:30.397551+00:00",
@@ -7250,7 +7012,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Yeclano - Castellon B</b>\n🏆 Segunda Rfef\n⏱ 29' | Skor 1-0\n━━━━━━━━━━━━━━\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%63</b>  |  Oran <b>1.47</b>\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%64</b>  |  Oran <b>1.50</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAZANDI",
       "settled_at": "2026-11-15T21:11:05.454757+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94390223:deplasman gol|1.5|alt|piyasa_v1:2026-11-10T13:36:30.374957+00:00": {
       "created_at": "2026-11-10T13:36:30.374957+00:00",
@@ -7266,7 +7029,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Yeclano - Castellon B</b>\n🏆 Segunda Rfef\n⏱ 29' | Skor 1-0\n━━━━━━━━━━━━━━\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%63</b>  |  Oran <b>1.47</b>\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%64</b>  |  Oran <b>1.50</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAZANDI",
       "settled_at": "2026-11-15T21:11:05.460941+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94390830:deplasman gol|1.5|alt|piyasa_v1:2026-11-10T14:25:17.602579+00:00": {
       "created_at": "2026-11-10T14:25:17.602579+00:00",
@@ -7282,7 +7046,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Navalcarnero - Getafe B</b>\n🏆 Segunda Rfef\n⏱ 45' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.41</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAZANDI",
       "settled_at": "2026-11-15T21:11:05.467113+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94390828:deplasman gol|1.5|alt|piyasa_v1:2026-11-10T14:25:24.159683+00:00": {
       "created_at": "2026-11-10T14:25:24.159683+00:00",
@@ -7298,7 +7063,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Conquense - Guadalajara</b>\n🏆 Segunda Rfef\n⏱ 27' | Skor 1-0\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%64</b>  |  Oran <b>1.47</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAZANDI",
       "settled_at": "2026-11-15T21:11:05.473416+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94390828:i̇y toplam gol|1.5|alt|piyasa_v1:2026-11-10T14:25:24.13754+00:00": {
       "created_at": "2026-11-10T14:25:24.13754+00:00",
@@ -7314,7 +7080,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Conquense - Guadalajara</b>\n🏆 Segunda Rfef\n⏱ 27' | Skor 1-0\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%64</b>  |  Oran <b>1.47</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAZANDI",
       "settled_at": "2026-11-15T21:11:05.479614+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94390829:deplasman gol|1.5|alt|piyasa_v1:2026-11-10T14:25:30.116362+00:00": {
       "created_at": "2026-11-10T14:25:30.116362+00:00",
@@ -7330,7 +7097,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Gimnastica Segoviana - Real Avila</b>\n🏆 Segunda Rfef\n⏱ 29' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%64</b>  |  Oran <b>1.47</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%64</b>  |  Oran <b>1.46</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAZANDI",
       "settled_at": "2026-11-15T21:11:05.485725+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94390829:i̇y toplam gol|1.5|alt|piyasa_v1:2026-11-10T14:25:30.089916+00:00": {
       "created_at": "2026-11-10T14:25:30.089916+00:00",
@@ -7346,7 +7114,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Gimnastica Segoviana - Real Avila</b>\n🏆 Segunda Rfef\n⏱ 29' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%64</b>  |  Oran <b>1.47</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%64</b>  |  Oran <b>1.46</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAZANDI",
       "settled_at": "2026-11-15T21:11:05.491993+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94391463:ev sahibi gol|1.5|alt|piyasa_v1:2026-11-11T16:25:55.106202+00:00": {
       "created_at": "2026-11-11T16:25:55.106202+00:00",
@@ -7362,7 +7131,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Lugo - Mirandes</b>\n🏆 Segunda B\n⏱ 45' | Skor 0-2\n━━━━━━━━━━━━━━\n🎯 <b>Ev Sahibi Gol 1.5 ALT</b>  |  Güven <b>%64</b>  |  Oran <b>1.50</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAZANDI",
       "settled_at": "2026-11-15T21:11:05.498221+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94391839:deplasman gol|1.5|alt|piyasa_v1:2026-11-11T16:25:58.358552+00:00": {
       "created_at": "2026-11-11T16:25:58.358552+00:00",
@@ -7378,7 +7148,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Algeciras - Antequera</b>\n🏆 Segunda B\n⏱ 45' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%71</b>  |  Oran <b>1.36</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAZANDI",
       "settled_at": "2026-11-15T21:11:05.504383+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94391466:ev sahibi gol|1.5|üst|piyasa_v1:2026-11-11T16:26:01.311914+00:00": {
       "created_at": "2026-11-11T16:26:01.311914+00:00",
@@ -7394,7 +7165,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>UD Logrones - Arenas Getxo</b>\n🏆 Segunda B\n⏱ 45' | Skor 0-1\n━━━━━━━━━━━━━━\n🎯 <b>Ev Sahibi Gol 1.5 ÜST</b>  |  Güven <b>%67</b>  |  Oran <b>1.40</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAZANDI",
       "settled_at": "2026-11-15T21:11:05.510734+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94380577:toplam gol|2.5|üst|piyasa_v1:2026-11-12T06:45:20.474872+00:00": {
       "created_at": "2026-11-12T06:45:20.474872+00:00",
@@ -7410,7 +7182,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Pisek - Benesov</b>\n🏆 Liga 3\n⏱ 26' | Skor 1-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n🎯 <b>Ev Sahibi Gol 2.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.46</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAZANDI",
       "settled_at": "2026-11-15T21:11:05.517179+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94380577:ev sahibi gol|2.5|alt|piyasa_v1:2026-11-12T06:45:20.443855+00:00": {
       "created_at": "2026-11-12T06:45:20.443855+00:00",
@@ -7426,7 +7199,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Pisek - Benesov</b>\n🏆 Liga 3\n⏱ 26' | Skor 1-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n🎯 <b>Ev Sahibi Gol 2.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.46</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAZANDI",
       "settled_at": "2026-11-15T21:11:05.532429+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94372430:toplam gol|2.5|üst|piyasa_v1:2026-11-12T12:35:02.727674+00:00": {
       "created_at": "2026-11-12T12:35:02.727674+00:00",
@@ -7442,7 +7216,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>TSC - Jedinstvo U.</b>\n🏆 Prva Liga\n⏱ 70' | Skor 1-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ÜST</b>  |  Güven <b>%66</b>  |  Oran <b>1.40</b>\n🎯 <b>2Y Toplam Gol 2.5 ALT</b>  |  Güven <b>%70</b>  |  Oran <b>1.38</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAYBETTİ",
       "settled_at": "2026-11-15T21:11:05.538442+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94372430:2y toplam gol|2.5|alt|piyasa_v1:2026-11-12T12:35:02.687817+00:00": {
       "created_at": "2026-11-12T12:35:02.687817+00:00",
@@ -7458,7 +7233,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>TSC - Jedinstvo U.</b>\n🏆 Prva Liga\n⏱ 70' | Skor 1-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ÜST</b>  |  Güven <b>%66</b>  |  Oran <b>1.40</b>\n🎯 <b>2Y Toplam Gol 2.5 ALT</b>  |  Güven <b>%70</b>  |  Oran <b>1.38</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAZANDI",
       "settled_at": "2026-11-15T21:11:05.544626+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94423592:maç sonucu||ev kazanır|piyasa_v1:2026-11-12T16:25:57.727207+00:00": {
       "created_at": "2026-11-12T16:25:57.727207+00:00",
@@ -7474,7 +7250,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Langreo - Club Siero</b>\n🏆 Tercera\n⏱ 29' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Maç Sonucu Ev Kazanır</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAZANDI",
       "settled_at": "2026-11-15T21:11:05.550790+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94423594:maç sonucu||ev kazanır|piyasa_v1:2026-11-12T16:26:01.414632+00:00": {
       "created_at": "2026-11-12T16:26:01.414632+00:00",
@@ -7490,7 +7267,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>L&#x27;Entregu - Andes</b>\n🏆 Tercera\n⏱ 31' | Skor 1-1\n━━━━━━━━━━━━━━\n🎯 <b>Maç Sonucu Ev Kazanır</b>  |  Güven <b>%63</b>  |  Oran <b>1.50</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAZANDI",
       "settled_at": "2026-11-15T21:11:05.556981+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94443154:deplasman gol|1.5|alt|piyasa_v1:2026-11-12T18:07:58.444029+00:00": {
       "created_at": "2026-11-12T18:07:58.444029+00:00",
@@ -7506,7 +7284,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Maceratese - Giulianova</b>\n🏆 Serie D\n⏱ 46' | Skor 1-0\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%64</b>  |  Oran <b>1.47</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAZANDI",
       "settled_at": "2026-11-15T21:11:05.563180+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94425600:i̇y toplam gol|1.5|alt|piyasa_v1:2026-11-12T18:25:47.276851+00:00": {
       "created_at": "2026-11-12T18:25:47.276851+00:00",
@@ -7522,7 +7301,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Tropezon - Vimenor</b>\n🏆 Tercera\n⏱ 27' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%69</b>  |  Oran <b>1.35</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAZANDI",
       "settled_at": "2026-11-15T21:11:05.569325+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94435073:i̇y toplam gol|0.5|üst|piyasa_v1:2026-11-12T18:25:51.749615+00:00": {
       "created_at": "2026-11-12T18:25:51.749615+00:00",
@@ -7538,7 +7318,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Ontinyent 1931 - Atzeneta</b>\n🏆 Tercera\n⏱ 28' | Skor 2-0\n━━━━━━━━━━━━━━\n🎯 <b>İY Toplam Gol 0.5 ÜST</b>  |  Güven <b>%62</b>  |  Oran <b>1.45</b>\n🎯 <b>2Y Toplam Gol 1.5 ALT</b>  |  Güven <b>%64</b>  |  Oran <b>1.45</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAZANDI",
       "settled_at": "2026-11-15T21:11:05.575496+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94435073:2y toplam gol|1.5|alt|piyasa_v1:2026-11-12T18:25:51.729724+00:00": {
       "created_at": "2026-11-12T18:25:51.729724+00:00",
@@ -7554,7 +7335,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Ontinyent 1931 - Atzeneta</b>\n🏆 Tercera\n⏱ 28' | Skor 2-0\n━━━━━━━━━━━━━━\n🎯 <b>İY Toplam Gol 0.5 ÜST</b>  |  Güven <b>%62</b>  |  Oran <b>1.45</b>\n🎯 <b>2Y Toplam Gol 1.5 ALT</b>  |  Güven <b>%64</b>  |  Oran <b>1.45</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAZANDI",
       "settled_at": "2026-11-15T21:11:05.581655+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94437243:maç sonucu||ev kazanır|piyasa_v1:2026-11-12T18:25:55.675864+00:00": {
       "created_at": "2026-11-12T18:25:55.675864+00:00",
@@ -7570,7 +7352,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Cotillas CD - CD Algar</b>\n🏆 Tercera\n⏱ 27' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Maç Sonucu Ev Kazanır</b>  |  Güven <b>%63</b>  |  Oran <b>1.50</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.41</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAYBETTİ",
       "settled_at": "2026-11-15T21:11:05.587815+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94437243:i̇y toplam gol|1.5|alt|piyasa_v1:2026-11-12T18:25:55.653592+00:00": {
       "created_at": "2026-11-12T18:25:55.653592+00:00",
@@ -7586,7 +7369,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Cotillas CD - CD Algar</b>\n🏆 Tercera\n⏱ 27' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Maç Sonucu Ev Kazanır</b>  |  Güven <b>%63</b>  |  Oran <b>1.50</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.41</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAZANDI",
       "settled_at": "2026-11-15T21:11:05.593990+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94427039:i̇y toplam gol|0.5|üst|piyasa_v1:2026-11-12T18:25:59.34229+00:00": {
       "created_at": "2026-11-12T18:25:59.34229+00:00",
@@ -7602,7 +7386,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Barco - Boiro</b>\n🏆 Tercera\n⏱ 13' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>İY Toplam Gol 0.5 ÜST</b>  |  Güven <b>%63</b>  |  Oran <b>1.42</b>\n🎯 <b>2Y Toplam Gol 1.5 ALT</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAZANDI",
       "settled_at": "2026-11-15T21:11:05.600155+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94427039:2y toplam gol|1.5|alt|piyasa_v1:2026-11-12T18:25:59.319777+00:00": {
       "created_at": "2026-11-12T18:25:59.319777+00:00",
@@ -7618,7 +7403,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Barco - Boiro</b>\n🏆 Tercera\n⏱ 13' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>İY Toplam Gol 0.5 ÜST</b>  |  Güven <b>%63</b>  |  Oran <b>1.42</b>\n🎯 <b>2Y Toplam Gol 1.5 ALT</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAYBETTİ",
       "settled_at": "2026-11-15T21:11:05.606306+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94427039:deplasman gol|1.5|alt|piyasa_v1:2026-11-12T18:25:59.285201+00:00": {
       "created_at": "2026-11-12T18:25:59.285201+00:00",
@@ -7634,7 +7420,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Barco - Boiro</b>\n🏆 Tercera\n⏱ 13' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>İY Toplam Gol 0.5 ÜST</b>  |  Güven <b>%63</b>  |  Oran <b>1.42</b>\n🎯 <b>2Y Toplam Gol 1.5 ALT</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAZANDI",
       "settled_at": "2026-11-15T21:11:05.612531+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94328024:ev sahibi gol|1.5|alt|piyasa_v1:2026-11-13T13:15:21.581762+00:00": {
       "created_at": "2026-11-13T13:15:21.581762+00:00",
@@ -7650,7 +7437,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Spaeri - Iberia 1999</b>\n🏆 Umaglesi Liga\n⏱ 69' | Skor 1-1\n━━━━━━━━━━━━━━\n🎯 <b>Ev Sahibi Gol 1.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.36</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAYBETTİ",
       "settled_at": "2026-11-15T21:11:05.618444+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94367065:toplam gol|3.5|alt|piyasa_v1:2026-11-09T00:25:33.097567+00:00": {
       "created_at": "2026-11-09T00:25:33.097567+00:00",
@@ -7661,9 +7449,12 @@
       "cizgi": 3.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 588,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Juan Pablo II - Deportivo Garcilaso</b>\n🏆 Primera Division\n⏱ 45' | Skor 1-1\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 3.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.40</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Juan Pablo II - Deportivo Garcilaso</b>\n🏆 Primera Division\n⏱ 45' | Skor 1-1\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 3.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.40</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-16T01:00:26.422908+00:00",
+      "result_posted": true
     },
     "CANLI:94466536:toplam gol|1.5|üst|piyasa_v1:2026-11-13T17:44:57.543022+00:00": {
       "created_at": "2026-11-13T17:44:57.543022+00:00",
@@ -7674,9 +7465,12 @@
       "cizgi": 1.5,
       "ust_alt": "ÜST",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 589,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Alvarado - Sarmiento de La Banda</b>\n🏆 Argentino A\n⏱ 91' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%66</b>  |  Oran <b>1.40</b>\n🎯 <b>Maç Sonucu Ev Kazanır</b>  |  Güven <b>%62</b>  |  Oran <b>1.50</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Alvarado - Sarmiento de La Banda</b>\n🏆 Argentino A\n⏱ 91' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%66</b>  |  Oran <b>1.40</b>\n🎯 <b>Maç Sonucu Ev Kazanır</b>  |  Güven <b>%62</b>  |  Oran <b>1.50</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-16T01:00:26.428245+00:00",
+      "result_posted": true
     },
     "CANLI:94466536:maç sonucu||ev kazanır|piyasa_v1:2026-11-13T17:44:57.519168+00:00": {
       "created_at": "2026-11-13T17:44:57.519168+00:00",
@@ -7687,9 +7481,12 @@
       "cizgi": 0,
       "ust_alt": "Ev Kazanır",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 589,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Alvarado - Sarmiento de La Banda</b>\n🏆 Argentino A\n⏱ 91' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%66</b>  |  Oran <b>1.40</b>\n🎯 <b>Maç Sonucu Ev Kazanır</b>  |  Güven <b>%62</b>  |  Oran <b>1.50</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Alvarado - Sarmiento de La Banda</b>\n🏆 Argentino A\n⏱ 91' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%66</b>  |  Oran <b>1.40</b>\n🎯 <b>Maç Sonucu Ev Kazanır</b>  |  Güven <b>%62</b>  |  Oran <b>1.50</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-16T01:00:26.432863+00:00",
+      "result_posted": true
     },
     "CANLI:97374307:ev sahibi gol|1.5|üst|piyasa_v1:2026-11-13T23:54:50.842081+00:00": {
       "created_at": "2026-11-13T23:54:50.842081+00:00",
@@ -7700,9 +7497,12 @@
       "cizgi": 1.5,
       "ust_alt": "ÜST",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 590,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Cerro Porteno - Sol de America</b>\n🏆 Copa Paraguay\n⏱ 11' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Ev Sahibi Gol 1.5 ÜST</b>  |  Güven <b>%67</b>  |  Oran <b>1.37</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%62</b>  |  Oran <b>1.51</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Cerro Porteno - Sol de America</b>\n🏆 Copa Paraguay\n⏱ 11' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Ev Sahibi Gol 1.5 ÜST</b>  |  Güven <b>%67</b>  |  Oran <b>1.37</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%62</b>  |  Oran <b>1.51</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-16T01:00:26.437446+00:00",
+      "result_posted": true
     },
     "CANLI:97374307:i̇y toplam gol|1.5|alt|piyasa_v1:2026-11-13T23:54:50.809669+00:00": {
       "created_at": "2026-11-13T23:54:50.809669+00:00",
@@ -7713,9 +7513,12 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 590,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Cerro Porteno - Sol de America</b>\n🏆 Copa Paraguay\n⏱ 11' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Ev Sahibi Gol 1.5 ÜST</b>  |  Güven <b>%67</b>  |  Oran <b>1.37</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%62</b>  |  Oran <b>1.51</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Cerro Porteno - Sol de America</b>\n🏆 Copa Paraguay\n⏱ 11' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Ev Sahibi Gol 1.5 ÜST</b>  |  Güven <b>%67</b>  |  Oran <b>1.37</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%62</b>  |  Oran <b>1.51</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-16T01:00:26.442008+00:00",
+      "result_posted": true
     },
     "CANLI:94421541:deplasman gol|1.5|alt|piyasa_v1:2026-11-14T05:45:11.829983+00:00": {
       "created_at": "2026-11-14T05:45:11.829983+00:00",
@@ -7726,9 +7529,12 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 591,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Platense Municipal - Atletico Balboa</b>\n🏆 Primera Division\n⏱ 6' | Skor 1-0\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.44</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.40</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Platense Municipal - Atletico Balboa</b>\n🏆 Primera Division\n⏱ 6' | Skor 1-0\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.44</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.40</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-16T01:00:26.446581+00:00",
+      "result_posted": true
     },
     "CANLI:94421541:i̇y toplam gol|1.5|alt|piyasa_v1:2026-11-14T05:45:11.78837+00:00": {
       "created_at": "2026-11-14T05:45:11.78837+00:00",
@@ -7739,9 +7545,12 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 591,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Platense Municipal - Atletico Balboa</b>\n🏆 Primera Division\n⏱ 6' | Skor 1-0\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.44</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.40</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Platense Municipal - Atletico Balboa</b>\n🏆 Primera Division\n⏱ 6' | Skor 1-0\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.44</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.40</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-16T01:00:26.464125+00:00",
+      "result_posted": true
     },
     "CANLI:94330668:maç sonucu||ev kazanır|piyasa_v1:2026-11-14T09:00:16.301199+00:00": {
       "created_at": "2026-11-14T09:00:16.301199+00:00",
@@ -7752,9 +7561,12 @@
       "cizgi": 0,
       "ust_alt": "Ev Kazanır",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 592,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Cobreloa - D. Puerto Montt</b>\n🏆 Primera B\n⏱ 9' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Maç Sonucu Ev Kazanır</b>  |  Güven <b>%66</b>  |  Oran <b>1.40</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.44</b>\n🎯 <b>Ev Sahibi Gol 2.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.42</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Cobreloa - D. Puerto Montt</b>\n🏆 Primera B\n⏱ 9' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Maç Sonucu Ev Kazanır</b>  |  Güven <b>%66</b>  |  Oran <b>1.40</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.44</b>\n🎯 <b>Ev Sahibi Gol 2.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.42</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-16T01:00:26.468682+00:00",
+      "result_posted": true
     },
     "CANLI:94330668:i̇y toplam gol|1.5|alt|piyasa_v1:2026-11-14T09:00:16.270646+00:00": {
       "created_at": "2026-11-14T09:00:16.270646+00:00",
@@ -7765,9 +7577,12 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 592,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Cobreloa - D. Puerto Montt</b>\n🏆 Primera B\n⏱ 9' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Maç Sonucu Ev Kazanır</b>  |  Güven <b>%66</b>  |  Oran <b>1.40</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.44</b>\n🎯 <b>Ev Sahibi Gol 2.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.42</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Cobreloa - D. Puerto Montt</b>\n🏆 Primera B\n⏱ 9' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Maç Sonucu Ev Kazanır</b>  |  Güven <b>%66</b>  |  Oran <b>1.40</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.44</b>\n🎯 <b>Ev Sahibi Gol 2.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.42</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-16T01:00:26.473218+00:00",
+      "result_posted": true
     },
     "CANLI:94330668:ev sahibi gol|2.5|alt|piyasa_v1:2026-11-14T09:00:16.222435+00:00": {
       "created_at": "2026-11-14T09:00:16.222435+00:00",
@@ -7778,9 +7593,12 @@
       "cizgi": 2.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 592,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Cobreloa - D. Puerto Montt</b>\n🏆 Primera B\n⏱ 9' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Maç Sonucu Ev Kazanır</b>  |  Güven <b>%66</b>  |  Oran <b>1.40</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.44</b>\n🎯 <b>Ev Sahibi Gol 2.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.42</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Cobreloa - D. Puerto Montt</b>\n🏆 Primera B\n⏱ 9' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Maç Sonucu Ev Kazanır</b>  |  Güven <b>%66</b>  |  Oran <b>1.40</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.44</b>\n🎯 <b>Ev Sahibi Gol 2.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.42</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-16T01:00:26.477762+00:00",
+      "result_posted": true
     },
     "CANLI:94330670:i̇y toplam gol|1.5|alt|piyasa_v1:2026-11-14T09:00:19.366835+00:00": {
       "created_at": "2026-11-14T09:00:19.366835+00:00",
@@ -7791,9 +7609,12 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 593,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Magallanes - Antofagasta</b>\n🏆 Primera B\n⏱ 10' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%63</b>  |  Oran <b>1.53</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Magallanes - Antofagasta</b>\n🏆 Primera B\n⏱ 10' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%63</b>  |  Oran <b>1.53</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-16T01:00:26.482338+00:00",
+      "result_posted": true
     },
     "CANLI:94330672:i̇y toplam gol|1.5|alt|piyasa_v1:2026-11-14T09:00:23.532128+00:00": {
       "created_at": "2026-11-14T09:00:23.532128+00:00",
@@ -7804,9 +7625,12 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 594,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>San Felipe - U. Espanola</b>\n🏆 Primera B\n⏱ 10' | Skor 0-1\n━━━━━━━━━━━━━━\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%64</b>  |  Oran <b>1.50</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>San Felipe - U. Espanola</b>\n🏆 Primera B\n⏱ 10' | Skor 0-1\n━━━━━━━━━━━━━━\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%64</b>  |  Oran <b>1.50</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-16T01:00:26.486998+00:00",
+      "result_posted": true
     },
     "CANLI:94330673:i̇y toplam gol|1.5|alt|piyasa_v1:2026-11-14T09:00:26.624588+00:00": {
       "created_at": "2026-11-14T09:00:26.624588+00:00",
@@ -7817,9 +7641,12 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 595,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>San Marcos de Arica - San Luis</b>\n🏆 Primera B\n⏱ 9' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.38</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>San Marcos de Arica - San Luis</b>\n🏆 Primera B\n⏱ 9' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.38</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-16T01:00:26.491561+00:00",
+      "result_posted": true
     },
     "CANLI:94467614:toplam korner|10.5|alt|piyasa_v1:2026-11-14T15:04:53.469511+00:00": {
       "created_at": "2026-11-14T15:04:53.469511+00:00",
@@ -7830,9 +7657,12 @@
       "cizgi": 10.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 596,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Envigado - U. Magdalena</b>\n🏆 Primera B\n⏱ 19' | Skor 2-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Korner 10.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.35</b>\n🎯 <b>2Y Toplam Gol 1.5 ALT</b>  |  Güven <b>%62</b>  |  Oran <b>1.48</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Envigado - U. Magdalena</b>\n🏆 Primera B\n⏱ 19' | Skor 2-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Korner 10.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.35</b>\n🎯 <b>2Y Toplam Gol 1.5 ALT</b>  |  Güven <b>%62</b>  |  Oran <b>1.48</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-16T01:00:26.496101+00:00",
+      "result_posted": true
     },
     "CANLI:94467614:2y toplam gol|1.5|alt|piyasa_v1:2026-11-14T15:04:53.445055+00:00": {
       "created_at": "2026-11-14T15:04:53.445055+00:00",
@@ -7843,9 +7673,12 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 596,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Envigado - U. Magdalena</b>\n🏆 Primera B\n⏱ 19' | Skor 2-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Korner 10.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.35</b>\n🎯 <b>2Y Toplam Gol 1.5 ALT</b>  |  Güven <b>%62</b>  |  Oran <b>1.48</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Envigado - U. Magdalena</b>\n🏆 Primera B\n⏱ 19' | Skor 2-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Korner 10.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.35</b>\n🎯 <b>2Y Toplam Gol 1.5 ALT</b>  |  Güven <b>%62</b>  |  Oran <b>1.48</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-16T01:00:26.500700+00:00",
+      "result_posted": true
     },
     "CANLI:94377847:i̇y toplam gol|1.5|alt|piyasa_v1:2026-11-14T16:35:17.536121+00:00": {
       "created_at": "2026-11-14T16:35:17.536121+00:00",
@@ -7856,9 +7689,12 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 597,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Deportivo San Pedro - Marquense</b>\n🏆 Liga Nacional\n⏱ 10' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%70</b>  |  Oran <b>1.36</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Deportivo San Pedro - Marquense</b>\n🏆 Liga Nacional\n⏱ 10' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%70</b>  |  Oran <b>1.36</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-16T01:00:26.505191+00:00",
+      "result_posted": true
     },
     "CANLI:97382669:deplasman gol|1.5|alt|piyasa_v1:2026-11-15T01:35:21.411667+00:00": {
       "created_at": "2026-11-15T01:35:21.411667+00:00",
@@ -7869,9 +7705,12 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 598,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Dunbeholden - Chapelton</b>\n🏆 Premier League\n⏱ 45' | Skor 2-1\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Dunbeholden - Chapelton</b>\n🏆 Premier League\n⏱ 45' | Skor 2-1\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-16T01:00:26.509724+00:00",
+      "result_posted": true
     },
     "CANLI:97382670:ev sahibi gol|1.5|alt|piyasa_v1:2026-11-15T01:35:24.379472+00:00": {
       "created_at": "2026-11-15T01:35:24.379472+00:00",
@@ -7882,9 +7721,12 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 599,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Tivoli - Montego Bay</b>\n🏆 Premier League\n⏱ 50' | Skor 0-3\n━━━━━━━━━━━━━━\n🎯 <b>Ev Sahibi Gol 1.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.37</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Tivoli - Montego Bay</b>\n🏆 Premier League\n⏱ 50' | Skor 0-3\n━━━━━━━━━━━━━━\n🎯 <b>Ev Sahibi Gol 1.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.37</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-16T01:00:26.514327+00:00",
+      "result_posted": true
     },
     "CANLI:97382720:deplasman gol|1.5|alt|piyasa_v1:2026-11-15T01:35:27.359193+00:00": {
       "created_at": "2026-11-15T01:35:27.359193+00:00",
@@ -7895,9 +7737,12 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 600,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Racing United - Tru-Juice</b>\n🏆 Premier League\n⏱ 51' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%62</b>  |  Oran <b>1.51</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Racing United - Tru-Juice</b>\n🏆 Premier League\n⏱ 51' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%62</b>  |  Oran <b>1.51</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-16T01:00:26.518804+00:00",
+      "result_posted": true
     },
     "CANLI:94468136:toplam gol|1.5|üst|piyasa_v1:2026-11-15T09:54:52.288335+00:00": {
       "created_at": "2026-11-15T09:54:52.288335+00:00",
@@ -7908,9 +7753,12 @@
       "cizgi": 1.5,
       "ust_alt": "ÜST",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 601,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Central SC - Ypiranga</b>\n🏆 Pernambucano\n⏱ 46' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>Maç Sonucu Ev Kazanır</b>  |  Güven <b>%67</b>  |  Oran <b>1.40</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Central SC - Ypiranga</b>\n🏆 Pernambucano\n⏱ 46' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>Maç Sonucu Ev Kazanır</b>  |  Güven <b>%67</b>  |  Oran <b>1.40</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-16T01:00:26.523294+00:00",
+      "result_posted": true
     },
     "CANLI:94468136:maç sonucu||ev kazanır|piyasa_v1:2026-11-15T09:54:52.268379+00:00": {
       "created_at": "2026-11-15T09:54:52.268379+00:00",
@@ -7921,9 +7769,12 @@
       "cizgi": 0,
       "ust_alt": "Ev Kazanır",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 601,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Central SC - Ypiranga</b>\n🏆 Pernambucano\n⏱ 46' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>Maç Sonucu Ev Kazanır</b>  |  Güven <b>%67</b>  |  Oran <b>1.40</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Central SC - Ypiranga</b>\n🏆 Pernambucano\n⏱ 46' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>Maç Sonucu Ev Kazanır</b>  |  Güven <b>%67</b>  |  Oran <b>1.40</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-16T01:00:26.527804+00:00",
+      "result_posted": true
     },
     "CANLI:94330667:deplasman gol|1.5|alt|piyasa_v1:2026-11-15T09:54:55.415574+00:00": {
       "created_at": "2026-11-15T09:54:55.415574+00:00",
@@ -7934,9 +7785,12 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 602,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>CD Santa Cruz - Rangers</b>\n🏆 Primera B\n⏱ 9' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%71</b>  |  Oran <b>1.35</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>CD Santa Cruz - Rangers</b>\n🏆 Primera B\n⏱ 9' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%71</b>  |  Oran <b>1.35</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-16T01:00:26.532396+00:00",
+      "result_posted": true
     },
     "CANLI:94330667:i̇y toplam gol|1.5|alt|piyasa_v1:2026-11-15T09:54:55.388946+00:00": {
       "created_at": "2026-11-15T09:54:55.388946+00:00",
@@ -7947,9 +7801,12 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 602,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>CD Santa Cruz - Rangers</b>\n🏆 Primera B\n⏱ 9' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%71</b>  |  Oran <b>1.35</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>CD Santa Cruz - Rangers</b>\n🏆 Primera B\n⏱ 9' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%71</b>  |  Oran <b>1.35</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-16T01:00:26.537106+00:00",
+      "result_posted": true
     },
     "CANLI:97382718:maç sonucu||ev kazanır|piyasa_v1:2026-11-15T10:04:56.375223+00:00": {
       "created_at": "2026-11-15T10:04:56.375223+00:00",
@@ -7960,9 +7817,12 @@
       "cizgi": 0,
       "ust_alt": "Ev Kazanır",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 603,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Cavalier - Treasure Beach</b>\n🏆 Premier League\n⏱ 48' | Skor 2-1\n━━━━━━━━━━━━━━\n🎯 <b>Maç Sonucu Ev Kazanır</b>  |  Güven <b>%63</b>  |  Oran <b>1.50</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Cavalier - Treasure Beach</b>\n🏆 Premier League\n⏱ 48' | Skor 2-1\n━━━━━━━━━━━━━━\n🎯 <b>Maç Sonucu Ev Kazanır</b>  |  Güven <b>%63</b>  |  Oran <b>1.50</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-16T01:00:26.541661+00:00",
+      "result_posted": true
     },
     "CANLI:97382719:toplam gol|2.5|üst|piyasa_v1:2026-11-15T10:04:59.300007+00:00": {
       "created_at": "2026-11-15T10:04:59.300007+00:00",
@@ -7973,9 +7833,12 @@
       "cizgi": 2.5,
       "ust_alt": "ÜST",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 604,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Humble Lions - Arnett Gardens</b>\n🏆 Premier League\n⏱ 50' | Skor 0-2\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Humble Lions - Arnett Gardens</b>\n🏆 Premier League\n⏱ 50' | Skor 0-2\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-16T01:00:26.546176+00:00",
+      "result_posted": true
     },
     "CANLI:94463437:toplam gol|2.5|üst|piyasa_v1:2026-11-15T11:56:01.961839+00:00": {
       "created_at": "2026-11-15T11:56:01.961839+00:00",
@@ -7986,9 +7849,12 @@
       "cizgi": 2.5,
       "ust_alt": "ÜST",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 605,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Inter Moengotapoe - Flora</b>\n🏆 Hoofdklasse\n⏱ 70' | Skor 1-1\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>2Y Toplam Gol 2.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.41</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Inter Moengotapoe - Flora</b>\n🏆 Hoofdklasse\n⏱ 70' | Skor 1-1\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>2Y Toplam Gol 2.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.41</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-16T01:00:26.550709+00:00",
+      "result_posted": true
     },
     "CANLI:94463437:2y toplam gol|2.5|alt|piyasa_v1:2026-11-15T11:56:01.903049+00:00": {
       "created_at": "2026-11-15T11:56:01.903049+00:00",
@@ -7999,9 +7865,12 @@
       "cizgi": 2.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 605,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Inter Moengotapoe - Flora</b>\n🏆 Hoofdklasse\n⏱ 70' | Skor 1-1\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>2Y Toplam Gol 2.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.41</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Inter Moengotapoe - Flora</b>\n🏆 Hoofdklasse\n⏱ 70' | Skor 1-1\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ÜST</b>  |  Güven <b>%69</b>  |  Oran <b>1.36</b>\n🎯 <b>2Y Toplam Gol 2.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.41</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-16T01:00:26.555265+00:00",
+      "result_posted": true
     },
     "CANLI:94466838:maç sonucu||deplasman kazanır|piyasa_v1:2026-11-15T16:05:06.036452+00:00": {
       "created_at": "2026-11-15T16:05:06.036452+00:00",
@@ -8012,9 +7881,12 @@
       "cizgi": 0,
       "ust_alt": "Deplasman Kazanır",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 606,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Molynes - Portmore</b>\n🏆 Premier League\n⏱ 45' | Skor 1-2\n━━━━━━━━━━━━━━\n🎯 <b>Maç Sonucu Deplasman Kazanır</b>  |  Güven <b>%64</b>  |  Oran <b>1.40</b>\n🎯 <b>Toplam Korner 8.5 ÜST</b>  |  Güven <b>%63</b>  |  Oran <b>1.52</b>\n🎯 <b>Deplasman Gol 2.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.48</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Molynes - Portmore</b>\n🏆 Premier League\n⏱ 45' | Skor 1-2\n━━━━━━━━━━━━━━\n🎯 <b>Maç Sonucu Deplasman Kazanır</b>  |  Güven <b>%64</b>  |  Oran <b>1.40</b>\n🎯 <b>Toplam Korner 8.5 ÜST</b>  |  Güven <b>%63</b>  |  Oran <b>1.52</b>\n🎯 <b>Deplasman Gol 2.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.48</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-16T01:00:26.559792+00:00",
+      "result_posted": true
     },
     "CANLI:94466838:toplam korner|8.5|üst|piyasa_v1:2026-11-15T16:05:05.98942+00:00": {
       "created_at": "2026-11-15T16:05:05.98942+00:00",
@@ -8038,9 +7910,12 @@
       "cizgi": 2.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 606,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Molynes - Portmore</b>\n🏆 Premier League\n⏱ 45' | Skor 1-2\n━━━━━━━━━━━━━━\n🎯 <b>Maç Sonucu Deplasman Kazanır</b>  |  Güven <b>%64</b>  |  Oran <b>1.40</b>\n🎯 <b>Toplam Korner 8.5 ÜST</b>  |  Güven <b>%63</b>  |  Oran <b>1.52</b>\n🎯 <b>Deplasman Gol 2.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.48</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Molynes - Portmore</b>\n🏆 Premier League\n⏱ 45' | Skor 1-2\n━━━━━━━━━━━━━━\n🎯 <b>Maç Sonucu Deplasman Kazanır</b>  |  Güven <b>%64</b>  |  Oran <b>1.40</b>\n🎯 <b>Toplam Korner 8.5 ÜST</b>  |  Güven <b>%63</b>  |  Oran <b>1.52</b>\n🎯 <b>Deplasman Gol 2.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.48</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-16T01:00:26.564361+00:00",
+      "result_posted": true
     },
     "CANLI:97375024:toplam gol|2.5|alt|:2026-11-15T20:42:06.289502+00:00": {
       "created_at": "2026-11-15T20:42:06.289502+00:00",
@@ -8051,9 +7926,12 @@
       "cizgi": 2.5,
       "ust_alt": "ALT",
       "yontem": null,
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 607,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Fenix - Atenas</b>\n🏆 Segunda Division\n⏱ 80' | Skor 1-1\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ALT</b>  |  Güven <b>%70</b>  |  Oran <b>1.35</b>\n🎯 <b>Ev Sahibi Gol 1.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.41</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Fenix - Atenas</b>\n🏆 Segunda Division\n⏱ 80' | Skor 1-1\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ALT</b>  |  Güven <b>%70</b>  |  Oran <b>1.35</b>\n🎯 <b>Ev Sahibi Gol 1.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.41</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-16T01:00:26.568939+00:00",
+      "result_posted": true
     },
     "CANLI:97375024:ev sahibi gol|1.5|alt|piyasa_v1:2026-11-14T01:24:47.564721+00:00": {
       "created_at": "2026-11-14T01:24:47.564721+00:00",
@@ -8064,19 +7942,178 @@
       "cizgi": 1.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 607,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Fenix - Atenas</b>\n🏆 Segunda Division\n⏱ 80' | Skor 1-1\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ALT</b>  |  Güven <b>%70</b>  |  Oran <b>1.35</b>\n🎯 <b>Ev Sahibi Gol 1.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.41</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Fenix - Atenas</b>\n🏆 Segunda Division\n⏱ 80' | Skor 1-1\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ALT</b>  |  Güven <b>%70</b>  |  Oran <b>1.35</b>\n🎯 <b>Ev Sahibi Gol 1.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.41</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-16T01:00:26.573491+00:00",
+      "result_posted": true
+    },
+    "CANLI:94421543:toplam gol|1.5|alt|:2026-11-16T00:22:05.486504+00:00": {
+      "created_at": "2026-11-16T00:22:05.486504+00:00",
+      "source": "CANLI",
+      "match_id": "94421543",
+      "home": "Inca Aruba - Aguila",
+      "kategori": "Toplam Gol",
+      "cizgi": 1.5,
+      "ust_alt": "ALT",
+      "yontem": null,
+      "settled": false,
+      "telegram_message_id": 609,
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Inca Aruba - Aguila</b>\n🏆 Primera Division\n⏱ 93' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 1.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.50</b>\n🎯 <b>Maç Sonucu Deplasman Kazanır</b>  |  Güven <b>%62</b>  |  Oran <b>1.44</b>\n🎯 <b>Deplasman Gol 2.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.42</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+    },
+    "CANLI:94421543:maç sonucu||deplasman kazanır|piyasa_v1:2026-11-14T05:45:14.651183+00:00": {
+      "created_at": "2026-11-14T05:45:14.651183+00:00",
+      "source": "CANLI",
+      "match_id": "94421543",
+      "home": "Inca Aruba - Aguila",
+      "kategori": "Maç Sonucu",
+      "cizgi": 0,
+      "ust_alt": "Deplasman Kazanır",
+      "yontem": "piyasa_v1",
+      "settled": false,
+      "telegram_message_id": 609,
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Inca Aruba - Aguila</b>\n🏆 Primera Division\n⏱ 93' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 1.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.50</b>\n🎯 <b>Maç Sonucu Deplasman Kazanır</b>  |  Güven <b>%62</b>  |  Oran <b>1.44</b>\n🎯 <b>Deplasman Gol 2.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.42</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+    },
+    "CANLI:94421543:deplasman gol|2.5|alt|piyasa_v1:2026-11-14T05:45:14.604492+00:00": {
+      "created_at": "2026-11-14T05:45:14.604492+00:00",
+      "source": "CANLI",
+      "match_id": "94421543",
+      "home": "Inca Aruba - Aguila",
+      "kategori": "Deplasman Gol",
+      "cizgi": 2.5,
+      "ust_alt": "ALT",
+      "yontem": "piyasa_v1",
+      "settled": false,
+      "telegram_message_id": 609,
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Inca Aruba - Aguila</b>\n🏆 Primera Division\n⏱ 93' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 1.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.50</b>\n🎯 <b>Maç Sonucu Deplasman Kazanır</b>  |  Güven <b>%62</b>  |  Oran <b>1.44</b>\n🎯 <b>Deplasman Gol 2.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.42</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+    },
+    "CANLI:94377851:toplam gol|3.5|alt|:2026-11-16T00:47:10.935845+00:00": {
+      "created_at": "2026-11-16T00:47:10.935845+00:00",
+      "source": "CANLI",
+      "match_id": "94377851",
+      "home": "Suchitepequez - Antigua",
+      "kategori": "Toplam Gol",
+      "cizgi": 3.5,
+      "ust_alt": "ALT",
+      "yontem": null,
+      "settled": false,
+      "telegram_message_id": 610,
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Suchitepequez - Antigua</b>\n🏆 Liga Nacional\n⏱ 90' | Skor 1-1\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 3.5 ALT</b>  |  Güven <b>%70</b>  |  Oran <b>1.35</b>\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%64</b>  |  Oran <b>1.46</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+    },
+    "CANLI:94377851:deplasman gol|1.5|alt|piyasa_v1:2026-11-14T16:35:20.74954+00:00": {
+      "created_at": "2026-11-14T16:35:20.74954+00:00",
+      "source": "CANLI",
+      "match_id": "94377851",
+      "home": "Suchitepequez - Antigua",
+      "kategori": "Deplasman Gol",
+      "cizgi": 1.5,
+      "ust_alt": "ALT",
+      "yontem": "piyasa_v1",
+      "settled": false,
+      "telegram_message_id": 610,
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Suchitepequez - Antigua</b>\n🏆 Liga Nacional\n⏱ 90' | Skor 1-1\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 3.5 ALT</b>  |  Güven <b>%70</b>  |  Oran <b>1.35</b>\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%64</b>  |  Oran <b>1.46</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+    },
+    "CANLI:97375025:toplam korner|8.5|üst|:2026-11-16T00:52:02.881807+00:00": {
+      "created_at": "2026-11-16T00:52:02.881807+00:00",
+      "source": "CANLI",
+      "match_id": "97375025",
+      "home": "Oriental - Colon",
+      "kategori": "Toplam Korner",
+      "cizgi": 8.5,
+      "ust_alt": "ÜST",
+      "yontem": null,
+      "settled": false,
+      "telegram_message_id": 611,
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Oriental - Colon</b>\n🏆 Segunda Division\n⏱ 71' | Skor 1-2\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Korner 8.5 ÜST</b>  |  Güven <b>%65</b>  |  Oran <b>1.44</b>\n🎯 <b>Toplam Gol 3.5 ÜST</b>  |  Güven <b>%70</b>  |  Oran <b>1.48</b>\n🎯 <b>2Y Toplam Gol 1.5 ALT</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n🎯 <b>Ev Sahibi Gol 1.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.41</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+    },
+    "CANLI:97375025:toplam gol|3.5|üst|:2026-11-16T00:46:14.350523+00:00": {
+      "created_at": "2026-11-16T00:46:14.350523+00:00",
+      "source": "CANLI",
+      "match_id": "97375025",
+      "home": "Oriental - Colon",
+      "kategori": "Toplam Gol",
+      "cizgi": 3.5,
+      "ust_alt": "ÜST",
+      "yontem": null,
+      "settled": false,
+      "telegram_message_id": 611,
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Oriental - Colon</b>\n🏆 Segunda Division\n⏱ 71' | Skor 1-2\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Korner 8.5 ÜST</b>  |  Güven <b>%65</b>  |  Oran <b>1.44</b>\n🎯 <b>Toplam Gol 3.5 ÜST</b>  |  Güven <b>%70</b>  |  Oran <b>1.48</b>\n🎯 <b>2Y Toplam Gol 1.5 ALT</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n🎯 <b>Ev Sahibi Gol 1.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.41</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+    },
+    "CANLI:97375025:2y toplam gol|1.5|alt|piyasa_v1:2026-11-14T01:24:50.591077+00:00": {
+      "created_at": "2026-11-14T01:24:50.591077+00:00",
+      "source": "CANLI",
+      "match_id": "97375025",
+      "home": "Oriental - Colon",
+      "kategori": "2Y Toplam Gol",
+      "cizgi": 1.5,
+      "ust_alt": "ALT",
+      "yontem": "piyasa_v1",
+      "settled": false,
+      "telegram_message_id": 611,
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Oriental - Colon</b>\n🏆 Segunda Division\n⏱ 71' | Skor 1-2\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Korner 8.5 ÜST</b>  |  Güven <b>%65</b>  |  Oran <b>1.44</b>\n🎯 <b>Toplam Gol 3.5 ÜST</b>  |  Güven <b>%70</b>  |  Oran <b>1.48</b>\n🎯 <b>2Y Toplam Gol 1.5 ALT</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n🎯 <b>Ev Sahibi Gol 1.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.41</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+    },
+    "CANLI:97375025:ev sahibi gol|1.5|alt|piyasa_v1:2026-11-14T01:24:50.563386+00:00": {
+      "created_at": "2026-11-14T01:24:50.563386+00:00",
+      "source": "CANLI",
+      "match_id": "97375025",
+      "home": "Oriental - Colon",
+      "kategori": "Ev Sahibi Gol",
+      "cizgi": 1.5,
+      "ust_alt": "ALT",
+      "yontem": "piyasa_v1",
+      "settled": false,
+      "telegram_message_id": 611,
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Oriental - Colon</b>\n🏆 Segunda Division\n⏱ 71' | Skor 1-2\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Korner 8.5 ÜST</b>  |  Güven <b>%65</b>  |  Oran <b>1.44</b>\n🎯 <b>Toplam Gol 3.5 ÜST</b>  |  Güven <b>%70</b>  |  Oran <b>1.48</b>\n🎯 <b>2Y Toplam Gol 1.5 ALT</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n🎯 <b>Ev Sahibi Gol 1.5 ALT</b>  |  Güven <b>%66</b>  |  Oran <b>1.41</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+    },
+    "CANLI:94466548:toplam gol|2.5|alt|:2026-11-16T00:52:07.359405+00:00": {
+      "created_at": "2026-11-16T00:52:07.359405+00:00",
+      "source": "CANLI",
+      "match_id": "94466548",
+      "home": "Ferro - Gimnasia y Tiro",
+      "kategori": "Toplam Gol",
+      "cizgi": 2.5,
+      "ust_alt": "ALT",
+      "yontem": null,
+      "settled": false,
+      "telegram_message_id": 612,
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Ferro - Gimnasia y Tiro</b>\n🏆 Argentino B\n⏱ 59' | Skor 0-1\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.55</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+    },
+    "CANLI:94330671:toplam korner|11.5|üst|:2026-11-16T00:56:05.840619+00:00": {
+      "created_at": "2026-11-16T00:56:05.840619+00:00",
+      "source": "CANLI",
+      "match_id": "94330671",
+      "home": "Recoleta - Deportes Iquique",
+      "kategori": "Toplam Korner",
+      "cizgi": 11.5,
+      "ust_alt": "ÜST",
+      "yontem": null,
+      "settled": false,
+      "telegram_message_id": 613,
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Recoleta - Deportes Iquique</b>\n🏆 Primera B\n⏱ 71' | Skor 1-1\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Korner 11.5 ÜST</b>  |  Güven <b>%68</b>  |  Oran <b>1.40</b>\n🎯 <b>Toplam Gol 2.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.57</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+    },
+    "CANLI:94330671:toplam gol|2.5|alt|:2026-11-16T00:45:12.428093+00:00": {
+      "created_at": "2026-11-16T00:45:12.428093+00:00",
+      "source": "CANLI",
+      "match_id": "94330671",
+      "home": "Recoleta - Deportes Iquique",
+      "kategori": "Toplam Gol",
+      "cizgi": 2.5,
+      "ust_alt": "ALT",
+      "yontem": null,
+      "settled": false,
+      "telegram_message_id": 613,
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Recoleta - Deportes Iquique</b>\n🏆 Primera B\n⏱ 71' | Skor 1-1\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Korner 11.5 ÜST</b>  |  Güven <b>%68</b>  |  Oran <b>1.40</b>\n🎯 <b>Toplam Gol 2.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.57</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
     }
   },
-  "last_run": "2026-11-15T21:13:49.632082+00:00",
+  "last_run": "2026-11-16T01:02:06.080486+00:00",
   "last_counts": {
-    "live": 48,
+    "live": 12,
     "prematch": 0,
-    "sent_messages": 20,
-    "sent_predictions": 32,
-    "queued_matches": 20,
-    "settled_predictions": 30
+    "sent_messages": 5,
+    "sent_predictions": 12,
+    "queued_matches": 5,
+    "settled_predictions": 31
   },
-  "last_live_report_at": "2026-11-15T21:11:36.470376+00:00"
+  "last_live_report_at": "2026-11-16T01:00:59.230973+00:00"
 }
