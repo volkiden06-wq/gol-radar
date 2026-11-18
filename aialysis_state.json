@@ -1321,32 +1321,6 @@
       "result_edit_unavailable": true,
       "result_posted": true
     },
-    "MAÇ ÖNÜ:94423962:deplasman gol|1.5|alt|piyasa_v1:2026-11-04T06:45:23.266+00:00": {
-      "created_at": "2026-11-04T06:45:23.266+00:00",
-      "source": "MAÇ ÖNÜ",
-      "match_id": "94423962",
-      "home": "Metalul Buzau - Steaua Bucuresti",
-      "kategori": "Deplasman Gol",
-      "cizgi": 1.5,
-      "ust_alt": "ALT",
-      "yontem": "piyasa_v1",
-      "settled": false,
-      "telegram_message_id": 291,
-      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Metalul Buzau - Steaua Bucuresti</b>\n🏆 Liga II\n🗓 10.11 17:30\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.42</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.41</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
-    },
-    "MAÇ ÖNÜ:94423962:i̇y toplam gol|1.5|alt|piyasa_v1:2026-11-04T06:45:23.266+00:00": {
-      "created_at": "2026-11-04T06:45:23.266+00:00",
-      "source": "MAÇ ÖNÜ",
-      "match_id": "94423962",
-      "home": "Metalul Buzau - Steaua Bucuresti",
-      "kategori": "İY Toplam Gol",
-      "cizgi": 1.5,
-      "ust_alt": "ALT",
-      "yontem": "piyasa_v1",
-      "settled": false,
-      "telegram_message_id": 291,
-      "telegram_message_text": "<b>🟡 MAÇ ÖNÜ ANALİZİ</b>\n⚽ <b>Metalul Buzau - Steaua Bucuresti</b>\n🏆 Liga II\n🗓 10.11 17:30\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ALT</b>  |  Güven <b>%68</b>  |  Oran <b>1.42</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.41</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
-    },
     "MAÇ ÖNÜ:94370240:toplam gol|3.5|alt|piyasa_v1:2026-11-04T16:45:35.647+00:00": {
       "created_at": "2026-11-04T16:45:35.647+00:00",
       "source": "MAÇ ÖNÜ",
@@ -8254,7 +8228,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Palmacia - Fortaleza B</b>\n🏆 Copa Fares Lopes\n⏱ 17' | Skor 0-1\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ÜST</b>  |  Güven <b>%66</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%63</b>  |  Oran <b>1.49</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAZANDI",
       "settled_at": "2026-11-18T01:04:11.982503+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94458705:i̇y toplam gol|1.5|alt|piyasa_v1:2026-11-16T22:15:16.155859+00:00": {
       "created_at": "2026-11-16T22:15:16.155859+00:00",
@@ -8270,7 +8245,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Palmacia - Fortaleza B</b>\n🏆 Copa Fares Lopes\n⏱ 17' | Skor 0-1\n━━━━━━━━━━━━━━\n🎯 <b>Deplasman Gol 1.5 ÜST</b>  |  Güven <b>%66</b>  |  Oran <b>1.36</b>\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%63</b>  |  Oran <b>1.49</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAZANDI",
       "settled_at": "2026-11-18T01:04:11.991901+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94466564:i̇y toplam gol|1.5|alt|:2026-11-17T18:11:51.59938+00:00": {
       "created_at": "2026-11-17T18:11:51.59938+00:00",
@@ -8286,7 +8262,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Albania U21 - Spain U21</b>\n🏆 Friendlies\n⏱ 20' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>İY Toplam Gol 1.5 ALT</b>  |  Güven <b>%65</b>  |  Oran <b>1.48</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAZANDI",
       "settled_at": "2026-11-18T01:04:12.000623+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94465938:toplam korner|6.5|üst|:2026-11-17T18:14:54.579589+00:00": {
       "created_at": "2026-11-17T18:14:54.579589+00:00",
@@ -8302,7 +8279,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Croatia U21 - Germany U21</b>\n🏆 Friendlies\n⏱ 64' | Skor 1-2\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Korner 6.5 ÜST</b>  |  Güven <b>%67</b>  |  Oran <b>1.36</b>\n🎯 <b>Toplam Gol 3.5 ALT</b>  |  Güven <b>%70</b>  |  Oran <b>1.36</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAZANDI",
       "settled_at": "2026-11-18T01:04:12.009116+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94465938:toplam gol|3.5|alt|:2026-11-17T18:05:10.59234+00:00": {
       "created_at": "2026-11-17T18:05:10.59234+00:00",
@@ -8318,7 +8296,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Croatia U21 - Germany U21</b>\n🏆 Friendlies\n⏱ 64' | Skor 1-2\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Korner 6.5 ÜST</b>  |  Güven <b>%67</b>  |  Oran <b>1.36</b>\n🎯 <b>Toplam Gol 3.5 ALT</b>  |  Güven <b>%70</b>  |  Oran <b>1.36</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAYBETTİ",
       "settled_at": "2026-11-18T01:04:12.021356+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94467526:toplam korner|9.5|üst|:2026-11-17T18:17:18.557244+00:00": {
       "created_at": "2026-11-17T18:17:18.557244+00:00",
@@ -8334,7 +8313,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Poland U21 - Serbia U21</b>\n🏆 Friendlies\n⏱ 63' | Skor 0-1\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Korner 9.5 ÜST</b>  |  Güven <b>%67</b>  |  Oran <b>1.36</b>\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%70</b>  |  Oran <b>1.35</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAZANDI",
       "settled_at": "2026-11-18T01:04:12.029663+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94467526:toplam gol|1.5|üst|:2026-11-17T18:13:03.646281+00:00": {
       "created_at": "2026-11-17T18:13:03.646281+00:00",
@@ -8350,7 +8330,8 @@
       "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Poland U21 - Serbia U21</b>\n🏆 Friendlies\n⏱ 63' | Skor 0-1\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Korner 9.5 ÜST</b>  |  Güven <b>%67</b>  |  Oran <b>1.36</b>\n🎯 <b>Toplam Gol 1.5 ÜST</b>  |  Güven <b>%70</b>  |  Oran <b>1.35</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
       "result": "KAYBETTİ",
       "settled_at": "2026-11-18T01:04:12.038112+00:00",
-      "result_posted": true
+      "result_posted": true,
+      "result_edit_unavailable": false
     },
     "CANLI:94466539:toplam gol|2.5|alt|piyasa_v1:2026-11-13T17:45:04.281677+00:00": {
       "created_at": "2026-11-13T17:45:04.281677+00:00",
@@ -8361,9 +8342,12 @@
       "cizgi": 2.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 640,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Olimpo Bahia Blanca - Kimberley</b>\n🏆 Argentino A\n⏱ 90' | Skor 1-1\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ALT</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Olimpo Bahia Blanca - Kimberley</b>\n🏆 Argentino A\n⏱ 90' | Skor 1-1\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ALT</b>  |  Güven <b>%64</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-18T08:28:32.052296+00:00",
+      "result_posted": true
     },
     "CANLI:94463135:2y toplam gol|1.5|üst|piyasa_v1:2026-11-15T20:35:05.893114+00:00": {
       "created_at": "2026-11-15T20:35:05.893114+00:00",
@@ -8374,9 +8358,12 @@
       "cizgi": 1.5,
       "ust_alt": "ÜST",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 641,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>USA - Haiti</b>\n🏆 Concacaf Nations League\n⏱ 45' | Skor 2-0\n━━━━━━━━━━━━━━\n🎯 <b>2Y Toplam Gol 1.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.40</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>USA - Haiti</b>\n🏆 Concacaf Nations League\n⏱ 45' | Skor 2-0\n━━━━━━━━━━━━━━\n🎯 <b>2Y Toplam Gol 1.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.40</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-18T08:28:32.062005+00:00",
+      "result_posted": true
     },
     "CANLI:94458328:toplam gol|3.5|alt|piyasa_v1:2026-11-16T08:15:01.085966+00:00": {
       "created_at": "2026-11-16T08:15:01.085966+00:00",
@@ -8387,9 +8374,12 @@
       "cizgi": 3.5,
       "ust_alt": "ALT",
       "yontem": "piyasa_v1",
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 642,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>French Guiana - Saint Vincent and the Grenadines</b>\n🏆 Concacaf Nations League\n⏱ 48' | Skor 1-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 3.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>French Guiana - Saint Vincent and the Grenadines</b>\n🏆 Concacaf Nations League\n⏱ 48' | Skor 1-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 3.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.44</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-18T08:28:32.070733+00:00",
+      "result_posted": true
     },
     "CANLI:94458587:toplam gol|0.5|üst|:2026-11-17T23:56:04.906503+00:00": {
       "created_at": "2026-11-17T23:56:04.906503+00:00",
@@ -8400,9 +8390,12 @@
       "cizgi": 0.5,
       "ust_alt": "ÜST",
       "yontem": null,
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 643,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Chile - Colombia</b>\n🏆 Friendlies\n⏱ 94' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 0.5 ÜST</b>  |  Güven <b>%67</b>  |  Oran <b>1.35</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Chile - Colombia</b>\n🏆 Friendlies\n⏱ 94' | Skor 0-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 0.5 ÜST</b>  |  Güven <b>%67</b>  |  Oran <b>1.35</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-18T08:28:32.079398+00:00",
+      "result_posted": true
     },
     "CANLI:94466328:toplam gol|2.5|alt|:2026-11-18T00:49:04.509014+00:00": {
       "created_at": "2026-11-18T00:49:04.509014+00:00",
@@ -8413,9 +8406,12 @@
       "cizgi": 2.5,
       "ust_alt": "ALT",
       "yontem": null,
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 644,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Uruguay - Dominican Republic</b>\n🏆 Friendlies\n⏱ 74' | Skor 2-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.57</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Uruguay - Dominican Republic</b>\n🏆 Friendlies\n⏱ 74' | Skor 2-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ALT</b>  |  Güven <b>%67</b>  |  Oran <b>1.57</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-18T08:28:32.088172+00:00",
+      "result_posted": true
     },
     "CANLI:94467610:toplam gol|4.5|üst|:2026-11-18T00:51:07.147477+00:00": {
       "created_at": "2026-11-18T00:51:07.147477+00:00",
@@ -8426,9 +8422,12 @@
       "cizgi": 4.5,
       "ust_alt": "ÜST",
       "yontem": null,
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 645,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Atl. Nacional - Once Caldas</b>\n🏆 Colombia Cup\n⏱ 71' | Skor 2-2\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 4.5 ÜST</b>  |  Güven <b>%70</b>  |  Oran <b>1.45</b>\n🎯 <b>Toplam Korner 8.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.49</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Atl. Nacional - Once Caldas</b>\n🏆 Colombia Cup\n⏱ 71' | Skor 2-2\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 4.5 ÜST</b>  |  Güven <b>%70</b>  |  Oran <b>1.45</b>\n🎯 <b>Toplam Korner 8.5 ÜST</b>  |  Güven <b>%64</b>  |  Oran <b>1.49</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-18T08:28:32.096761+00:00",
+      "result_posted": true
     },
     "CANLI:94467610:toplam korner|8.5|üst|piyasa_v1:2026-11-15T21:55:00.000194+00:00": {
       "created_at": "2026-11-15T21:55:00.000194+00:00",
@@ -8452,9 +8451,12 @@
       "cizgi": 2.5,
       "ust_alt": "ÜST",
       "yontem": null,
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 646,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Ecuador - Bolivia</b>\n🏆 Friendlies\n⏱ 62' | Skor 2-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ÜST</b>  |  Güven <b>%70</b>  |  Oran <b>1.35</b>\n🎯 <b>Toplam Korner 9.5 ÜST</b>  |  Güven <b>%68</b>  |  Oran <b>1.36</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Ecuador - Bolivia</b>\n🏆 Friendlies\n⏱ 62' | Skor 2-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ÜST</b>  |  Güven <b>%70</b>  |  Oran <b>1.35</b>\n🎯 <b>Toplam Korner 9.5 ÜST</b>  |  Güven <b>%68</b>  |  Oran <b>1.36</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAYBETTİ",
+      "settled_at": "2026-11-18T08:28:32.105511+00:00",
+      "result_posted": true
     },
     "CANLI:94465212:toplam korner|9.5|üst|:2026-11-18T00:57:04.199486+00:00": {
       "created_at": "2026-11-18T00:57:04.199486+00:00",
@@ -8465,19 +8467,22 @@
       "cizgi": 9.5,
       "ust_alt": "ÜST",
       "yontem": null,
-      "settled": false,
+      "settled": true,
       "telegram_message_id": 646,
-      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Ecuador - Bolivia</b>\n🏆 Friendlies\n⏱ 62' | Skor 2-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ÜST</b>  |  Güven <b>%70</b>  |  Oran <b>1.35</b>\n🎯 <b>Toplam Korner 9.5 ÜST</b>  |  Güven <b>%68</b>  |  Oran <b>1.36</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>"
+      "telegram_message_text": "<b>🔴 CANLI MAÇ SİNYALİ</b>\n⚽ <b>Ecuador - Bolivia</b>\n🏆 Friendlies\n⏱ 62' | Skor 2-0\n━━━━━━━━━━━━━━\n🎯 <b>Toplam Gol 2.5 ÜST</b>  |  Güven <b>%70</b>  |  Oran <b>1.35</b>\n🎯 <b>Toplam Korner 9.5 ÜST</b>  |  Güven <b>%68</b>  |  Oran <b>1.36</b>\n━━━━━━━━━━━━━━\n<i>(Verilen tahminler analiz sonucudur. Yatırım tavsiyesi değildir.)</i>",
+      "result": "KAZANDI",
+      "settled_at": "2026-11-18T08:28:32.114313+00:00",
+      "result_posted": true
     }
   },
-  "last_run": "2026-11-18T01:05:03.933713+00:00",
+  "last_run": "2026-11-18T08:28:48.561263+00:00",
   "last_counts": {
-    "live": 9,
+    "live": 0,
     "prematch": 0,
-    "sent_messages": 7,
-    "sent_predictions": 9,
-    "queued_matches": 7,
-    "settled_predictions": 7
+    "sent_messages": 0,
+    "sent_predictions": 0,
+    "queued_matches": 0,
+    "settled_predictions": 8
   },
-  "last_live_report_at": "2026-11-18T01:04:27.937874+00:00"
+  "last_live_report_at": "2026-11-18T08:28:47.590310+00:00"
 }
